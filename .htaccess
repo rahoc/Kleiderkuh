@@ -1,0 +1,19 @@
+#######################################################################
+#     Diese .htaccess wurde vom STRATO-Webservermanager erstellt      #
+#######################################################################
+
+
+mod_gzip_on Yes
+
+Options -Indexes
+
+DirectoryIndex home.php
+ 
+Redirect /bestellungen /goToTransaction.php?language=de
+Redirect /orders /goToTransaction.php?language=en
+
+
+
+
+
+

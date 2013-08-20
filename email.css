@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color:#EEE;	
+	font-family:"Noto sans", sans-serif;
+	font-size:12pt;
+}
+
+a {
+	color:#028E9B;
+	text-decoration:none;
+}
+
+#mail {
+	background-color:#FFF;
+	width:600px;
+	margin-left:auto;
+	margin-right:auto;	
+	padding:10px;
+}
+
+#head {
+	height:128px;
+	back ground-image:url(images/impressum_logo.png);
+	back ground-repeat:no-repeat;
+	backg round-size:auto 128px;
+	border-bottom:2px solid #028E9B;
+}
+
+#head_img {
+	height:128px;
+}
+
+#order {
+	height:auto;
+	padding:10px;
+}
+
+#content {
+	height:auto;
+	padding:10px;
+}
+
+#foot {
+	border-top:2px solid #028E9B;
+	height:50px;
+}
+
+#f_left {
+	padding-top:10px;
+	float:left;
+	width:150px;
+}
+
+#f_center {
+	padding-top:10px;
+	float:left;
+	text-align:center;
+}
+
+#f_right {
+	float:right;
+}
+
+#imp_img {
+	height:50px;	
+}
