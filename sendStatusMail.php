@@ -91,7 +91,7 @@ switch($t->status) {
 $message= '
 <html>
 <head>
-  <title>Kleiderkuh</title>
+  <title>Kleider Kuh</title>
 </head>
 <body style="background-color:#EEE;	
 	font-family:"Noto sans", sans-serif;

@@ -139,15 +139,17 @@ require_once('language.php');
                     <input type='image' src='images/<?php echo $langID; ?>/buttons/versand.png'
                     class='button_medium' id='print_shipping' />
 					<br />
-					<p id="popups" class="orange" hidden="hidden"><?php echo $trans_text37; ?></p>
+					
 					
                 </div></div>
                 </fieldset>
+                
             </div>
             <div id="dhl_info">
             	<?php echo $trans_text36; ?>
             </div>
             <div class="clear"></div>
+            <p id="popups" class="orange" hidden="hidden"><?php echo $trans_text37; ?></p>
         </div>
 		<p id="testOutput"></p>
         <!-- RECEIVED -->
@@ -613,9 +615,9 @@ $("#print_shipping").click(function() {
 			})
 		.done(function(data) {
 			//$("#testOutput").text(data);
-			//window.open("http://goessinger.eu/" + data, '', '_blank');
+			window.open("http://goessinger.eu/" + data, '', '_blank');
 			//window.location.href = "http://goessinger.eu/" + data;
-			window.location = "http://goessinger.eu/" + data;
+			//window.location = "http://goessinger.eu/" + data;
 		});
 	});
 

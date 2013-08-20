@@ -46,7 +46,7 @@
 	<div id="steps">
     	<table class="center">
     	<tr>
-			<td><img class='step' src='images/Step1_v2b.png' /></td>
+			<td><a href="sell.php"><img class='step' src='images/Step1_v2b.png' /></a></td>
             <td><img class='step' src='images/Step2_v2b.png' /></td>
             <td class="last"><img class='step' src='images/Step3_v2b.png' /></td>
 			

@@ -30,10 +30,10 @@ $home_subheader8  = 'Babykleidung';
 $home_subheader9  = 'Artikel ohne Etiketten';
 $home_subheader10  = 'Fälschungen';
 $home_text1  = 'Hilf der Umwelt und gib den Klamotten deiner Kinder ein neues Zuhause';
-$home_text2  = 'Lass Dich für Kinderbekleidung mit Top-Marken bezahlen';
-$home_text3  = 'Räum auf und recycle ungetragene Kleidung';
+$home_text2  = 'Lass Dich für Marken-Kinderbekleidung bezahlen';
+$home_text3  = 'Räum auf und recycle ungetragene Kinderkleidung';
 $home_text4  = 'Sage uns was du hast und wir sagen dir, wieviel du dafür bekommst';
-$home_text5  = 'Drucke ein kostenloses Versandetikett aus, verpacke die Klamotten und schicke sie los.';
+$home_text5  = 'Drucke den kostenlosen Frankierschein aus, verpacke die Klamotten und schicke sie los.';
 $home_text6  = 'Sobald das Paket bei uns angekommen ist, bekommst du sofort dein Geld.';
 $home_text7  = 'Die Artikel sollten in ausgezeichnetem Zustand sein. Erfahre mehr über unsere genauen Anforderungen ';
 $home_text8  = 'Die Kleidung sollte sauber sein und gut riechen. Bitte wasche und trockne die Kleidung bevor du sie uns schickst.';
@@ -138,20 +138,20 @@ $goToTrans_error1  = 'Wir konnten leider keine Bestellung unter der angegebenen 
 // transactionState.php
 //#####################
 $trans_headline1  = 'Aufträge';
-$trans_text1  = 'Deine Auftragsnummer:';
-$trans_text2  = 'Deine E-Mail-Adresse:';
-$trans_text3  = 'Dein Auftragsstatus:';
-$trans_text4  = 'Vielen Dank für deinen Auftrag vom:';
+$trans_text1  = 'Deine Auftragsnummer: ';
+$trans_text2  = 'Deine E-Mail-Adresse: ';
+$trans_text3  = 'Dein Auftragsstatus: ';
+$trans_text4  = 'Vielen Dank für deinen Auftrag vom: ';
 $trans_text5  = 'Eine Auftragstätigung wurde an deine E-Mail-Adresse gesendet: ';
 $trans_text6  = 'Bitte fülle das unten stehende Formular aus, um einen kostenlosen DHL-Versandaufkleber und die Versandanweisungen auszudrucken.';
-$trans_text8  = 'Paket eingegangen am:';
+$trans_text8  = 'Paket eingegangen am: ';
 $trans_text9  = 'Dein Paket ist bei uns angekommen und wird bearbeitet.';
-$trans_state_confirmed  = 'Von dir verschickt';
-$trans_state_received  = 'Wir haben erhalten';
+$trans_state_confirmed  = 'Verschickt';
+$trans_state_received  = 'Empfangen';
 $trans_state_processed  = 'Bearbeitet';
 $trans_state_payment  = 'Bezahlung';
 $trans_state_waitingpayment  = 'Wir brauchen deine Hilfe';
-$trans_state_finished  = 'Abgeschlossen';
+$trans_state_finished  = 'Abschluss';
 $trans_state_canceled  = 'Storniert';
 $trans_label1  = 'Vorname: ';
 $trans_label2  = 'Nachname: ';
@@ -192,9 +192,9 @@ $trans_text27  = 'Zurücksenden';
 $trans_text28  = 'Spenden';
 $trans_text29  = '5€ Versandkosten wurden abgezogen, neuer Zahlungsbetrag: ';
 $trans_text30a  = 'Bitte überweise uns ';
-$trans_text30b  = '€ unter Angabe der Bestellnummer:';
+$trans_text30b  = '€ unter Angabe der Bestellnummer: ';
 $trans_text31  = 'Option A: Bezahlung via PayPal an: paypal@kleiderkuh.de
-<br />Option B: Bezahlung via Überweisung auf folgendes Konto:';
+<br />Option B: Bezahlung via Überweisung auf folgendes Konto: ';
 $trans_text32  = 'Akzeptiert';
 $trans_text33  = 'Abgelehnt';
 $trans_text34  = 'Fehlt';
@@ -212,7 +212,7 @@ $trans_text36  = '<strong>Anleitung zum einsenden</strong>
 						</ul>
 					</li>
 					</ol>';
-$trans_text36  = 'Ein PopUp Fenster sollte sich innerhalb der nächsten 10 Sekunden öffnen!';
+$trans_text37  = 'Ein PopUp Fenster sollte sich innerhalb der nächsten 10 Sekunden öffnen!';
 
 
 //##################### = '';
@@ -223,7 +223,7 @@ $how_subheader1  = '6 Schritte...';
 $how_text1  = 'Wähle Produkt aus den Kategorien';
 $how_text2  = 'Schau den Verkaufspreis an und und lege es in den Warenkorb';
 $how_text3  = 'Zur Kasse';
-$how_text4  = 'Drucke die kostenlose Versandetikett aus';
+$how_text4  = 'Drucke den kostenlosen Frankierschein aus';
 $how_text5  = 'Verpacken und senden';
 $how_text6  = 'Wir prüfen die Kleidung und überweisen dir das Geld';
 $how_text7  = 'Wir kaufen schonend getragene Kinderbekleidung von ausgewählten Top-Marken';
@@ -245,13 +245,13 @@ Um deinen Verkauf zu bestätigen, gib deine E-Mail-Adresse ein und gib an wie du
 Die Zahlungsoptionen sind Überweisung oder PayPal.<br />
 Um eine Überweisung zu erhalten, gib einfach deine Kontonummer und die Bankleitzahl ein.<br />
 Um PayPal zu nutzen, gib an welche E-Mail-Adresse für die Zahlung verwendet werden soll. (Hinweis: Es entstehen PayPal-Gebühren. Dies bedeutet, PayPal berechnet dir die normalen Gebühren für den Erhalt von Zahlungen. Üblicherweise sind das 0,10 € + 3,5% des Zahlungsbetrags)';
-$how_text14  = 'Kostenloses Versandetikett drucken<br />
-Sobald du an der Kasse fertig bist, kannst Du ein kostenloses DHL-Versandetikett ausdrucken<br />
-Falls Du keinen Drucker hast, kannst Du Dir das kostenlose Versandetikett per Post schicken lassen<br />
-Alternativ kannst du uns das Paket auch mit einem anderen Versanddienstleister schicken. Beachte aber, dass wir leider nur die Versankosten bezahlen, wenn du das DHL-Versandetikett von unserer Website verwendest.';
+$how_text14  = 'Kostenlosen Frankierschein drucken<br />
+Sobald du an der Kasse fertig bist, kannst Du einen kostenlosen DHL-Frankierschein ausdrucken<br />
+Falls Du keinen Drucker hast, kannst Du Dir den kostenlosen Frankierschein per Post schicken lassen<br />
+Alternativ kannst du uns das Paket auch mit einem anderen Versanddienstleister schicken. Beachte aber, dass wir leider nur die Versankosten bezahlen, wenn du den DHL-Frankierschein von unserer Website verwendest.';
 $how_text15  = 'Verpacken und senden<br />
 Packe alle Artikel und die ausgedruckten Unterlagen in ein Paket.<br />
-Bringe das Versandetikett außen am Paket an.<br />
+Bringe den Frankierschein außen am Paket an.<br />
 Du kannst das Paket in jedem Postamt oder jeder DHL Packstation abgeben.';
 $how_text16a  = 'Wir erhalten und bearbeiten den Auftrag<br />
 Sobald wir das Paket erhalten, prüfen wir  ob alle Artikel den ';
@@ -307,6 +307,13 @@ $feedback_label5  = 'Du würdest hier gern noch andere Marken sehen';
 $feedback_label6  = 'Sonstiges...';
 $feedback_text1  = 'Deine Meinung ist uns wichtig';
 $feedback_text2 = 'Wenn du eine Rückmeldung von uns möchtest hinterlasse bitte deinen Namen und E-Mail-Adresse (optional)';
+$feedback_mail1 = "Danke für dein Feedback!";
+$feedback_mail2 = "Dein Name: ";
+$feedback_mail3 = "E-Mail: ";
+$feedback_mail4 = "Kategorie: ";
+$feedback_mail5 = "Text: ";
+
+
 $about_text1  = '<h1>Wer wir sind</h1><br />
 <p>Kleider Kuh wurde von einer kleinen Gruppe von Unternehmern in der süddeutschen Stadt Ulm gegründet. Albert Einstein wurde in Ulm geboren und eines Tages traf sich unser Team um zu sehen ob wir eine Idee entwickeln können die Einstein würdig ist ... so entwickelten wir das Konzept von Kleider Kuh.</p>
 <h1>Warum?</h1>
@@ -459,7 +466,7 @@ $email_c_subject  = 'Kleider Kuh - Neuer Auftrag erstellt';
 $email_c_text1  = '<p>Lieber Kunde,</p>
 <p>Vielen Dank für deinen neue Auftrag!</p>
 <p><ul><li>Das sind die nächsten Schritte:
-Schick uns deine Artikel. Falls du dein Versandetikett nicht schon gefunden hast, findest du es bei den Versandinformationen: ';
+Schick uns deine Artikel. Falls du deinen DHL-Frankierschein nicht schon gefunden hast, findest du es bei den Versandinformationen: ';
 $email_c_text2  = '</a></li><li>Sobald wir deine Artikel empfangen haben, bekommst du von uns eine Empfangsbestätigung.</li><li>
 Anschließend werden wir deinen Auftrag und die Auszahlung bearbeiten.</li></ul></p>
 <p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/auftraege abrufen.</p> 

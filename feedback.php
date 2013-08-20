@@ -27,7 +27,7 @@ require_once("language.php");
         <input type="radio" name="category" value="other"><?php echo $feedback_label6; ?> <br />
         <br />
         <label><?php echo $feedback_text1; ?></label><br />
-        <textarea size="50" id="ta_exact"></textarea>
+        <textarea size="50" id="exact"></textarea>
         <br /><br />
         <p><?php echo $feedback_text2; ?></p>
         <table>

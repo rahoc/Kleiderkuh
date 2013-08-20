@@ -296,6 +296,11 @@ $feedback_label5  =  "What brands would you like to see";
 $feedback_label6  =  "Other...";
 $feedback_text1  = "Your opinion is important for us:";
 $feedback_text2 = "If you would like a reply from us please leave your name and email address (optional)";
+$feedback_mail1 = "Thanks for your Feedback!";
+$feedback_mail2 = "Your name: ";
+$feedback_mail3 = "Email: ";
+$feedback_mail4 = "Category: ";
+$feedback_mail5 = "Text: ";
 
 //#####################
 // about.php
