@@ -2,240 +2,215 @@
 
 $langID = "en";
 
-//#####################
-// Head.php
-//#####################
+$head_link1  =  "Home";
+$head_link2  =  "Sell";
+$head_link3  =  "Buy";
+$head_link4  =  "Orders";
+$head_link5  =  "How it Works";
 
-$head_link1 = "Home";
-$head_link2 = "Sell";
-$head_link3 = "Buy";
-$head_link4 = "Orders";
-$head_link5 = "How it works";
+//##################### = 
+// Home.php = 
+//##################### = 
 
+$home_headline1  =  "Turn children's clothes into cash ... in 3 easy steps!";
+$home_headline2  =  "Send us";
+$home_headline3  =  "Better not";
+$home_subheader1  =  "Children's clothing in new or like-new condition";
+$home_subheader2  =  "Clean Clothes";
+$home_subheader3  =  "Recognized brands that are accepted";
+$home_subheader4  =  "Appropriate sizes";
+$home_subheader6  =  "Clothing that shows any signs of wear";
+$home_subheader7  =  "Women or Men's Clothes";
+$home_subheader8  =  "Baby Clothes";
+$home_subheader9  =  "Items missing labels";
+$home_subheader10  =  "Counterfeit Items";
+$home_text1  =  "Help the environment and give your child's clothes a new home";
+$home_text2  =  "Get paid for your premium branded children's clothes";
+$home_text3  =  "Clean up and recycle unused clothes";
+$home_text4  =  "Tell us what you have and see how much we pay";
+$home_text5  =  "Print free shipping label, pack and send";
+$home_text6  =  "You will be payed as soon as the package arrives";
+$home_text7  =  "Items should be in excellent condition. Learn more about our detailed requirements ";
+$home_text8  =  "Clothes must look and smell clean. Please wash and fully dry all clothing before sending";
+$home_text9  = "Our service is designed exclusively for premium brands. Based on demand we are often updating our brands so check back regularly";
+$home_text10  =  "We are only looking for clothes for children between the age of 1 and 10 years old at this time";
+$home_text12  =  "Any clothing with holes, stains, fading, shrinkage, etc., cannot be accepted";
+$home_text13  =  "Only children's clothes are accepted";
+$home_text14  =  "Clothing sized under 12 months will not be accepted at this time";
+$home_text15  =  "Brand and size need to be clearly identified on the original label";
+$home_text16  =  "Clothing must be manufactured by the brand represented on the item";
+$home_button1  =  "Sell now!";
+$home_link1  =  "More details...";
+$home_link2  =  "here...";
+$home_bubble1  =  "Yup!";
+$home_bubble2  =  "No!";
 
-//#####################
-// Home.php
-//#####################
+//##################### = 
+// foot.php = 
+//##################### = 
+ 
+$foot_text1  =  "FAQ";
+$foot_text2  =  "Contact";
+$foot_text3  =  "About us";
+$foot_text4  = "Terms and Conditions";
+$foot_text5  =  "Privacy policy";
+$foot_text6  = "Imprint";
+$foot_text7  =  "&copy; Copyright 2013 Kleider Kuh";
 
-$home_headline1 = "Turn childrens clothes into cash ... in 3 easy steps!";
-$home_headline2 = "Send us";
-$home_headline3 = "Better not";
-$home_subheader1 = "Childrens clothing in new to like-new condition";
-$home_subheader2 = "Clothing that's freshly laundered";
-$home_subheader3 = "Brands we are searching for";
-$home_subheader4 = "Appropriate sizes";
-$home_subheader5 = "";
-$home_subheader6 = "Clothing that shows any signs of wear";
-$home_subheader7 = "Women or Mens Clothes";
-$home_subheader8 = "Baby Clothes";
-$home_subheader9 = "Items missing labels";
-$home_subheader10 = "Counterfit Items";
-$home_text1 = "Top payment for your children's clothes";
-$home_text2 = "Clean up and get rid of unused clothes";
-$home_text3 = "Help the environment and give your clothes a new home";
-$home_text4 = "Tell us what you have and see how much we pay";
-$home_text5 = "Print free shipping label, pack and send";
-$home_text6 = "You will be payed as soon as the package arrives";
-$home_text7 = "Items should be in excellent condition. Learn more about our detailed requirements ";
-$home_text8 = "Clothing should look and smell clean. Please wash and fully dry all clothing before sending";
-$home_text9 = "Only certain brands are accepted according to current demand, we are often updating our brands so check back regularly";
-$home_text10 = "We are only looking for clothes for children between the age of 1 and 10 years old";
-$home_text11 = "";
-$home_text12 = "Any clothing with holes, stains, fading, shrinkage, etc., cannot be accepted";
-$home_text13 = "Only childrens clothes are accepted";
-$home_text14 = "Clothing sized under 12 months will not be accepted";
-$home_text15 = "Brand and size need to be clearly identified on the original label";
-$home_text16 = "Clothing must be manufactured by the brand represented on the item";
-$home_button1 = "Sell now!";
-$home_link1 = "More details...";
-$home_link2 = "here...";
-$home_bubble1 = "Yup!";
-$home_bubble2 = "No!";
-
-//#####################
-// foot.php
-//#####################
-
-$foot_text1 = "FAQ";
-$foot_text2 = "Contact";
-$foot_text3 = "About us";
-$foot_text4 = "Our AGBs";
-$foot_text5 = "Privacy policy";
-$foot_text6 = "impressum";
-$foot_text7 = "&copy; Copyright 2013 Kleider Kuh";
-
-//#####################
-// sell.php
-//#####################
-$sell_button1 = "Add to sell cart!";
-$sell_bubble1 = "Choose";
-$sell_headline1 = "Sell your kids clothes";
-$sell_headline2 = "Please choose from below";
-$sell_subheader1 = "Sellcart";
-$sell_text1 = "Enter the Details";
-$sell_text2 = "See the clothes value and put it in the cart";
-$sell_text3 = "Go to sell";
-$sell_text4 = "Didn't find what your looking for?";
-$sell_text5 = "We only buy clothes in excellent condition, ";
+//##################### = 
+// sell.php = 
+//##################### = 
+$sell_button1  =  "Add to sell cart!";
+$sell_bubble1  =  "Choose";
+$sell_headline1  =  "Sell your kids clothes";
+$sell_headline2  =  "Please choose from below";
+$sell_subheader1  =  "Sellcart";
+$sell_text1  =  "Enter the details. Start below with \"Gender\"";
+$sell_text2  =  "See the clothes value and put it in the cart";
+$sell_text3  =  "Go to sell";
+$sell_text4  =  "Should we add something?  Give feedback...";
+$sell_text5  =  "We only buy clothes in excellent condition, ";
 $sell_text6 = "You have selected:";
 $sell_text7 = "Gender:";
-$sell_text8 = "Brand:";
-$sell_text9 = "Type:";
+$sell_text8  = "Brand:";
+$sell_text9  = "Type:";
 $sell_text10 = "Size:";
-$sell_link1 = "click here for details";
+$sell_link1  =  "click here for details";
+ 
+//##################### = 
+// cartOverview.php = 
+//##################### = 
+$cartOverview_headline1  =  "Sell cart overview";
+$cartOverview_subheader1  =  "Your order number: ";
+$cartOverview_label1  =  "First name:";
+$cartOverview_label2  =  "Last name:";
+$cartOverview_label3  =  "Email:";
+$cartOverview_label4  =  "Payment method:";
+$cartOverview_label5  =  "Paypal";
+$cartOverview_label6  =  "Bank Transfer";
+$cartOverview_label7  =  "BLZ:";
+$cartOverview_label8  =  "Account number:";
+$cartOverview_label9  =  "Paypal:";
+$cartOverview_label10  =  "Use same address as above";
+$cartOverview_label11  =  "Use a different address";
+$cartOverview_label12  =  "Paypal Email:";
+$cartOverview_button1  =  "Submit";
+$cartOverview_error1  =  "Email address not valid";
+$cartOverview_error2  =  "Paypal Mail address not valid";
+ 
+//##################### = 
+// cart = 
+//##################### = 
+$cart_text1  =  "Total: ";
+$cart_text2  =  "You haven't reached the minimum selling amount of 15 € yet!";
+ 
+//##################### = 
+// confirm.php = 
+//##################### = 
+$confirm_headline1  =  "Sell cart overview";
+$confirm_subheader1  =  "Your order number: ";
+$confirm_label1  =  "First name:";
+$confirm_label2  =  "Last name:";
+$confirm_label3  =  "Email:";
+$confirm_label4  =  "Payment method:";
+$confirm_label5  =  "Paypal Mail:";
+$confirm_label6  =  "Bank Nr:";
+$confirm_label7  =  "Account Nr:";
+$confirm_button1  =  "Back";
+$confirm_button2  =  "Confirm";
+$confirm_checkbox1  =  "Yes, I read and accept the Terms & Conditions";
+$confirm_error1  =  "Please accept the Terms & Conditions";
 
-//#####################
-// cartOverview.php
-//#####################
-$cartOverview_headline1 = "Sell cart overview";
-$cartOverview_subheader1 = "Your order number: ";
-$cartOverview_label1 = "First name:";
-$cartOverview_label2 = "Last name:";
-$cartOverview_label3 = "Email:";
-$cartOverview_label4 = "Payment method:";
-$cartOverview_label5 = "Paypal";
-$cartOverview_label6 = "Überweisung";
-$cartOverview_label7 = "BLZ:";
-$cartOverview_label8 = "Account number:";
-$cartOverview_label9 = "Paypal:";
-$cartOverview_label10 = "Use same adress as above";
-$cartOverview_label11 = "Use a different adress";
-$cartOverview_label12 = "Paypal Email:";
-$cartOverview_button1 = "Submit";
-$cartOverview_error1 = "Email address not valid";
-$cartOverview_error2 = "Paypal Mail address not valid";
+//##################### = 
+// goToTransaction.php = 
+//##################### = 
+$goToTrans_headline1  =  "Select Order";
+$goToTrans_label1  =  "Order Number:";
+$goToTrans_label2  =  "Email address:";
+$goToTrans_error1  =  "No order found with this number and/or email address. Please try again or contact us for assistance";
 
-//#####################
-// cart
-//#####################
-$cart_text1 = "Total: ";
-$cart_text2 = "You haven't reached the minimum selling amount of 15 € yet!";
-
-//#####################
-// confirm.php
-//#####################
-$confirm_headline1 = "Sell cart overview";
-$confirm_subheader1 = "Your order number: ";
-$confirm_label1 = "First name:";
-$confirm_label2 = "Last name:";
-$confirm_label3 = "Email:";
-$confirm_label4 = "Payment method:";
-$confirm_label5 = "Paypal Mail:";
-$confirm_label6 = "Bank Nr:";
-$confirm_label7 = "Account Nr:";
-$confirm_button1 = "Back";
-$confirm_button2 = "Confirm";
-$confirm_checkbox1 = "Yes, I read and accept the AGBs";
-$confirm_error1 = "Please accept the AGBs";
-
-//#####################
-// goToTransaction.php
-//#####################
-$goToTrans_headline1 = "Select Transaction";
-$goToTrans_label1 = "Transaction Number:";
-$goToTrans_label2 = "Email adress:";
-$goToTrans_error1 = "No order found with this number and/or email address. Please try again or contact us for assistance";
-
-//#####################
-// transactionState.php
-//#####################
-$trans_headline1 = "Orders";
-$trans_text1 = "Your order number: ";
-$trans_text2 = "Your email adress: ";
-$trans_text3 = "Your state: ";
-$trans_text4 = "Thank you for your order on: ";
-$trans_text5 = "A confirmation has been sent to: ";
-$trans_text6 = "Please complete the form below to print a free DHL shipping label and instructions for sending.";
-$trans_text7 = "<b>Instructions for retoure<b><br />
-1. adsjaksdj<br />
-2. asdljaksld";
-$trans_text8 = "Date Order received: ";
-$trans_text9 = "Your order has been received and is being processed.";
-$trans_state_confirmed = "You send";
-$trans_state_received = "We receive";
-$trans_state_processed = "Processed";
-$trans_state_payment = "Payment";
-$trans_state_waitingpayment = "Waiting for you";
-$trans_state_finished = "Finished";
-$trans_state_canceled = "Canceled";
-$trans_label1 = "First name: ";
-$trans_label2 = "Last name: ";
-$trans_label3 = "Street: ";
-$trans_label4 = "Nr: ";
-$trans_label5 = "PLZ: ";
-$trans_label6 = "City: ";
-$trans_label7 = "Donate to charity (no charge)";
-$trans_label8 = "Return to me (5 € shipping fee, will be deducted from total to be paid)";
-$trans_error1 = "Please fill out the form completely!";
-$trans_error2 = "PLZ seems not valid!";
-$trans_error3 = "Street number seems not valid!";
-$trans_th1 = "Gender";
-$trans_th2 = "Brand";
-$trans_th3 = "Type";
-$trans_th4 = "Size";
-$trans_th5 = "Price";
-$trans_th6 = "Result";
-$trans_th7 = "Comment";
-$trans_text10 = "Payment amount: ";
-$trans_text11 = "Payment method: ";
-$trans_text12 = "Payment date: ";
-$trans_text13 = "NOTE: In some cases there may be a period of 1-2 working days between payment date and when the payment reaches your account.";
-$trans_text14 = "Überweisung";
-$trans_text15 = "Paypal";
-$trans_text16 = "The order was completed: ";
-$trans_text17 = "Payment amount: ";
-$trans_text18 = "Accepted items: ";
-$trans_text19 = "Rejected items: ";
-$trans_text20 = "Missing items: ";
-$trans_text21 = "Date Processed: ";
-$trans_text22 = "Sell cart";
-$trans_text23 = "Total to be paid: ";
-$trans_text23b= " - 5 € shipping fee)";
-$trans_text24 = "<span class='orange'>ATTENTION:</span> There are rejected item(s) in your cart.";
-$trans_text25 = "What do you want to do with the rejected item(s)?";
-$trans_text26 = "Rejected items to be: ";
-$trans_text27 = "Returned";
-$trans_text28 = "Donated to charity";
-$trans_text29 = "5 € shipping fee has been deducted from total to be paid, new amount is: ";
-$trans_text30a = "Please send us ";
-$trans_text30b = " € and include reference to Order Number: ";
-$trans_text31 = "Option A: Send PayPal payment to: paypal@kleiderkuh.de<br />Option B: Uberweisung, Konto nummer, BLZ";
-$trans_text32 = "Accepted";
-$trans_text33 = "Rejected";
-$trans_text34 = "Missing";
-$trans_text35 = "Kostenloser DHL Frankierschhein zum ausdrucken";
-$trans_text36 = "<strong>Anleitung zum einsenden</strong>
-					<ol>
-					<li>Versanddokumente drucken</li>
-					<li>Artikel ins Paket legen</li>
-					<li>DHL-Frankierschein gut sichtbar aufs Paket kleben</li>
-					<li>Sie haben folgende Möglichkeiten das Paket aufzugeben:
-						<ul>
-						<li>Packstation</li>
-						<li>Paketbox</li>
-						<li>An DHL Fahrer übergeben</li>
-						</ul>
-					</li>
-					</ol>";
-$trans_text37 = "A popup window should be opened within 10 seconds!";
-
-//#####################
-// HowItWorks.php
-//#####################
-$how_headline1 = "How it works";
-$how_subheader1 = "6 Steps...";
-$how_text1 = "Inout item details";
-$how_text2 = "See value and add to cart";
-$how_text3 = "Check out";
-$how_text4 = "Print free shipping label";
-$how_text5 = "Pack and send";
-$how_text6 = "We process and transfer money";
-$how_text7 = "We buy gently used children's clothes from selected brands";
-$how_text8 = "We only buy clothes that are in excellent condition and meet specific ";
-$how_link1 = "criteria";
-$how_text9a = "To sell your clothes navigate to ";
-$how_link2 = "sell";
-$how_text9b = " and follow the steps pictured above";
+//##################### = 
+// transactionState.php = 
+//##################### = 
+$trans_headline1  =  "Orders";
+$trans_text1  =  "Your order number: ";
+$trans_text2  =  "Your email address: ";
+$trans_text3  =  "Your state: ";
+$trans_text4  =  "Thank you for your order on: ";
+$trans_text5  =  "A confirmation has been sent to: ";
+$trans_text6  =  "Please complete the form below to print a free DHL shipping label and instructions for sending.";
+$trans_text8  =  "Date Order received: ";
+$trans_text9  =  "Your order has been received and is being processed.";
+$trans_state_confirmed  =  "You send";
+$trans_state_received  =  "We receive";
+$trans_state_processed  =  "Processed";
+$trans_state_payment  =  "Payment";
+$trans_state_waitingpayment  =  "Waiting for you";
+$trans_state_finished  =  "Finished";
+$trans_state_canceled  =  "Canceled";
+$trans_label1  =  "First name: ";
+$trans_label2  =  "Last name: ";
+$trans_label3  =  "Street: ";
+$trans_label4  =  "Nr: ";
+$trans_label5  =  "PLZ: ";
+$trans_label6  =  "City: ";
+$trans_label7  =  "Donate to charity (no charge)";
+$trans_label8  =  "Return to me (5 € shipping fee, will be deducted from total to be paid)";
+$trans_error1  =  "Please fill out the form completely!";
+$trans_error2  =  "PLZ seems not valid!";
+$trans_th1  =  "Gender";
+$trans_th2  =  "Brand";
+$trans_th3  =  "Type";
+$trans_th4  =  "Size";
+$trans_th5  =  "Price";
+$trans_th6  =  "Result";
+$trans_th7  =  "Comment";
+$trans_text10  =  "Payment amount: ";
+$trans_text11  =  "Payment method: ";
+$trans_text12  =  "Payment date: ";
+$trans_text13  =  "NOTE: In some cases there may be a period of 1-2 working days between payment date and when the payment reaches your account.";
+$trans_text14  =  "Bank Transfer";
+$trans_text15  =  "Paypal";
+$trans_text16  =  "The order was completed: ";
+$trans_text17  =  "Payment amount: ";
+$trans_text18  =  "Accepted items: ";
+$trans_text19  =  "Rejected items: ";
+$trans_text20  =  "Missing items: ";
+$trans_text21  =  "Date Processed: ";
+$trans_text22  =  "Sell cart";
+$trans_text23  =  "Total to be paid: ";
+$trans_text23b =  " - 5 € shipping fee)";
+$trans_text24  = "ATTENTION: There are rejected item(s) in your cart";
+$trans_text25  =  "What do you want to do with the rejected item(s)?";
+$trans_text26  =  "Rejected items to be: ";
+$trans_text27  =  "Returned";
+$trans_text28  =  "Donated to charity";
+$trans_text29  =  "5 € shipping fee has been deducted from total to be paid, new amount is: ";
+$trans_text30a  =  "Please send us ";
+$trans_text30b  =  " € and include reference to Order Number: ";
+$trans_text31  =  "Option A: Send PayPal payment to: paypal@kleiderkuh.de<br />Option B: Uberweisung, Konto nummer, BLZ";
+$trans_text32  =  "Accepted";
+$trans_text33  =  "Rejected";
+$trans_text34  =  "Missing";
+$trans_text35  = "Print free DHL shipping label";
+$trans_text36  = "Instructions for Sending";
+//##################### = 
+// HowItWorks.php = 
+//##################### = 
+$how_headline1  =  "How it Works";
+$how_subheader1  =  "6 Steps...";
+$how_text1  =  "Input item details";
+$how_text2  =  "See value and add to cart";
+$how_text3  =  "Check out";
+$how_text4  =  "Print free shipping label";
+$how_text5  =  "Pack and send";
+$how_text6  =  "We process and send you money";
+$how_text7  =  "We buy gently used children's clothes from selected premium brands";
+$how_text8  =  "We only buy clothes that are in excellent condition and meet specific ";
+$how_link1  =  "criteria";
+$how_text9a  =  "To sell your clothes navigate ";
+$how_link2  =  "here";
+$how_text9b  =  " and follow the steps pictured below";
 $how_text10 = "Tell us about the item you want to sell by selecting the following:
 <br />- Gender
 <br />- Brand
@@ -278,57 +253,49 @@ In this case the customer has two options:<br />
 $how_text17a = "Order Tracking<br />
 You will receive notification by email when you submit an order for sale and also when your order has been received and processed <br />
 At anytime you can track your order by navigating to ";
-$how_link4 = "Orders";
-$how_text17b = " and entering your email address and order number
-";
+$how_link4  =  "Orders";
+$how_text17b  =  " and entering your email address and order number.";
 
+//##################### = 
+// Requirements.php = 
+//##################### = 
+$req_headline1  =  "Clothes Criteria";
+$req_text1  =  "no holes or tears";
+$req_text2  =  "no stains or marks";
+$req_text3  =  "no missing buttons, zippers, etc";
+$req_text4  =  "no signs of wear";
+$req_text5  =  "non-smoking household (no smoke smell)";
+$req_text6  =  "no odors";
+$req_text7  =  "no fading";
+$req_text8  =  "no stretching";
+$req_text9  =  "no shrinking";
+$req_text10  =  "not more then 5 years old";
+$req_text11  =  "washed and cleaned before sending to us";
 
-//#####################
-// Requirements.php
-//#####################
-$req_headline1 = "Clothes Criteria";
-$req_subheader1 = "";
-$req_text1 = "no holes or tears";
-$req_text2 = "no stains or marks";
-$req_text3 = "no missing buttons, zippers, etc";
-$req_text4 = "no signs of wear";
-$req_text5 = "non-smoking household (no smoke smell)";
-$req_text6 = "no odors";
-$req_text7 = "no fading";
-$req_text8 = "no stretching";
-$req_text9 = "no shrinking";
-$req_text10 = "not more then 5 years old";
-$req_text11 = "washed and cleaned before sending to us";
+//##################### = 
+// buy.php = 
+//##################### = 
+$buy_headline1  =  "Buy clothes";
+$buy_subheader1  =  "Sorry...";
+$buy_text1  =  "We have not started to sell items from our collection but we plan to do so in the near future. If you would like to be notified when we start selling high quality, gently used children's clothes, please enter your email address";
+$buy_text2  =  "Your Email address is already stored, we will inform you!";
+$buy_text3  =  "Your Email address was successfully stored in our database, we will inform you as soon as we start selling high quality, gently used children's clothes.";
+$buy_button1  =  "Save my Email address and inform me!";
+$buy_error1  =  "Please enter a valid Email!";
 
-//#####################
-// buy.php
-//#####################
-$buy_headline1 = "Buy clothes";
-$buy_subheader1 = "Sorry...";
-$buy_text1 = "We have not started to sell items from our collection but we plan to
-				do so in the near future. If you would like to be notified
-				when we start selling high quality, gently used childrens clothes,
-				please enter your email	address";
-$buy_text2 = "Your Email adress is allready stored, we will inform you!";
-$buy_text3 = "Your Email adress was successfully stored in our database, we will
-				inform you as soon as we start selling high quality, gently used
-				childrens clothes.";
-$buy_button1 = "Save my Email adress and inform me!";		
-$buy_error1 = "Please enter a valid Email!";	
-
-//#####################
-// feeback.php
-//#####################
-$feedback_headline1 = "Give Feeback";
-$feedback_subheader1 = "Select one";
-$feedback_label1 = "Share an idea";
-$feedback_label2 = "Ask a question";
-$feedback_label3 = "Report a problem";
-$feedback_label4 = "Tell us what you like";
-$feedback_label5 = "What clothing should b added";
-$feedback_label6 = "Other...";
-$feedback_text1 ="Your opinion is important for us: ";
-$feedback_text2 ="If you would like a reply from us please leave your name and email address (optional)";
+//##################### = 
+// feeback.php = 
+//##################### = 
+$feedback_headline1  =  "Give Feedback";
+$feedback_subheader1  =  "Select one";
+$feedback_label1  =  "Share an idea";
+$feedback_label2  =  "Ask a question";
+$feedback_label3  =  "Report a problem";
+$feedback_label4  =  "Tell us what you like";
+$feedback_label5  =  "What brands would you like to see";
+$feedback_label6  =  "Other...";
+$feedback_text1  = "Your opinion is important for us:";
+$feedback_text2 = "If you would like a reply from us please leave your name and email address (optional)";
 
 //#####################
 // about.php

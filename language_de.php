@@ -462,7 +462,7 @@ $email_c_text1  = '<p>Lieber Kunde,</p>
 Schick uns deine Artikel. Falls du dein Versandetikett nicht schon gefunden hast, findest du es bei den Versandinformationen: ';
 $email_c_text2  = '</a></li><li>Sobald wir deine Artikel empfangen haben, bekommst du von uns eine Empfangsbestätigung.</li><li>
 Anschließend werden wir deinen Auftrag und die Auszahlung bearbeiten.</li></ul></p>
-<p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/orders abrufen.</p> 
+<p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/auftraege abrufen.</p> 
 <p>Mit freundlichen Grüßen<br />
 Dein Kleider Kuh Team<br />
 info@kleiderkuh.de</p>';
@@ -495,7 +495,7 @@ $email_r_text2  = 'erhalten haben.</p>
 </li>
 <li>Für den Fall dass nicht alle deine Artikel unseren Auflagen genügen, werden wir dich per Email kontaktieren.</li>
 </ul>
-</p><p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/orders abrufen.</p>
+</p><p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/auftraege abrufen.</p>
 <p>Mit freundlichen Grüßen<br />
 Dein Kleider Kuh Team<br />
 info@kleiderkuh.de</p>';
@@ -512,7 +512,7 @@ $email_w_text2  = 'um den oder die Artikel, die nicht bestätigt werden konnten,
 Du hast du Möglichkeit, dir die Artikel zurücksenden zu lassen, kannst sie aber auch spenden.
 </li>
 </ul>
-</p><p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/orders abrufen.</p>
+</p><p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/auftraege abrufen.</p>
 <p>Mit freundlichen Grüßen<br />
 Dein Kleider Kuh Team<br />
 info@kleiderkuh.de</p>';
@@ -532,7 +532,7 @@ $email_f_accountNr  = 'Konto Nr.: ';
 $email_f_amount  = 'Gesamtsumme: ';
 $email_f_text2  = '</ul>
 </p>
-<p>Du kannst deinen Auftragsstatus jederzeit auf www.kleiderkuh.de/orders überprüfen</p>
+<p>Du kannst deinen Auftragsstatus jederzeit auf www.kleiderkuh.de/auftraege überprüfen</p>
 <p>Vielen dank noch einmal für deine Bestellung!</p>
 <p>Mit freundlichen Grüssen,<br />
 Dein Kleider Kuh Team<br />
@@ -553,7 +553,7 @@ $checklist_text5  = 'Das Paket ist sicher verschlossen.';
 $checklist_text6  = 'Nächster Schritt';
 $checklist_text7  = 'Sobald wir deine Sendung erhalten haben, senden wir dir eine Bestätigungs-E-Mail.';
 $checklist_text8  = 'Beachte die üblichen Lieferzeiten der Versanddienstleister (1-3 Tage).';
-$checklist_text9  = 'Überprüfe deinen Auftragstatus jederzeit auf www.kleiderkuh.de/orders';
+$checklist_text9  = 'Überprüfe deinen Auftragstatus jederzeit auf www.kleiderkuh.de/auftraege';
 $checklist_text10  = 'Unseren Support erreichst du über:';
 
 

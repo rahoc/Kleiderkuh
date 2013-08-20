@@ -9,7 +9,7 @@ Options -Indexes
 
 DirectoryIndex home.php
  
-Redirect /bestellungen /goToTransaction.php?language=de
+Redirect /auftraege /goToTransaction.php?language=de
 Redirect /orders /goToTransaction.php?language=en
 
 
