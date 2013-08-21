@@ -6,11 +6,11 @@ if (isset($_GET["language"])) {
 }
 $language = $_SESSION["language"];
 
-if ( $language == "de" ) {
-	include 'language_de.php';
+if ( $language == "en" ) {
+	include 'language_en.php';
 }
 else {
-	include 'language_en.php';
+	include 'language_de.php';
 }
 
 

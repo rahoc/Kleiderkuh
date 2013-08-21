@@ -3,9 +3,12 @@ session_start();
 require_once("language.php");
 require_once("Transaction.php");
 
-// TESTING
+
 if (isset($_GET["id"])) {
 	$id = $_GET["id"];
+}
+else if (isset($_POST["id"])) {
+	$id = $_POST["id"];
 }
 else {
 	echo "no id";
@@ -49,6 +52,8 @@ $webPath = 'http://kleiderkuh.de';
 $t = new Transaction;
 $t->loadById($id);
 
+// Receiver
+$receiver = $t->email;
 
 // Betreff
 $subject = "";
@@ -58,32 +63,41 @@ switch($t->status) {
 	case "Confirmed": {
 		$subject = $email_c_subject;
 		$content = getConfirmed($t, $webPath);
+		$sendMail = true;
 		break;
 	}
 	case "Cancelled": {
 		$subject = $email_ca_subject;
 		$content = getCancelled($t, $webPath);
+		$sendMail = true;
 		break;
 	}
 	case "Received": {
 		$subject = $email_r_subject;
 		$content = getReceived($t, $webPath);
+		$sendMail = true;
 		break;
 	}
 	case "Waiting for customer": {
 		$subject = $email_w_subject;
 		$content = getWaitingForCustomer($t, $webPath);	
+		$sendMail = true;
 		break;
 	}
 	case "Waiting for payment": {
 		$subject = $email_wp_subject;
-		$content = getWaitingForPayment($t, $webPath);	
+		$content = getWaitingForPayment($t, $webPath);
+		$sendMail = true;
 		break;
 	}
 	case "Finished": {
 		$subject = $email_f_subject;
 		$content = getFinished($t, $webPath);
+		$sendMail = true;
 		break;
+	}
+	default: {
+		$sendMail = false;
 	}
 }
 

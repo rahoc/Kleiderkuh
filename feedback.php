@@ -34,7 +34,7 @@ require_once("language.php");
             <tr><td>Your name:</td><td><input type="text" id="name"></td></tr>
             <tr><td>Email:</td><td><input type="text" id="email"></td></tr>
             <tr><td></td>
-            	<td><input type="image" src="images/<?php echo $langID; ?>/buttons/send.png" value="Send" class="button" id="submitFeedback" onclick="javascript:getFeedback(this.parentNode);"/>
+            	<td><input type="image" src="images/<?php echo $langID; ?>/buttons/send.png" value="Send" class="button" id="submitFeedback" onclick="javascript:getFeedback(this.parentNode); ga_feedback();"/>
              	</td>
             </tr>
         </table>

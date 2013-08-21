@@ -7,9 +7,26 @@
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Handlee' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Chela+One' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="jspdf/jspdf.js"></script>
+<script type="text/javascript" src="jspdf/libs/Deflate/adler32cs.js"></script>
+<script type="text/javascript" src="jspdf/libs/FileSaver.js/FileSaver.js"></script>
+<script type="text/javascript" src="jspdf/libs/Blob.js/BlobBuilder.js"></script>
+<script type="text/javascript" src="jspdf/jspdf.plugin.addimage.js"></script>
+<script type="text/javascript" src="jspdf/jspdf.plugin.standard_fonts_metrics.js"></script>
+<script type="text/javascript" src="jspdf/jspdf.plugin.split_text_to_size.js"></script>
+<script type="text/javascript" src="jspdf/jspdf.plugin.from_html.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="script.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43204156-1', 'kleiderkuh.de');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
 <?php

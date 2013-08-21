@@ -1,5 +1,17 @@
 // JavaScript Document
 
+function trackOutboundLink(link, category, action, label) { 
+
+	try { 
+		ga('send', 'event', category, action, label); 
+	}
+	catch(err){}
+	setTimeout(function() {
+		document.location.href = link.href;
+	}, 100);
+	
+}
+
 function mainNavActive(nav)
 {
 	var allNavItems = document.getElementsByClassName("mainnav");
@@ -90,6 +102,10 @@ function showByCategory(name, category, gender)
 		brand.style.visibility="hidden";
 		type.style.visibility="hidden";
 		size.style.visibility="hidden";
+		
+		
+		// Google Analytics
+		ga('send', 'event', 'Sell Process', 'Select Gender', name);
 	}
 	if(category=="Brand")	{
 		document.getElementById("result").style.visibility="hidden";
@@ -116,6 +132,9 @@ function showByCategory(name, category, gender)
 		brand.style.visibility="hidden";
 		type.style.visibility="hidden";
 		size.style.visibility="hidden";
+		
+		// Google Analytics
+		ga('send', 'event', 'Sell Process', 'Select Brand', name);
 	}
 	if(category=="Type")	{
 		document.getElementById("result").style.visibility="hidden";
@@ -140,6 +159,10 @@ function showByCategory(name, category, gender)
 		brand.style.visibility="hidden";
 		type.style.visibility="hidden";
 		size.style.visibility="hidden";
+		
+		
+		// Google Analytics
+		ga('send', 'event', 'Sell Process', 'Select Type', name);
 	}
 	if(category=="Size")	{
 		document.getElementById("result").style.visibility="visible";
@@ -165,6 +188,10 @@ function showByCategory(name, category, gender)
 		size.style.visibility="visible";
 		
 		
+		// Google Analytics
+		ga('send', 'event', 'Sell Process', 'Select Size', name);
+		
+		
 		// AJAX
 		if (gender=="")
 		  {
@@ -184,7 +211,10 @@ function showByCategory(name, category, gender)
 		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			{
 			// Display Price
-			document.getElementById("price").innerHTML = "We pay you " + xmlhttp.responseText + " €";
+			var priceResponse = xmlhttp.responseText;
+			document.getElementById("price").innerHTML = "We pay you " + priceResponse + " €";
+			// Google Analytics
+			ga('send', 'event', 'Sell Process', 'Submit Akkordean', priceResponse);
 			}
 		  }
 		  var callString = "price.php?"+
@@ -217,11 +247,16 @@ function showByCategory(name, category, gender)
 
 function addClothToCart() {
 	
+	
+		 
 	var cart = document.getElementById("cartList");
 	var brand = document.getElementById("selectedBrand");
 	var type = document.getElementById("selectedType");
 	var size = document.getElementById("selectedSize");
 	var gender = document.getElementById("selectedGender");
+
+	// Google Analytics
+	ga('send', 'event', 'Sell Process', 'Add To Cart', $("#selectedGender").text() + ', ' +  $("#selectedBrand").text() + ', ' +  $("#selectedType").text() + ', ' +  $("#selectedSize").text() + ', ' + $("#price").text());
 
 	/*var cloth = cart.innerHTML +
 				"<div id='cartItem" + cart.childNodes.length +
@@ -323,6 +358,8 @@ function setDiffPaypalVisible(visibility) {
 	checkCartForm()
 }
 
+//GA
+var buyOpen = false;
 // Akkordeon
 $(document).ready(function(){
 
@@ -340,17 +377,12 @@ $(document).ready(function(){
 	  // Feedback
 		  $("#closebtn_feedback").click(function () {
 			$("#dlg_feedback").hide('800', "swing", function () { $("#bkg_feedback").fadeOut("500"); });
+			feedbackOpen = false;
 		  });
 		  $("#opn_feedback").click(function () {
-				if (document.getElementById('bkg_feedback').style.visibility == 'hidden') {
-				  document.getElementById('bkg_feedback').style.visibility = '';
-				  $("#bkg_feedback").hide();
-				}
-				if (document.getElementById('dlg_feedback').style.visibility == 'hidden') {
-				  document.getElementById('dlg_feedback').style.visibility = '';
-				  $("#dlg_feedback").hide();
-				}
-			$("#bkg_feedback").fadeIn(500, "linear", function () { $("#dlg_feedback").show(800, "swing"); });
+			  	
+				
+				openFeedbackOverlay();
 		  });    
 		  
 		 /*
@@ -369,10 +401,15 @@ $(document).ready(function(){
 		  });*/
 		  
 		// Buy
+		
 		  $("#closebtn_buy").click(function () {
 			$("#dlg_buy").hide('800', "swing", function () { $("#bkg_buy").fadeOut("500"); });
+			buyOpen = false;
 		  });
 		  $("#opn_buy").click(function () {
+			// Google Analytics 
+			
+			  
 			if (document.getElementById('bkg_buy').style.visibility == 'hidden') {
 			  document.getElementById('bkg_buy').style.visibility = '';
 			  $("#bkg_buy").hide();
@@ -383,6 +420,11 @@ $(document).ready(function(){
 			}
 			$("#bkg_buy").fadeIn(500, "linear", function () { $("#dlg_buy").show(800, "swing"); });
 		  
+		  // Google Analytics 
+		  if (buyOpen == false) {
+			ga('send', 'event', "Interested to buy", "Launch overlay", "Buy");	
+			buyOpen = true;
+		}
 		});
 
 
@@ -394,6 +436,7 @@ $(document).ready(function(){
   //####################################
   $("#closebtn").click(function () {
 	$("#dlg").hide('800', "swing", function () { $("#bkg").fadeOut("500"); });
+	
   });
   
 //}); 
@@ -408,6 +451,23 @@ $(document).ready(function(){
 		  });
 });
 
+var feedbackOpen = false;
+function openFeedbackOverlay() {
+	if (document.getElementById('bkg_feedback').style.visibility == 'hidden') {
+		  document.getElementById('bkg_feedback').style.visibility = '';
+		  $("#bkg_feedback").hide();
+		}
+		if (document.getElementById('dlg_feedback').style.visibility == 'hidden') {
+		  document.getElementById('dlg_feedback').style.visibility = '';
+		  $("#dlg_feedback").hide();
+		}
+	$("#bkg_feedback").fadeIn(500, "linear", function () { $("#dlg_feedback").show(800, "swing"); });
+	// Google Analytics 
+	if (feedbackOpen == false) {
+		ga('send', 'event', "Connect to KK", "Launch overlay", "Feedback");	
+		feedbackOpen = true;
+	}
+}
 
 //$(function() {
 //    $( "#accordion" ).accordion();
@@ -589,6 +649,7 @@ function buy_storeEmail(parameters)
 	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
 		document.getElementById("dlg_buy_content").innerHTML=xmlhttp.responseText;
+		ga_buy();
 		}
 	  }
 	xmlhttp.open("POST","buy_storeEmail.php",true);
@@ -685,6 +746,55 @@ function doMultiEdit() {
 }
 
 function openOverlay(site) {
+	
+	// Goolge analytics
+	if (site == "HowItWorks.php") {
+		var category = "Understanding KK";
+		var action = "Launch overlay";
+		var label = "How it Works";
+		var pathname = window.location.pathname;
+		if (pathname.slice(-8) == "home.php" || pathname.slice(-9) == "home.php#") {
+			var label = "More Details";
+		}
+		ga('send', 'event', category, action, label); 
+	}
+	if (site == "Requirements.php") {
+		var category = "Understanding KK";
+		var action = "Launch overlay";
+		var label = "Clothing Criteria";
+		ga('send', 'event', category, action, label); 
+	}
+	if (site == "contact.php") {
+		var category = "Connect to KK";
+		var action = "Launch overlay";
+		var label = "Contact";
+		ga('send', 'event', category, action, label); 
+	}
+	if (site == "privacy.php") {
+		var category = "Legal";
+		var action = "Launch overlay";
+		var label = "Datenschutz";
+		ga('send', 'event', category, action, label); 
+	}
+	if (site == "impressum.php") {
+		var category = "Legal";
+		var action = "Launch overlay";
+		var label = "Impressum";
+		ga('send', 'event', category, action, label); 
+	}
+	if (site == "AGB.php") {
+		var category = "Legal";
+		var action = "Launch overlay";
+		var pathname = window.location.pathname;
+		var label;
+		if (pathname.slice(-11) == "confirm.php") {
+			var label = "AGBs order confirmation";
+		}
+		else {
+			var label = "AGBs footer";
+		}
+		ga('send', 'event', category, action, label); 
+	}
 	
 	// AJAX
 	if (window.XMLHttpRequest)

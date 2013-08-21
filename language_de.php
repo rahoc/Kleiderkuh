@@ -464,7 +464,7 @@ $email_text1  = 'Dein Auftrag: ';
 
 $email_c_subject  = 'Kleider Kuh - Neuer Auftrag erstellt';
 $email_c_text1  = '<p>Lieber Kunde,</p>
-<p>Vielen Dank für deinen neue Auftrag!</p>
+<p>Vielen Dank für deinen neuen Auftrag!</p>
 <p><ul><li>Das sind die nächsten Schritte:
 Schick uns deine Artikel. Falls du deinen DHL-Frankierschein nicht schon gefunden hast, findest du es bei den Versandinformationen: ';
 $email_c_text2  = '</a></li><li>Sobald wir deine Artikel empfangen haben, bekommst du von uns eine Empfangsbestätigung.</li><li>

@@ -16,27 +16,7 @@ require_once('head.php');
 require_once('language.php');
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Kleider Kuh</title>
-<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Handlee' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" language="javascript"></script>
-<script type="text/javascript" src="jspdf/jspdf.js"></script>
-	<script type="text/javascript" src="jspdf/libs/Deflate/adler32cs.js"></script>
-	<script type="text/javascript" src="jspdf/libs/FileSaver.js/FileSaver.js"></script>
-	<script type="text/javascript" src="jspdf/libs/Blob.js/BlobBuilder.js"></script>
 
-	<script type="text/javascript" src="jspdf/jspdf.plugin.addimage.js"></script>
-
-	<script type="text/javascript" src="jspdf/jspdf.plugin.standard_fonts_metrics.js"></script>
-	<script type="text/javascript" src="jspdf/jspdf.plugin.split_text_to_size.js"></script>
-	<script type="text/javascript" src="jspdf/jspdf.plugin.from_html.js"></script>
-</head>
-
-<body>
 
 
 <div id="tab_view" class="center">
@@ -287,30 +267,31 @@ $(document).ready(function() {
 
 	$(".tab_arrow").hide();
 	$(".hide").hide();
-	$("#tab_view").hide();
+	//$("#tab_view").hide();
 	
 	var confirmed = <?php echo $confirmed; ?>;
 	var email = "<?php echo $email; ?>";
-	
+
 	// CHECK CONFIRM
 	if (confirmed == 1) {
 
 	var c = "Confirmed";
-	$.post('http://kleiderkuh.de/changeTransactionState.php', { id: id , status: c })
+	$.post('changeTransactionState.php', { id: id , status: c })
 	.done(function(data) {
 		//alert("transactionState.php?email=" + email + "&id=" + id + "");
 		 window.location.replace("transactionState.php?email=" + email + "&transaction=" + id + "");
 	}); } // END CONFIRMED TRUE 
-	
+	//alert(id);
 	
 	// LOAD TRANSACTION
-	$.post("http://kleiderkuh.de/getTransaction.php", { id: id })
+	$.post("getTransaction.php", { id: id })
 		.done(function(json) {
 			//alert( json );
 			if (json == "error") {
 				window.location.replace("goToTransaction.php?error=true");
 				return;
 			}
+			
 			transaction = JSON.parse(json);
 			//alert(transaction.email  + " <?php  echo $email; ?>");
 			if (transaction.email != "<?php  echo $email; ?>") {
@@ -692,7 +673,7 @@ $("#submit_rejectOption").click(function() {
 		
 	}
 	
-	$.post("http://kleiderkuh.de/updateTransaction.php", {
+	$.post("updateTransaction.php", {
 				id: id , 
 				reject_option: reject_option,
 				rejection_submit: "true",
@@ -738,7 +719,7 @@ $("#submit_rejectOption").click(function() {
 		 }
 		 
 		 //alert(status);
-		$.post("http://kleiderkuh.de/changeTransactionState.php", { id: id , status: status })
+		$.post("changeTransactionState.php", { id: id , status: status })
 		.done(function(data) {
 		  //alert("Data Loaded: " + data);
 		  location.reload();
@@ -751,6 +732,5 @@ $("#submit_rejectOption").click(function() {
 
 </script>
 <?php require_once('foot.php'); ?>
-</body>
-</html>
+
 

@@ -1,11 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Kleider Kuh</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+
 <?php
  $site = "home";
  include 'head.php';
@@ -46,7 +39,10 @@
 	<div id="steps">
     	<table class="center">
     	<tr>
-			<td><a href="sell.php"><img class='step' src='images/Step1_v2b.png' /></a></td>
+			<td><a href="sell.php" onClick="trackOutboundLink(this, 'Interested to Sell', 'Sell Step 1 image', 'jump to sell page'); return false;">
+            	<img class='step' src='images/Step1_v2b.png' />
+            	</a>
+            </td>
             <td><img class='step' src='images/Step2_v2b.png' /></td>
             <td class="last"><img class='step' src='images/Step3_v2b.png' /></td>
 			
@@ -60,8 +56,8 @@
     
     </div>
     
-    <div>
-        <a href="sell.php" id="sell_now_button" class="center">
+    <div id="sell_now">
+        <a href="sell.php" id="sell_now_button" class="center" onClick="trackOutboundLink(this, 'Interested to Sell', 'Sell Now button', 'jump to sell page'); return false;">
 		<img src="images/<?php echo $langID; ?>/buttons/sellNow.png" class="button" />
         </a>
     </div>
@@ -159,8 +155,29 @@
     </div>
 -->
 
+<script>
+
+//$("#sell_now").click(function() {
+	//alert("click");
+	//_gaq.push(['_trackEvent', 'Interested to Sell', 'Sell Now button', 'jump to sell page']);
+	//_trackEvent("Interested to Sell", "Sell Now button", "jump to sell page");
+	
+//});
+
+
+
+$("#testGA").click(function() {
+	//alert("click");
+	//_gaq.push(['_trackEvent', 'Interested to Sell', 'Sell Now button', 'jump to sell page']);
+	//_trackEvent("Interested to Sell", "Sell Now button", "jump to sell page");
+	ga('send', 'event', 'Interested to Sell', 'Sell Now button', 'jump to sell page');
+	
+	
+});
+</script>
+
+
+
 <?php
  include 'foot.php';
 ?>
-</body>
-</html>

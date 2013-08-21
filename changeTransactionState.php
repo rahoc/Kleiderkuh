@@ -1,6 +1,7 @@
 <?php
 		
-	require_once("Transaction.php");		
+	require_once("Transaction.php");
+	require_once("post.php");		
 
 	//print_r($_POST);
 
@@ -22,6 +23,8 @@
 	
 		// Change status
 		$transaction->status = $statusName;
+		
+		
 		$transaction->StatusDate = date("Y-m-d H:i:s");
 		switch($statusName) {
 			case "InCart": {
@@ -70,6 +73,10 @@
 		
 		// Store to DB
 		$transaction->save();
+		
+		
+		// Send email
+		post_request("http://kleiderkuh.de/sendStatusMail.php", array("id" => $id));
 		
 		echo "successfully stored $id with new status $statusName";
 

@@ -27,6 +27,7 @@
 		$insert = "INSERT INTO Feedback (Email, Reason)
 					VALUES ('$email', 'Buy')";
 		mysql_query($insert);
+		
 		echo $buy_text3;
 		echo "<br />Email: $email";
 	}
