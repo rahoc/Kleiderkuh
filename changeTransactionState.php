@@ -55,6 +55,17 @@
 					$transaction->status = "Waiting for customer";
 					$transaction->finalToPay = $transaction->getSumAccepted();
 				}
+				// Set actual amount
+				$clothes = $transaction->clothes;
+				foreach ($clothes as $j => $value) {
+					// Get just accepted items
+					if ($clothes[$j]->accepted == true) {
+						$clothes[$j]->actualAmount = $clothes[$j]->actualAmount + 1;
+						$clothes[$j]->saveClothData();
+					}
+				}
+
+				
 				break;
 			}
 			case "Waiting for customer": {

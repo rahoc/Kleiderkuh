@@ -22,6 +22,7 @@
 				$cloth->rejected = 0;
 				$cloth->missing = 0;
 			}
+			
 			$changes = true;
 		}
 	

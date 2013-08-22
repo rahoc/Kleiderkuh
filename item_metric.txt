@@ -1,0 +1,61 @@
+transaction;id;gender;brand;type;size;price
+22;318;Jungen;Armani;Pullover & Strick;98;6.84
+22;319;Jungen;Armani;Pullover & Strick;98;6.84
+22;320;Jungen;Abercrombie & Fitch;Hosen;80;5.44
+21;312;Jungen;Abercrombie & Fitch;Hosen;104;5.44
+21;313;Jungen;Armani;Jacken & Mäntel;86;9.36
+21;314;Jungen;Armani;Pullover & Strick;140;6.84
+21;315;Jungen;Armani;Pullover & Strick;140;6.84
+21;316;Jungen;Armani;Pullover & Strick;140;6.84
+21;317;Jungen;Armani;Pullover & Strick;140;6.84
+20;306;Jungen;Armani;Pullover & Strick;98;6.84
+20;307;Jungen;Abercrombie & Fitch;Hosen;80;5.44
+20;308;Jungen;Abercrombie & Fitch;Hosen;80;5.44
+20;309;Mädchen;Benetton;Pullover & Strick;92;1.66
+20;310;Jungen;Dolce & Gabbana;Hosen;80;5.22
+20;311;Jungen;Armani;Jacken & Mäntel;86;9.36
+19;304;Mädchen;Benetton;Tops & Shirts;104;1.61
+19;305;Mädchen;Burberry;Jacken & Mäntel;140;21.16
+18;302;Jungen;Burberry;Tops & Shirts;98;7.56
+18;303;Jungen;Burberry;Shorts;104;12.1
+17;300;Jungen;Burberry;Shorts;86;12.1
+17;301;Jungen;Tommy Hilfiger;Tops & Shirts;98;4.27
+16;298;Jungen;Burberry;Pullover & Strick;92;7.16
+16;299;Jungen;Burberry;Jacken & Mäntel;92;19.05
+15;296;Jungen;Burberry;Shorts;92;12.1
+15;297;Jungen;Burberry;Pullover & Strick;92;7.16
+14;294;Jungen;Burberry;Jacken & Mäntel;104;19.05
+14;295;Mädchen;Lacoste;Pullover & Strick;110;5.12
+13;292;Mädchen;Armani;Jacken & Mäntel;86;11.38
+13;293;Mädchen;Armani;Jacken & Mäntel;86;11.38
+12;290;Jungen;Armani;Jacken & Mäntel;80;9.36
+12;291;Jungen;Armani;Jacken & Mäntel;80;9.36
+11;286;Jungen;Hugo Boss;Jacken & Mäntel;98;12.04
+11;287;Mädchen;Ralph Lauren;Tops & Shirts;122;4.13
+11;288;Mädchen;Benetton;Kleider;92;2.92
+11;289;Mädchen;Burberry;Röcke;104;12.4
+10;283;Jungen;Abercrombie & Fitch;Hosen;80;5.44
+10;284;Jungen;Abercrombie & Fitch;Hosen;86;5.44
+10;285;Jungen;Abercrombie & Fitch;Pullover & Strick;98;7.96
+9;281;Jungen;Armani;Jacken & Mäntel;92;9.36
+9;282;Jungen;Armani;Shorts;104;5.75
+8;279;Jungen;Abercrombie & Fitch;Jacken & Mäntel;92;10.89
+8;280;Jungen;Abercrombie & Fitch;Jacken & Mäntel;92;10.89
+7;277;Jungen;Jack Wolfskin;Jacken & Mäntel;98;13.54
+7;278;Mädchen;Armani;Hosen;110;3.84
+6;275;Jungen;Abercrombie & Fitch;Jacken & Mäntel;92;10.89
+6;276;Jungen;Abercrombie & Fitch;Jacken & Mäntel;92;10.89
+5;271;Jungen;Abercrombie & Fitch;Hosen;80;5.44
+5;273;Jungen;Armani;Pullover & Strick;92;6.84
+5;274;Jungen;Burberry;Shorts;104;12.1
+4;269;Jungen;Abercrombie & Fitch;Hosen;80;5.44
+4;270;Jungen;Abercrombie & Fitch;Jacken & Mäntel;92;10.89
+3;268;Mädchen;Tommy Hilfiger;Röcke;116;4.48
+3;267;Jungen;Hugo Boss;Pullover & Strick;110;2.73
+3;266;Mädchen;Ralph Lauren;Tops & Shirts;98;4.13
+3;265;Mädchen;Armani;Pullover & Strick;98;4.31
+2;263;Mädchen;Lacoste;Jacken & Mäntel;116;6.43
+2;264;Mädchen;Jack Wolfskin;Jacken & Mäntel;98;13.46
+1;262;Jungen;Tommy Hilfiger;Jacken & Mäntel;110;8.69
+1;261;Jungen;Dolce & Gabbana;Tops & Shirts;104;4.55
+1;259;Jungen;Abercrombie & Fitch;Hosen;80;5.44

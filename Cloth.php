@@ -5,6 +5,7 @@ require_once('db.php');
 class Cloth
 {
 	public 	$id,
+			$fk_Clothes,
 			$gender,
 			$brand,
 			$type,
@@ -51,6 +52,7 @@ class Cloth
 
 		while ($row = mysql_fetch_object($result)) {
 			$this->id = $row->tcID;
+			$this->fk_Clothes = $row->ClothId;
 			$this->gender = $row->Gender;
 			$this->brand = $row->Brand;
 			$this->type = $row->Type;
@@ -82,7 +84,15 @@ class Cloth
 		closeDB($connection);
 	}
 
-	
+	public function saveClothData() {
+		$connection = connectDB();
+		$query = "UPDATE Clothes
+					SET ActualAmount = $this->actualAmount
+					WHERE id=$this->fk_Clothes";
+		//echo "$query";
+		mysql_query($query);
+		closeDB($connection);
+	}
 		
 	function toString()
 	{

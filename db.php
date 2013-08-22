@@ -96,7 +96,7 @@ include 'language.php';
 	// Column data
 	while($row = mysql_fetch_object($ergebnis))
 	{
-		$abfrage2 = "SELECT Active FROM Clothes c
+		$abfrage2 = "SELECT Active, ActualAmount, MaxAmount FROM Clothes c
 					JOIN Gender g ON c.gender = g.id
 					JOIN Brand b ON c.brand = b.id
 					JOIN Type t ON c.type = t.id
@@ -112,10 +112,12 @@ include 'language.php';
 					{
 						//echo  $row2->Active;
 						$active = $row2->Active;
+						$actAmount = $row2->ActualAmount;
+						$maxAmount = $row2->MaxAmount;
 						break;
 					}
 					//echo $active;
-		if($active == 1) {
+		if($active == 1 && $actAmount < $maxAmount) {
 		echo "<a id=\"$row->Name\" class=\"select\" href=\"#\"
 			  onclick=\"showByCategory('$row->Name', '$tableName'); return false\">
 				<span class='sizeName'>$row->Name</span>

@@ -515,6 +515,11 @@ div.inline {
 	text-align:center;
 }
 
+p.selectInactiveCategory {
+	margin:2px;
+	padding:3px;
+}
+
 a.select:link    { color:#000; background-color:#transparent; }
 a.select:visited { color:#000; background-color:#transparent; }
 a.select:hover   { color:#000; background-color:rgba(154,154,154,0.83); }
