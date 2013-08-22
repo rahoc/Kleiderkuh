@@ -2,7 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Kleider Kuh</title>
+<?php
+	include 'language.php';
+	
+	switch($site) {
+		case "sell":
+			echo '<title>'.$title_sell.'</title><meta name="description" content="'.$description_sell.'">';
+			break;
+		case "transaction":
+			echo '<title>'.$title_transaction.'</title><meta name="description" content="'.$description_transaction.'">';
+			break;
+		default:
+			echo '<title>'.$title_home.'</title><meta name="description" content="'.$description_home.'">';
+			break;
+	}
+?>
 <link rel="shortcut icon" href="http://www.kleiderkuh.de/favicon.ico?v=2" />
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Handlee' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Chela+One' rel='stylesheet' type='text/css'>
@@ -31,7 +45,7 @@
 <body>
 <?php
 include 'clicktale/ct_top.php';
-include 'language.php';
+
 ?>
   
     <div id="head">

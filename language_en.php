@@ -2,11 +2,22 @@
 
 $langID = "en";
 
+//##################### 
+// Head.php 
+//##################### 
 $head_link1  =  "Home";
 $head_link2  =  "Sell";
 $head_link3  =  "Buy";
 $head_link4  =  "Orders";
 $head_link5  =  "How it Works";
+$title_home = "Kleider Kuh - Easily buy and sell premium branded used childrens clothes";
+$description_home = "Kleider Kuh is the best way to buy and sell used childrens clothes.  Clean your schrank, fill your wallet and help the environment by recycling clothes and giving them a new home.  We focus on used childrens clothes in excellent condition from premium brands such as Abercrombie & Fitch, Armani, Benetton, Dolce & Gabbana, Hugo Boss, Jack Wolfskin, Lacoste, Napapijri, Ralph Lauren, Tommy Hilfiger and Vingino.";
+$title_sell = "Kleider Kuh - Clean out your wardrobe and fill your wallet";
+$description_sell = "Kleider Kuh provides an easy way to sell used childrens clothes.  With a few clicks you learn exactly how much your childrens clothes are worth and can print a free shipping label.  As soon as your clothes are processed we immediately issue payment to you.  We buy used childrens clothes in excellent condition from top brands such as Abercrombie & Fitch, Armani, Benetton, Dolce & Gabbana, Hugo Boss, Jack Wolfskin, Lacoste, Napapijri, Ralph Lauren, Tommy Hilfiger and Vingino.";
+$title_transaction = "Kleider Kuh - Check your order status";
+$description_transaction = "Check the status of your existing Kleider Kuh order.  See when the order was received and processed.  View the payment details.  Print another shipping label if needed.";
+
+
 
 //##################### = 
 // Home.php = 
