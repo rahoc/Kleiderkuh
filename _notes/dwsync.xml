@@ -6,9 +6,9 @@
 <file name="head.php" server="ftp.strato.de//" local="130216379732123697" remote="130216379400000000" Dst="2" />
 <file name="script.js" server="ftp.strato.de//" local="130216427718914165" remote="130216427400000000" Dst="2" />
 <file name="Cloth.php" server="ftp.strato.de//" local="130216356913958624" remote="130216356600000000" Dst="2" />
-<file name="manageTransactions2.php" server="ftp.strato.de//" local="130216343993912689" remote="130216344000000000" Dst="2" />
+<file name="manageTransactions2.php" server="ftp.strato.de//" local="130216477435739909" remote="130216477200000000" Dst="2" />
 <file name="transactionState.php" server="ftp.strato.de//" local="130216411213461121" remote="130216411200000000" Dst="2" />
-<file name=".htaccess" server="ftp.strato.de//" local="130214794909244467" remote="130214794800000000" Dst="2" />
+<file name=".htaccess" server="ftp.strato.de//" local="130216479544474355" remote="130216479000000000" Dst="2" />
 <file name="language_en.php" server="ftp.strato.de//" local="130216419688178812" remote="130216419600000000" Dst="2" />
 <file name="home.php" server="ftp.strato.de//" local="130215665032871278" remote="130215664800000000" Dst="2" />
 <file name="style.css" server="ftp.strato.de//" local="130216362968712202" remote="130216362600000000" Dst="2" />
@@ -22,4 +22,6 @@
 <file name="testJsPost.php" server="ftp.strato.de//" local="130215786145966154" remote="130215786000000000" Dst="2" />
 <file name="getItemMetricCSV.php" server="ftp.strato.de//" local="130216346284639773" remote="130216345800000000" Dst="2" />
 <file name="changeTransClothAccepted.php" server="ftp.strato.de//" local="130216352239786117" remote="130216351800000000" Dst="2" />
+<file name="login.php" server="ftp.strato.de//" local="130216470697573218" remote="130216470600000000" Dst="2" />
+<file name="manageClothes.php" server="ftp.strato.de//" local="130216478505546549" remote="130216478400000000" Dst="2" />
 </dwsync>

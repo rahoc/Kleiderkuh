@@ -18,6 +18,27 @@
 </head>
 <body>
 <?php
+// LOGIN
+if (isset($_POST['user']) && isset($_POST['pw'])) {
+	if ($_POST['user'] == 'kleiderkuh' && $_POST['pw'] == '22qmuh22' ){
+		$_SESSION['loggedIn'] = 'kleiderkuh';
+	}
+}
+if (isset($_GET['logout'])) {
+	if ($_GET['logout'] == 'true' ){
+		$_SESSION['loggedIn'] = '';
+	}
+}
+if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 'kleiderkuh') {
+	echo "logged in as kleiderkuh <a href='manageTransactions2.php?logout=true'>logout</a><br />";
+}
+else {
+	die( "not logged in: username and/or password wrong or you just logged out<br />
+		<a href='login.php'>login</a>" );
+}
+// END LOGIN
+?>
+<?php
  //include 'head.php';
  
     
@@ -26,6 +47,7 @@
 
 <div id="editToolbar">
 	<h2>Manage Clothes</h2>
+     <a href="manageTransactions2.php">Manage Transactions</a><br />
    
 <?php
 

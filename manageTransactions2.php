@@ -1,3 +1,8 @@
+<?php
+	session_start();
+	$transaction = $_SESSION['transaction'];
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -13,13 +18,35 @@
 
 <body>
 <?php
+// LOGIN
+if (isset($_POST['user']) && isset($_POST['pw'])) {
+	if ($_POST['user'] == 'kleiderkuh' && $_POST['pw'] == '22qmuh22' ){
+		$_SESSION['loggedIn'] = 'kleiderkuh';
+	}
+}
+if (isset($_GET['logout'])) {
+	if ($_GET['logout'] == 'true' ){
+		$_SESSION['loggedIn'] = '';
+	}
+}
+if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 'kleiderkuh') {
+	echo "logged in as kleiderkuh <a href='manageTransactions2.php?logout=true'>logout</a><br />";
+}
+else {
+	die( "not logged in: username and/or password wrong or you just logged out<br />
+		<a href='login.php'>login</a>" );
+}
+// END LOGIN
+?>
+<?php
  require_once('Transaction.php');
  require_once('Cloth.php');
  require_once('db.php');
 ?>   
 <div id="result" class="orange" style="position:fixed;top:5px;background-color:#FFF;left:50%;">No Changes</div>
 <div id="toolbar">
-	<a href="getItemMetricCSV.php" target="_blank">Download item metric as CSV</a>
+	<a href="getItemMetricCSV.php" target="_blank">Download item metric as CSV</a><br />
+    <a href="manageClothes.php">Manage Clothes</a>
 </div>
 <div id="editContent">
     
