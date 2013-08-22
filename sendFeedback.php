@@ -1,4 +1,5 @@
 <?php
+	require_once("language.php");
 	$name = urldecode($_POST['name']);
 	$email = urldecode($_POST['email']);
 	$category = urldecode($_POST['category']);
@@ -6,10 +7,10 @@
 	
 	echo "<h1 class='cyan'>$feedback_mail1</h1>
     <table>
-    	<tr><td>$feedback_mail2: </td><td>$name</td></tr>
-        <tr><td>$feedback_mail3: </td><td>$email</td></tr>
-        <tr><td>$feedback_mail4: </td><td>$category</td></tr>
-        <tr><td>$feedback_mail5: </td><td>$exact</td></tr>
+    	<tr><td>$feedback_mail2</td><td>$name</td></tr>
+        <tr><td>$feedback_mail3</td><td>$email</td></tr>
+        <tr><td>$feedback_mail4</td><td>$category</td></tr>
+        <tr><td>$feedback_mail5</td><td>$exact</td></tr>
     </table>";
 	
 	

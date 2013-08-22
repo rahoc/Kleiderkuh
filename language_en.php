@@ -312,6 +312,8 @@ $feedback_mail2 = "Your name: ";
 $feedback_mail3 = "Email: ";
 $feedback_mail4 = "Category: ";
 $feedback_mail5 = "Text: ";
+$feedback_error1 = "Email seems not valid!";
+$feedback_error2 = "Please enter a message text!";
 
 //#####################
 // about.php

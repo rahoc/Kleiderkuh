@@ -504,7 +504,26 @@ function getFeedback(obj) {
  			"&email=" + escape(encodeURI( document.getElementById("email").value )) +
  			"&category=" + escape(encodeURI( radioValue(document.myform.category) )) +
  			"&exact=" + escape(encodeURI( document.getElementById("exact").value ))	;
-      sendFeedback(poststr);
+			
+	$("#feedback_error_1").hide();
+	$("#feedback_error_2").hide();
+	if ($("#email").val()=="" || isEmail($("#email").val())) {
+		if ($("#exact").val() == "") {
+			
+			$("#feedback_error_2").show();
+		}
+		else {
+		
+			// SUBMIT FEEDBACK
+			sendFeedback(poststr);
+			//ga_feedback();
+		}
+	}
+	else {
+		
+		$("#feedback_error_1").show();
+	}
+      
 }
  
  function radioValue(rObj) {

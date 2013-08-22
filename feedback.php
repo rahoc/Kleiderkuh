@@ -39,8 +39,17 @@ require_once("language.php");
             </tr>
         </table>
 	 </form>
-
+		<div id="feedback_error_1" class="orange"><?php echo $feedback_error1; ?></div>
+        <div id="feedback_error_2" class="orange"><?php echo $feedback_error2; ?></div>
 </div>
+<script>
+
+$(document).ready(function(e) {
+    $("#feedback_error_1").hide();
+	$("#feedback_error_2").hide();
+});
+</script>
+
 </body>
 
 </html>
