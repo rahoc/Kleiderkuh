@@ -370,7 +370,7 @@ $(document).ready(function() {
 									"</div><div class='tableCell tableFormat'>" +
 									value.size +
 									"</div><div class='tableCell tableFormat'>" +
-									value.price + " €" +
+									parseFloat(value.price).toFixed(2) + " €" +
 									"</div><div class='tableCell tableFormat'>" +
 									processResult +
 									"</div><div class='tableCell tableFormat'>" +

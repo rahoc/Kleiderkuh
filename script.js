@@ -909,7 +909,7 @@ function createShippingPDF(transaction) {
 		
 		doc.text(25, y, value.id);
 		doc.text(35, y, changeUmlaute(value.gender) + ", " + changeUmlaute(value.brand) + ", " + changeUmlaute(value.type) + ", " +value.size);
-		doc.text(150, y, value.price + ' Euro');
+		doc.text(150, y, parseFloat(value.price).toFixed(2) + ' Euro');
 		doc.line(25, y+2, 180, y+2);
 		y = y + 7;
 		
@@ -918,7 +918,7 @@ function createShippingPDF(transaction) {
 	
 	doc.setFontType("bold");
 	doc.text(130, y+10, "Summe:");
-	doc.text(150, y+10, sum + ' Euro');
+	doc.text(150, y+10, sum.toFixed(2) + ' Euro');
 	
 	// SEITE 2
 	doc.addPage();
