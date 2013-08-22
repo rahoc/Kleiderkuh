@@ -18,6 +18,9 @@
  require_once('db.php');
 ?>   
 <div id="result" class="orange" style="position:fixed;top:5px;background-color:#FFF;left:50%;">No Changes</div>
+<div id="toolbar">
+	<a href="getItemMetricCSV.php" target="_blank">Download item metric as CSV</a>
+</div>
 <div id="editContent">
     
         
