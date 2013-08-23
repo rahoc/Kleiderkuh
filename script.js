@@ -212,7 +212,7 @@ function showByCategory(name, category, gender)
 			{
 			// Display Price
 			var priceResponse = xmlhttp.responseText;
-			document.getElementById("price").innerHTML = "We pay you " + priceResponse + " €";
+			document.getElementById("price").innerHTML = "" + priceResponse + " €";
 			// Google Analytics
 			ga('send', 'event', 'Sell Process', 'Submit Akkordean', priceResponse);
 			}

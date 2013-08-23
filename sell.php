@@ -72,7 +72,6 @@ session_start();
             <?php echo $sell_text6; ?>
             <br />
             <br />
-            <br />
             <?php echo $sell_text7; ?>
             <div id="selectedGender" class="resultBoxes"></div>
             <?php echo $sell_text8; ?>
@@ -82,7 +81,8 @@ session_start();
             <?php echo $sell_text10; ?>
             <div id="selectedSize" class="resultBoxes"></div>
             <br />
-            <div id="price"></div>
+            <?php echo $sell_text11; ?>
+            <div id="price" class="resultBoxes"></div>
             <br />
            <!-- <button id="addToCart" type="button"
             onclick="addClothToCart()">Add to cart</button>-->

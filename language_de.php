@@ -86,6 +86,7 @@ $sell_text7 = 'Geschlecht';
 $sell_text8  = 'Marke';
 $sell_text9  = 'Typ';
 $sell_text10 = 'Größe';
+$sell_text11 = 'Dafür erhältst du von uns:';
 $sell_link1  = 'hier findest du mehr Informationen';
 
 //#####################

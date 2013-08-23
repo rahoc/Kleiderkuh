@@ -86,6 +86,7 @@ $sell_text7 = "Gender:";
 $sell_text8  = "Brand:";
 $sell_text9  = "Type:";
 $sell_text10 = "Size:";
+$sell_text11 = "We pay you:";
 $sell_link1  =  "click here for details";
  
 //##################### = 
