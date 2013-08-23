@@ -200,7 +200,7 @@ function showCartByTransaction($transaction, $site) {
 				<td>$row->brand</td>
 				<td>$row->type</td>
 				<td>$row->size</td>
-				<td>$row->price €</td>
+				<td>".number_format($row->price,2)." €</td>
 				<td><a href='#' onclick='removeFromCart($row->transactionClothId); return false' class='trash'>
 					x</a></td>
 			  </tr>";
@@ -223,20 +223,20 @@ function showCartByTransaction($transaction, $site) {
 		$sum = 0;
 	}
 	if($site == "overview") {
-			echo "<br />$cart_text1 $sum €<br />";
+			echo "<br />$cart_text1 ".number_format($sum,2)." €<br />";
 			
 		}
 		else {
 			// check if sum higher than 15 Euro
 			if($row->summe >=15) {
-				echo "<br />$cart_text1 $sum €<br />
+				echo "<br />$cart_text1 ".number_format($sum,2)." €<br />
 					<form method=\"post\" action=\"cartOverview.php\">
 					
 					<input type='image' src='images/$langID/buttons/sellNow.png' alt='Submit Form' value=\"Sell this!\" class='button' />
 					</form>";
 			}
 			else {
-				echo "<br />$cart_text1 $sum €<br />
+				echo "<br />$cart_text1 ".number_format($sum,2)." €<br />
 						$cart_text2";
 			}
 		}
