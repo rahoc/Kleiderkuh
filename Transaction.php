@@ -33,6 +33,7 @@ class Transaction {
 	public $accountNrMasked;
 	public $sumAccepted;
 	public $loadResult;
+	public $language;
 	
 	// GETTER
 	public function getStatusDate() {
@@ -177,6 +178,7 @@ class Transaction {
 				$this->AccountNr = $row['AccountNr'];
 				$this->finalToPay = $row['FinalToPay'];
 				$this->RejectOption = $row['RejectOption'];
+				$this->language = $row['language'];
 				
 				break;
 			}
@@ -279,7 +281,8 @@ class Transaction {
 				ReceptionDate = '$this->ReceptionDate',
 				ProcessedDate = '$this->ProcessedDate',
 				PaymentDate = '$this->PaymentDate',
-				FinishedDate = '$this->FinishedDate'
+				FinishedDate = '$this->FinishedDate',
+				language = '$this->language'
 				WHERE id=$this->id";
 				//echo $query;
 		mysql_query($query);

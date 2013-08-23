@@ -271,12 +271,13 @@ $(document).ready(function() {
 	
 	var confirmed = <?php echo $confirmed; ?>;
 	var email = "<?php echo $email; ?>";
+	var lang = "<?php echo $language; ?>";
 
 	// CHECK CONFIRM
 	if (confirmed == 1) {
 
 	var c = "Confirmed";
-	$.post('changeTransactionState.php', { id: id , status: c })
+	$.post('changeTransactionState.php', { id: id , status: c, language: lang })
 	.done(function(data) {
 		//alert("transactionState.php?email=" + email + "&id=" + id + "");
 		 window.location.replace("transactionState.php?email=" + email + "&transaction=" + id + "");

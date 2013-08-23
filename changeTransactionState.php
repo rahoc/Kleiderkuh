@@ -1,4 +1,5 @@
 <?php
+
 		
 	require_once("Transaction.php");
 	require_once("post.php");		
@@ -10,6 +11,7 @@
 		
 		$id = $_POST["id"];
 		$statusName = $_POST["status"];
+		$lang = $_POST['language'];
 	
 		// Create new Transaction and load it by ID
 		$transaction = new Transaction;
@@ -32,6 +34,7 @@
 			}
 			case "Confirmed": {
 				$transaction->OrderDate = date("Y-m-d H:i:s");
+				$transaction->language = $lang;
 				break;
 			}
 			case "Received": {

@@ -279,6 +279,7 @@ function textAreaAdjust(o) {
 }
 
 $('.status').change(function() {
+	var lang = "<?php echo $language; ?>";
 	var dropdown = $(this);
 	var id =  dropdown.attr( "name" ).valueOf().substring(7);
 	var status =  dropdown.val();
@@ -313,7 +314,7 @@ $('.status').change(function() {
 	
 	if (doPost) {
 		//alert( "POST: " + status + " " + id );
-		$.post("http://kleiderkuh.de/changeTransactionState.php", { id: id , status: status })
+		$.post("http://kleiderkuh.de/changeTransactionState.php", { id: id , status: status , language: lang})
 		.done(function(data) {
 		  //alert("Data Loaded: " + data);
 		  $( "#result" ).empty().append( data );

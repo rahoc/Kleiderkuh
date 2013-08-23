@@ -1,8 +1,6 @@
 <?php
 session_start();
-require_once("language.php");
 require_once("Transaction.php");
-
 
 if (isset($_GET["id"])) {
 	$id = $_GET["id"];
@@ -14,43 +12,23 @@ else {
 	echo "no id";
 	return;
 }
+// Transaction
+$t = new Transaction;
+$t->loadById($id);
 
+// Language
+$_SESSION["language"] = $t->language;
+require_once("language.php");
+
+// Testing
 $sendMail = false;
 if (isset($_GET["mailTo"])) {
 	$receiver = $_GET["mailTo"];
 	$sendMail = true;
 }
 
-
-/*
-
-if (isset($_POST["id"])) {
-	$id = $_POST["id"];
-}
-else {
-	echo "no id";
-	return;
-}
-
-$sendMail = false;
-if (isset($_POST["mailTo"])) {
-	$receiver = $_POST["mailTo"];
-	$sendMail = true;
-}
-*/
-
-//$receiver = 'rainer.hochdorfer@gmail.com';
-
-/* mehrere Empfänger
-$empfaenger  = 'max@example.com' . ', '; // beachten Sie das Komma
-$empfaenger .= 'moritz@example.com';
-*/
-
+// General path
 $webPath = 'http://kleiderkuh.de';
-
-// Transaction
-$t = new Transaction;
-$t->loadById($id);
 
 // Receiver
 $receiver = $t->email;
