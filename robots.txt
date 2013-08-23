@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /File_PDF-0.3.3/
+Disallow: /js/
+Disallow: /jspdf/
+Disallow: /createPDF.php
