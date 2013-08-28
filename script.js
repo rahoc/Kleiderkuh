@@ -212,7 +212,7 @@ function showByCategory(name, category, gender)
 			{
 			// Display Price
 			var priceResponse = xmlhttp.responseText;
-			document.getElementById("price").innerHTML = "" + priceResponse + " €";
+			document.getElementById("price").innerHTML = "" + parseFloat(priceResponse).toFixed(2) + " €";
 			// Google Analytics
 			ga('send', 'event', 'Sell Process', 'Submit Akkordean', priceResponse);
 			}
@@ -525,6 +525,59 @@ function getFeedback(obj) {
 	}
       
 }
+
+function getFeedbackC(obj) {
+ var poststr = "name=" + escape(encodeURI( document.getElementById("nameC").value )) +
+ 			"&email=" + escape(encodeURI( document.getElementById("emailC").value )) +
+ 			"&category=" + escape(encodeURI( radioValue(document.myformC.category) )) +
+ 			"&exact=" + escape(encodeURI( document.getElementById("exactC").value ))	;
+			
+	$("#feedbackC_error_1").hide();
+	$("#feedbackC_error_2").hide();
+	if ($("#emailC").val()=="" || isEmail($("#emailC").val())) {
+		if ($("#exactC").val() == "") {
+			
+			$("#feedbackC_error_2").show();
+		}
+		else {
+		
+			// SUBMIT FEEDBACK
+			sendFeedbackC(poststr);
+			//ga_feedback();
+		}
+	}
+	else {
+		
+		$("#feedbackC_error_1").show();
+	}
+      
+}
+function sendFeedbackC(parameters)
+{ // AJAX
+	if (window.XMLHttpRequest)
+	  {// code for IE7+, Firefox, Chrome, Opera, Safari
+	  xmlhttp=new XMLHttpRequest();
+	  }
+	else
+	  {// code for IE6, IE5
+	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	xmlhttp.onreadystatechange=function()
+	  {
+	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+		document.getElementById("feedbackContentC").innerHTML=xmlhttp.responseText;
+		}
+	  }
+	xmlhttp.open("POST","sendFeedback.php",true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.setRequestHeader("Content-length", parameters.length);
+ 	xmlhttp.setRequestHeader("Connection", "close");
+	xmlhttp.send(parameters);
+}
+
+
+
  
  function radioValue(rObj) {
     for (var i=0; i<rObj.length; i++) if (rObj[i].checked) return rObj[i].value;

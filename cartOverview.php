@@ -34,9 +34,9 @@
 			
 			$verbindung = connectDB();
 	
-			$abfrage = "INSERT INTO Transactions (id, Status)
-						VALUES ($transaction, 'InCart')";
-			 mysql_query($abfrage);
+			//$abfrage = "INSERT INTO Transactions (id, Status)
+			//			VALUES ($transaction, 'InCart')";
+			// mysql_query($abfrage);
 			 
 			// Set predefined Values if existing
 			$abfrage = "SELECT * FROM Transactions

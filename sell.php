@@ -2,8 +2,7 @@
 session_start();
  
  
- //Debug
- //echo getTransactionId();
+ 
 ?>
 <!--
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -22,9 +21,37 @@ session_start();
  $site = "sell";
  include 'head.php';
  include 'db.php';
-  
+  //Debug
+ // echo getTransactionId();
+ //echo $_SESSION['transaction'];
+ if(isset($_SESSION['transaction'])){
+	 //$_SESSION['transaction'] = getTransactionId();
+	 //echo "tid was set";
+ }
+ else {
+ 	//$_SESSION['transaction'] = getTransactionId();
+	
+	$verbindung = connectDB();
+	
+	$newTransactionId = 1;
+	$abfrage = "SELECT * FROM Transactions
+				WHERE id= (SELECT MAX(id) FROM Transactions)";
+	$ergebnis = mysql_query($abfrage);
+	while($row = mysql_fetch_object($ergebnis))
+	{
+		$newTransactionId = $row->id + 1;
+	}
+	
+	$abfrage2 = "INSERT INTO Transactions (id, Status) VALUES (".$newTransactionId.", 'InCart')";
+	mysql_query($abfrage2);
+	
+	closeDB($verbindung);
+	$_SESSION['transaction'] = $newTransactionId;
+	//echo $newTransactionId;
+	
+	//echo "tid new";
+ }
  
- $_SESSION['transaction'] = getTransactionId();
 ?>
 
 <div class="headline center"><?php echo $sell_headline1; ?></div>

@@ -259,6 +259,7 @@ $(document).ready(function() {
 		if (isset($_GET["confirm"])) {
 			if ($_GET["confirm"]==true) {
 				$confirmed = 1;
+				session_destroy();
 			}
 		}
 		
@@ -338,10 +339,10 @@ $(document).ready(function() {
 				}
 				$("#t_processedDate").text(transaction.ProcessedDate);
 				if(status_id==3) {
-					$(".t_finalAmount").text(sumAcc);
+					$(".t_finalAmount").text(parseFloat(sumAcc).toFixed(2));
 				}
 				else {
-					$(".t_finalAmount").text(transaction.finalToPay);
+					$(".t_finalAmount").text(parseFloat(transaction.finalToPay).toFixed(2));
 				}
 				
 				// show cart
@@ -382,7 +383,7 @@ $(document).ready(function() {
 				});
 				
 				if(transaction.RejectOption == "return") {
-					$("#t_sumAccepted").text(transaction.sumAccepted);
+					$("#t_sumAccepted").text(parseFloat(transaction.sumAccepted).toFixed(2));
 					$("#t_rejectOption").text("<?php echo $trans_text27; ?>");
 					$(".return").show();
 					$("#reject_return").attr("checked", "checked");
@@ -404,7 +405,7 @@ $(document).ready(function() {
 					$("#submit_rejectOption").removeAttr("disabled");
 				}
 				$("#t_id").text(transaction.id);
-				$("#t_finalAmountAbs").text(Math.abs(transaction.finalToPay));
+				$("#t_finalAmountAbs").text(Math.abs(parseFloat(transaction.finalToPay).toFixed(2)));
 				
 				var rejectedItems = transaction.rejectedItems + transaction.missingItems;
 				if (rejectedItems <=0) {
@@ -417,7 +418,7 @@ $(document).ready(function() {
 				$("#tab_4").children().children(".tab_date").text(transaction.PaymentDate);
 				
 				// FILL CONTENT
-				$("#t_finalToPay").text(transaction.finalToPay);
+				$("#t_finalToPay").text(parseFloat(transaction.finalToPay).toFixed(2));
 				if (transaction.payment == "ueberweisung") {
 					$("#t_paymentMethod").text("<?php echo $trans_text14; ?> (" +
 					transaction.accountNrMasked + ")");
@@ -442,7 +443,7 @@ $(document).ready(function() {
 				
 				// FILL CONTENT
 				$("#t_finishedDate").text(transaction.FinishedDate);
-				$("#t_finalToPayFin").text(transaction.finalToPay);
+				$("#t_finalToPayFin").text(parseFloat(transaction.finalToPay).toFixed(2));
 				$("#t_acceptedItems").text(transaction.acceptedItems);
 				$("#t_rejectedItems").text(transaction.rejectedItems);
 				$("#t_missingItems").text(transaction.missingItems);

@@ -153,6 +153,9 @@ function getTransactionId() {
 		$newTransactionId = $row->id + 1;
 	}
 	
+	//	$abfrage = "INSERT INTO Transactions (id) VALUES (".$newTransactionId.")";
+	// mysql_query($abfrage);
+	
 	closeDB($verbindung);
 	
 	return $newTransactionId;
