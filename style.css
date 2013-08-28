@@ -52,6 +52,10 @@ a {
 	color:#028E9B;
 }
 
+a img {
+    border:none;
+}
+
 h1 {
 	font-family:"Handlee";
 	font-size:30px;
