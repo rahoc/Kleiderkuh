@@ -230,8 +230,8 @@ require_once('language.php');
            	<p><?php echo $trans_text16; ?><span id="t_finishedDate"></span></p>
             <p><?php echo $trans_text17; ?><span id="t_finalToPayFin"></span> €</p>
             <p><?php echo $trans_text18; ?><span id="t_acceptedItems"></span></p>
-            <p><?php echo $trans_text19; ?><span id="t_rejectedItems"></span></p>
-            <p><?php echo $trans_text20; ?><span id="t_missingItems"></span></p>
+            <p id="t_rejectedItems_label"><?php echo $trans_text19; ?><span id="t_rejectedItems"></span></p>
+            <p id="t_missingItems_label"><?php echo $trans_text20; ?><span id="t_missingItems"></span></p>
          </div>
          
          
@@ -454,8 +454,21 @@ $(document).ready(function() {
 				$("#t_finishedDate").text(getDateGerman(transaction.FinishedDate));
 				$("#t_finalToPayFin").text(parseFloat(transaction.finalToPay).toFixed(2));
 				$("#t_acceptedItems").text(transaction.acceptedItems);
-				$("#t_rejectedItems").text(transaction.rejectedItems);
-				$("#t_missingItems").text(transaction.missingItems);
+				if (transaction.rejectedItems > 0) {
+					$("#t_rejectedItems").text(transaction.rejectedItems);
+				}
+				else {
+					$("#t_rejectedItems").hide();
+					$("#t_rejectedItems_label").hide();
+				}
+				if (transaction.missingItems > 0) {
+					$("#t_missingItems").text(transaction.missingItems);
+				}
+				else {
+					$("#t_missingItems").hide();
+					$("#t_missingItems_label").hide();
+				}
+				
 			}
 			
 			$("#tab_" + status_id).children().children(".tab_arrow").show();
