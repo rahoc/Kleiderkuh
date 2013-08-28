@@ -205,7 +205,22 @@ $trans_text32  =  "Accepted";
 $trans_text33  =  "Rejected";
 $trans_text34  =  "Missing";
 $trans_text35  = "Print free DHL shipping label";
-$trans_text36  = "Instructions for Sending";
+$trans_text36  = "<strong>Instructions for sending</strong>
+					<ol>
+					<li>Print shipping documents</li>
+					<li>Put items in the package</li>
+					<li>Glue the DHL shipping label clearly visible on the package</li>
+					<li>You can ship the package as follows:
+						<ul>
+						<li>Packstation</li>
+						<li>Paketbox</li>
+						<li>Give it to a DHL driver</li>
+						</ul>
+					</li>
+					</ol>";
+$trans_text37  = 'A PopUp window should open within the next 10 seconds!';
+
+
 //##################### = 
 // HowItWorks.php = 
 //##################### = 
