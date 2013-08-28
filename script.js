@@ -377,6 +377,9 @@ $(document).ready(function(){
 	  // Feedback
 		  $("#closebtn_feedback").click(function () {
 			$("#dlg_feedback").hide('800', "swing", function () { $("#bkg_feedback").fadeOut("500"); });
+			$.get('feedback.php', function(data) {
+			  $('#dlg_feedback_content').html(data);
+			});
 			feedbackOpen = false;
 		  });
 		  $("#opn_feedback").click(function () {

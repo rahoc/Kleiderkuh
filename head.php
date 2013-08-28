@@ -112,7 +112,7 @@ include 'clicktale/ct_top.php';
 <div class="background" id="bkg_feedback" style="visibility: hidden;">
     <div class="modal" id="dlg_feedback" style="visibility: hidden;">
     	<div class="closebtn" title="Close" id="closebtn_feedback"></div>
-      	<?php include 'feedback.php'; ?>
+      	<div id="dlg_feedback_content"><?php include 'feedback.php'; ?></div>
     </div>
   </div>
   
