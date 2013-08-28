@@ -500,9 +500,9 @@ info@kleiderkuh.de</p>';
 
 
 $email_r_subject  = 'Kleider Kuh - Paket eingegangen';
-$email_r_text1 = ' ""<p>Lieber Kunde,</p>
+$email_r_text1 = '<p>Lieber Kunde,</p>
 <p>Dies ist eine automatisch generierte Email, um dir mitzuteilen dass wir dein Paket am ';
-$email_r_text2  = 'erhalten haben.</p>
+$email_r_text2  = ' erhalten haben.</p>
 <p>Das sind die nächsten Schritte:
 <ul>
 <li>Wir werden deinen Auftrag und jeden Artikel einzeln prüfen.</li>

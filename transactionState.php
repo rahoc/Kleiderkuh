@@ -246,6 +246,10 @@ require_once('language.php');
 var transaction;
 var new_sum = 0;
 
+function getDateGerman(d) {
+	var ndate = new Date(d);
+	return ndate.getDate() + "." + (ndate.getMonth()+1) + "." + ndate.getFullYear();
+}
 
 $(document).ready(function() {
 	<?php
@@ -300,14 +304,19 @@ $(document).ready(function() {
 				window.location.replace("goToTransaction.php?error=true");
 				return;
 			}
+			
+			// Dates:
+			var orderDate = new Date(transaction.OrderDate);
+			
 			$("#tab_view").show();
 			var status_id = transaction.statusNumber;
 			if (status_id >= 1) {
 				$("#tab_1").addClass("tab_active");
-				$("#tab_1").children().children(".tab_date").text(transaction.OrderDate);
+				$("#tab_1").children().children(".tab_date").text(getDateGerman(transaction.OrderDate));
 				
 				// FILL CONTENT
-				$("#t_orderDate").text(transaction.OrderDate);
+				
+				$("#t_orderDate").text(getDateGerman(transaction.OrderDate));
 				$("#t_email").text(transaction.email);
 				$("#fName").val(transaction.fname);
 				$("#lName").val(transaction.lname);
@@ -322,14 +331,14 @@ $(document).ready(function() {
 			}
 			if (status_id >= 2) {
 				$("#tab_2").addClass("tab_active");
-				$("#tab_2").children().children(".tab_date").text(transaction.ReceptionDate);
+				$("#tab_2").children().children(".tab_date").text(getDateGerman(transaction.ReceptionDate));
 				
 				// FILL CONTENT
-				$("#t_receptionDate").text(transaction.ReceptionDate);
+				$("#t_receptionDate").text(getDateGerman(transaction.ReceptionDate));
 			}
 			if (status_id >= 3) {
 				$("#tab_3").addClass("tab_active");
-				$("#tab_3").children().children(".tab_date").text(transaction.ProcessedDate);
+				$("#tab_3").children().children(".tab_date").text(getDateGerman(transaction.ProcessedDate));
 				$(".stateNr_2").hide();
 				
 				// FILL CONTENT
@@ -337,7 +346,7 @@ $(document).ready(function() {
 				if (transaction.sumAccepted > 0) {
 					sumAcc = transaction.sumAccepted;
 				}
-				$("#t_processedDate").text(transaction.ProcessedDate);
+				$("#t_processedDate").text(getDateGerman(transaction.ProcessedDate));
 				if(status_id==3) {
 					$(".t_finalAmount").text(parseFloat(sumAcc).toFixed(2));
 				}
@@ -415,7 +424,7 @@ $(document).ready(function() {
 			}
 			if (status_id >= 4) {
 				$("#tab_4").addClass("tab_active");
-				$("#tab_4").children().children(".tab_date").text(transaction.PaymentDate);
+				$("#tab_4").children().children(".tab_date").text(getDateGerman(transaction.PaymentDate));
 				
 				// FILL CONTENT
 				$("#t_finalToPay").text(parseFloat(transaction.finalToPay).toFixed(2));
@@ -426,7 +435,7 @@ $(document).ready(function() {
 				if (transaction.payment == "paypal") {
 					$("#t_paymentMethod").text("<?php echo $trans_text15; ?>");
 				}
-				$("#t_paymentDate").text(transaction.PaymentDate);
+				$("#t_paymentDate").text(getDateGerman(transaction.PaymentDate));
 				
 				if(transaction.finalToPay>=0) {
 					$(".positiveAmount").show();
@@ -439,10 +448,10 @@ $(document).ready(function() {
 			}
 			if (status_id >= 5) {
 				$("#tab_5").addClass("tab_active");
-				$("#tab_5").children().children(".tab_date").text(transaction.FinishedDate);
+				$("#tab_5").children().children(".tab_date").text(getDateGerman(transaction.FinishedDate));
 				
 				// FILL CONTENT
-				$("#t_finishedDate").text(transaction.FinishedDate);
+				$("#t_finishedDate").text(getDateGerman(transaction.FinishedDate));
 				$("#t_finalToPayFin").text(parseFloat(transaction.finalToPay).toFixed(2));
 				$("#t_acceptedItems").text(transaction.acceptedItems);
 				$("#t_rejectedItems").text(transaction.rejectedItems);

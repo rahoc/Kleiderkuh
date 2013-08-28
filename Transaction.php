@@ -41,7 +41,8 @@ class Transaction {
 			return "";
 		}
 		else {
-			return $this->StatusDate;
+			$d = explode("-", $this->StatusDate);
+			return $d[2] . "." . $d[1] . "." . $d[0] ;
 		}
 	}
 	public function getOrderDate() {
@@ -49,7 +50,8 @@ class Transaction {
 			return "";
 		}
 		else {
-			return $this->OrderDate;
+			$d = explode("-", $this->OrderDate);
+			return $d[2] . "." . $d[1] . "." . $d[0] ;
 		}
 	}
 	public function getReceptionDate() {
@@ -57,7 +59,8 @@ class Transaction {
 			return "";
 		}
 		else {
-			return $this->ReceptionDate;
+			$d = explode("-", $this->ReceptionDate);
+			return $d[2] . "." . $d[1] . "." . $d[0] ;
 		}
 	}
 	public function getProcessedDate() {
@@ -65,7 +68,8 @@ class Transaction {
 			return "";
 		}
 		else {
-			return $this->ProcessedDate;
+			$d = explode("-", $this->ProcessedDate);
+			return $d[2] . "." . $d[1] . "." . $d[0] ;
 		}
 	}
 	public function getPaymentDate() {
@@ -73,7 +77,8 @@ class Transaction {
 			return "";
 		}
 		else {
-			return $this->PaymentDate;
+			$d = explode("-", $this->PaymentDate);
+			return $d[2] . "." . $d[1] . "." . $d[0] ;
 		}
 	}
 	public function getFinishedDate() {
@@ -81,7 +86,8 @@ class Transaction {
 			return "";
 		}
 		else {
-			return $this->FinishedDate;
+			$d = explode("-", $this->FinishedDate);
+			return $d[2] . "." . $d[1] . "." . $d[0] ;
 		}
 	}
 	
