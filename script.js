@@ -1005,7 +1005,7 @@ function createShippingPDF(transaction) {
 	
 	// Checkliste
 	doc.setFontSize(14);
-	doc.text(20, 60, 'Ihre persönliche Checkliste');
+	doc.text(20, 60, 'Deine persönliche Checkliste');
 	
 	doc.setFontType("normal");
 	doc.setFontSize(12);
@@ -1019,11 +1019,11 @@ function createShippingPDF(transaction) {
 	doc.roundedRect(20, 94, 5, 5, 1, 1, 'FD'); 
 	doc.roundedRect(20, 101, 5, 5, 1, 1, 'FD'); 
 	doc.text(30, 70, 'Sind alle verkauften Artikel vollständig im Paket?');
-	doc.text(30, 77, 'All the articles washed and fully dried?');
-	doc.text(30, 84, 'All the articles meet the Kleider Kuh clothing requirments?');
-	doc.text(30, 91, 'Legen Sie den Leg-Mich-Ins-Paket-Schein in jedes Paket!?');
-	doc.text(30, 98, 'Securely close the package?');
-	doc.text(30, 105, 'Kleben Sie den Frankierschein auf das Paket! Bitte verschicken Sie nicht unfrei!');
+	doc.text(30, 77, 'Alle Artikel sind gewaschen und komplett trocken?');
+	doc.text(30, 84, 'Alle Artikel erfüllen die Kleider Kuh Kleidungs-Kriterien?');
+	doc.text(30, 91, 'Leg den LEG-MICH-INS-PAKET Schein in jedes Paket!');
+	doc.text(30, 98, 'Das Paket ist sicher verschlossen?');
+	doc.text(30, 105, 'Klebe den Frankierschein auf das Paket! Bitte verschicke das Paket nicht unfrei!');
 
 
 	// Näste Schritte
@@ -1038,14 +1038,14 @@ function createShippingPDF(transaction) {
 	doc.circle(25, 138, 1, 'F');
 	doc.circle(25, 145, 1, 'F');
 	doc.circle(25, 152, 1, 'F');
-	doc.text(30, 140, 'Once we receive your package, we will send you a confirmation email');
-	doc.text(30, 147, 'beachten Sie die üblichen Lieferzeiten der Versanddienstleister (1-3 Tage).');
-	doc.text(30, 154, 'Check your order status anytime at www.kleiderkuh.de/orders');
+	doc.text(30, 140, 'Sobald wir deine Sendung erhalten haben, senden wir dir eine Bestätigungs-E-Mail.');
+	doc.text(30, 147, 'Beachte die üblichen Lieferzeiten der Versanddienstleister (1-3 Tage).');
+	doc.text(30, 154, 'Überprüfe deinen Auftragstatus jederzeit auf www.kleiderkuh.de/auftraege');
 
 	// Kundenservice
 	doc.setFontType("normal");
 	doc.setFontSize(12);
-	doc.text(20, 170, 'Sie erreichen unseren Kundenservice hier:');
+	doc.text(20, 170, 'Unseren Support erreichst du über:');
 	doc.setFontType("bold");
 	doc.setFontSize(14);
 	doc.text(20, 180, 'support@kleiderkuh.de');
