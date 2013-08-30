@@ -249,17 +249,17 @@ Once this information is input, you will see the value we will pay for the item 
 ";
 $how_text12 = "Checkout<br />
 Before you can check out, you must have at least 15 euros worth of items in the cart
-Once you are done adding items, press the checkout button in the cart and proceed to the confirmation page
+<br />Once you are done adding items, press the checkout button in the cart and proceed to the confirmation page
 ";
 $how_text13 = "Payment and Your Information<br />
 To confirm your sell, input your email address and how you would like to get paid
-Payment options are Bank Transfer or PayPal<br />
-For bank transfer, simply into your account number and BLZ<br />
+<br />Payment options are Bank Transfer or PayPal<br />
+For bank transfer, simply enter your account number and BLZ<br />
 For PayPal, indicate which email address you want your payment to go to.  (note: PayPal fees apply, meaning they will charge you normal fees to receive money.  Typically this is .10 + 3.5% of the amount)
 ";
 $how_text14 = "Print Free Shipping Label<br />
-Once your checkout is complete, you will be able to print a free shipping label for DHL
-In case you dont have a printer, you can request a free shipping label be sent to you in the post
+Once your checkout is complete, you will be able to print a free shipping label for DHL <br>
+In case you dont have a printer, you can request a free shipping label be sent to you in the post <br>
 Alternatively you can send the package to us using a different shipping company if you prefer but unfortunately we only pay shipping if using DHL label printed from our firm
 ";
 $how_text15 = "Pack and Send<br />
@@ -273,7 +273,7 @@ $how_link3 = "clothing criteria";
 $how_text16b = "<br />
 Accepted: If all criteria are met, we will immediately send payment to you<br />
 Not Accepted: In case the criteria are not met or the item does not match the item details input, we will notify you that we cannot accept the item<br />
-In this case the customer has two options:<br />
+In this case you have two options:<br />
 <b>Return</b> - item is sent back to customer, customer pays shipping cost<br />
 <b>Donate</b> - item is donated to charity
 ";
@@ -336,7 +336,7 @@ $feedback_error2 = "Please enter a message text!";
 //#####################
 $about_headline1 = "";
 $about_text1 = "<h1>Who are we?</h1>
-Kleider Kuh was created by a small team of entrepreneurs in the southern German city of Ulm.  Albert Einstein was born in Ulm and one day our team got together to see if we could create an idea worthy of Einstein...... this is when we came up with the concept of Kleider Kuh ;-)
+Kleider Kuh was created by a small team of entrepreneurs in the southern German city of Ulm.  Albert Einstein was born in Ulm and one day our team got together to see if we could create an idea worthy of Einstein...... this is when we came up with the concept of Kleider Kuh
 
 <h1>Why?</h1>
 There are millions of pieces of high value childrens clothes laying in wardrobes around the country which will never be worn again.  Our mission is to offer a service to find new homes for these clothes.
@@ -498,7 +498,7 @@ $email_c_text1 = "<p>Dear Customer,</p>
 	<p>Thanks for creating a new order!</p>
 	<p>Next Steps:
 	<ul>
-	<li>Send us your items.  If you have not already done so, you can find your free shipping label and instructions: ";
+	<li>Send us your items.  If you have not already done so, you can find your free shipping label and instructions here: ";
 $email_c_text2 = "</a></li>
 	<li>Once we receive your items we will send you an email notification</li>
 	<li>Next we will process the order and send payment to you</li>

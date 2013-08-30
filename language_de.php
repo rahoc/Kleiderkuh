@@ -265,11 +265,11 @@ Du kannst das Paket in jedem Postamt oder jeder DHL Packstation abgeben.';
 $how_text16a  = 'Wir erhalten und bearbeiten den Auftrag<br />
 Sobald wir das Paket erhalten, prüfen wir  ob alle Artikel den ';
 $how_link3  = 'Kriterien für unsere Kleidung entsprechen.';
-$how_text16b  = 'Akzeptiert: Wenn alle Kriterien eingehalten werden, veranlassen wir unverzüglich Deine Bezahlung<br />
+$how_text16b  = '<br />Akzeptiert: Wenn alle Kriterien eingehalten werden, veranlassen wir unverzüglich Deine Bezahlung<br />
 Nicht akzeptiert: Falls die Kriterien nicht eingehalten werden oder der Artikel nicht den angegebenen Artikeldaten entspricht, informieren wir dich, dass wir den Artikel nicht akzeptieren können<br />
 In diesem Fall hat der Kunde zwei Möglichkeiten:<br />
-Zurücksenden - der Artikel wird anden Kunden zurückgeschickt, der Kunde zahlt die Versandkosten<br />
-Spenden - der Artikel wird an eine Wohltätigkeitsorganisation gespendet';
+<strong>Zurücksenden</strong> - der Artikel wird anden Kunden zurückgeschickt, der Kunde zahlt die Versandkosten<br />
+<strong>Spenden</strong> - der Artikel wird an eine Wohltätigkeitsorganisation gespendet';
 $how_text17a  = 'Auftragsverfolgung<br />
 Du erhälst per E-Mail eine Bestätigung, wenn Du eine Auftrag aufgibst, sobald wir deinen Auftrag (das Paket) erhalten und nachdem die Kleidung geprüft wurde.<br />
 Du kannst Deine Bestellung jederzeit verfolgen, indem Du zu ';
