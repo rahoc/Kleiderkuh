@@ -44,7 +44,7 @@
             </div>
             <div class="hline ">|</div>
             <div class="footer">
-            <a href="http://www.facebook.de"  onClick="trackOutboundLink(this, 'Understanding KK', 'External Link', 'Facebook'); return false;"><img class="footimage" src="images/fb.png" /></a>
+            <a href="http://www.facebook.de"  onClick="trackOutboundLink(this, 'Understanding KK', 'External Link', 'Facebook'); return false;" target="_blank"><img class="footimage" src="images/fb.png" /></a>
             </div>
             <div class="hline ">|</div>
             <div class="footer">

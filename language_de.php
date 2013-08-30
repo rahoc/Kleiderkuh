@@ -245,7 +245,7 @@ $how_text10  = 'Erkläre uns was du verkaufen möchtest indem du folgende Katego
 <br />- Typ
 <br />- Größe
 <br />Falls eine Kategorie nicht ausgewählt werden kann wie zum Beispiel eine bestimmte Größe, dann bedeutet das, dass wir diesen Artikel leider im Moment nicht kaufen.';
-$how_text11  = 'Wie viel bekomme ich dafür?<br />Sobald diese Information eingetragen ist, siehst Du den Wert des Artikels und kannst ihn in den Warenkorb legen.';
+$how_text11  = 'Wie viel bekomme ich dafür?<br />Sobald du die Kategorien gewählt hast, siehst du den Wert des Artikels und kannst ihn in den Warenkorb legen.';
 $how_text12  = 'Kasse<br />Bevor du zur Kasse gehen kannst, musst du Artikel im Gesamtwert von mindestens 15 Euro im Warenkorb haben. Sobald Du alle Artikel hinzugefügt hast, klicke den "Jetzt verkaufen"-Knopf im Warenkorb und du gelangst zur Bestätigungsseite';
 $how_text13  = 'Bezahlung und deine Daten<br />
 Um deinen Verkauf zu bestätigen, gib deine E-Mail-Adresse ein und gib an wie du bezahlt werden möchtest.<br />

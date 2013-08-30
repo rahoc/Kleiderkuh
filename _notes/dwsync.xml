@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="language_de.php" server="ftp.strato.de//" local="130221644877927490" remote="130221644400000000" Dst="2" />
+<file name="language_de.php" server="ftp.strato.de//" local="130223373949191436" remote="130223373600000000" Dst="2" />
 <file name="db.php" server="ftp.strato.de//" local="130221530623677200" remote="130221530400000000" Dst="2" />
-<file name="foot.php" server="ftp.strato.de//" local="130223227439843906" remote="130223227200000000" Dst="2" />
+<file name="foot.php" server="ftp.strato.de//" local="130223278339941364" remote="130223278200000000" Dst="2" />
 <file name="head.php" server="ftp.strato.de//" local="130221657637515376" remote="130221657600000000" Dst="2" />
 <file name="script.js" server="ftp.strato.de//" local="130221657800467595" remote="130221657600000000" Dst="2" />
 <file name="Cloth.php" server="ftp.strato.de//" local="130216356913958624" remote="130216356600000000" Dst="2" />
@@ -20,13 +20,13 @@
 <file name="changeTransactionState.php" server="ftp.strato.de//" local="130217398395590602" remote="130217398200000000" Dst="2" />
 <file name="language.php" server="ftp.strato.de//" local="130215760973808274" remote="130215760800000000" Dst="2" />
 <file name="testJsPost.php" server="ftp.strato.de//" local="130215786145966154" remote="130215786000000000" Dst="2" />
-<file name="getItemMetricCSV.php" server="ftp.strato.de//" local="130216346284639773" remote="130216345800000000" Dst="2" />
+<file name="getItemMetricCSV.php" server="ftp.strato.de//" local="130223244833898985" remote="130223244600000000" Dst="2" />
 <file name="changeTransClothAccepted.php" server="ftp.strato.de//" local="130216352239786117" remote="130216351800000000" Dst="2" />
 <file name="login.php" server="ftp.strato.de//" local="130216470697573218" remote="130216470600000000" Dst="2" />
 <file name="manageClothes.php" server="ftp.strato.de//" local="130216478505546549" remote="130216478400000000" Dst="2" />
 <file name="robots.txt" server="ftp.strato.de//" local="130216504889429039" remote="130216504800000000" Dst="2" />
 <file name="sell.php" server="ftp.strato.de//" local="130221543265050365" remote="130221543000000000" Dst="2" />
-<file name="Transaction.php" server="ftp.strato.de//" local="130221645413135512" remote="130221645000000000" Dst="2" />
+<file name="Transaction.php" server="ftp.strato.de//" local="130223245636577854" remote="130223245200000000" Dst="2" />
 <file name="cartOverview.php" server="ftp.strato.de//" local="130221534509489058" remote="130221534000000000" Dst="2" />
 <file name="contact.php" server="ftp.strato.de//" local="130221555177927642" remote="130221555000000000" Dst="2" />
 </dwsync>

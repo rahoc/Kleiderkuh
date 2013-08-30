@@ -206,7 +206,7 @@ class Transaction {
 			}
 		}
 		else {
-			echo "No Clothes exist for this Transaction: $transactionId ! <br />";	
+			//echo "No Clothes exist for this Transaction: $transactionId ! <br />";	
 		}	
 		
 		

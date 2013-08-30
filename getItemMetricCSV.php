@@ -2,7 +2,7 @@
 
 require_once('Transaction.php');
 
-$file = 'item_metric.txt';
+$file = 'item_metric.csv';
 
 // CONNECT
 $mysqli = new mysqli("rdbms.strato.de","U1401681", "22qmuh22", "DB1401681");
@@ -58,11 +58,25 @@ foreach ($transactions as $i => $value) {
 $content = str_replace(array('&auml;','&Auml;','&ouml;','&Ouml;','&uuml;','&Uuml;'), array('ä','Ä','ö','Ö','ü','Ü'), $content);
 
 $content = $headers . $content;
-header("Content-type:application/txt");
+$now = gmdate("D, d M Y H:i:s");
+
+// disable caching
+header("Expires: Tue, 03 Jul 2001 06:00:00 GMT");
+header("Cache-Control: max-age=0, no-cache, must-revalidate, proxy-revalidate");
+header("Last-Modified: {$now} GMT");
+
+// force download  
+header("Content-Type: application/force-download");
+header("Content-Type: application/octet-stream");
+header("Content-Type: application/download");
+
+header("Content-type:application/csv");
 header("Content-Disposition:attachment;filename='item-metric.csv'");
+header("Content-Transfer-Encoding: binary");
+
 echo $content;
 // Write the contents back to the file
-file_put_contents($file, $content);
+//file_put_contents($file, $content);
 
-
+die();
 ?>
