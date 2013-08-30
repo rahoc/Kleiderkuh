@@ -596,7 +596,7 @@ a.selectActive:hover   { color:#000; background-color:rgba(154,154,154,0.83); }
 	border-radius:10px;
     text-decoration: underline;
 	text-align:center;
-	cursor:alias;
+	cursor:pointer;
 }
 
 .selectDescription {
