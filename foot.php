@@ -68,7 +68,7 @@ $("#lang").click(function() {
 		l = "en";
 	}
 		//alert (l);
-	$.post("http://kleiderkuh.de/setLanguage.php", {language: l })
+	$.post("setLanguage.php", {language: l })
 	.done(function(data) {
 		//alert (data);
 	  location.reload();
