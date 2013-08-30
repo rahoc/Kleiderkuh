@@ -12,6 +12,9 @@
 		case "transaction":
 			echo '<title>'.$title_transaction.'</title><meta name="description" content="'.$description_transaction.'">';
 			break;
+		case "about":
+			echo '<title>'.$title_about.'</title><meta name="description" content="'.$description_about.'">';
+			break;
 		default:
 			echo '<title>'.$title_home.'</title><meta name="description" content="'.$description_home.'">';
 			break;

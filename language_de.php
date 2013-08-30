@@ -18,6 +18,8 @@ $title_sell = "Kleider Kuh - Leere deinen Kleiderschrank und füll deinen Geldbe
 $description_sell = "Kleider Kuh bietet dir einen einfachen Weg diene gebrauchte Kinderkleidung zu verkaufen. Mit nur wenigen Klicken kannst du exakt erfahren was deine Kinderkleidung noch wert ist und die einen Kostenlosen Frankierschein ausdrucken.  Sobald wir die Kleidung erhalten und geprüft haben, erhältst du von uns dein Geld.  Wir kaufen Kinderbekleidung in exzellentem Zustand von Premium Herstellern wie z.B. Abercrombie & Fitch, Armani, Benetton, Dolce & Gabbana, Hugo Boss, Jack Wolfskin, Lacoste, Napapijri, Ralph Lauren, Tommy Hilfiger und Vingino.";
 $title_transaction = "Kleider Kuh - Überprüfe deinen Auftragsstatus";
 $description_transaction = "Überprüfe den Status deines Kleider Kuh Auftrags. Du kannst sehen wann der Auftrag empfangen oder bearbeitet wurde, du kannst dir die Zahlungsdetails ansehen oder bei Bedarf einen weiterern Frankierschein drucken.";
+$title_about = "Kleider Kuh - Wer sind wir? Warum, wie und was genau machen wir?";
+$description_about = "Kleider Kuh hilft den Eltern im ganzen Land Geld aus nicht mehr getragenen Kinderbekleidung zu machen. Warum machen wir das? Wie machen wir das? Erfahre hier mehr!";
 
 //#####################
 // Home.php
