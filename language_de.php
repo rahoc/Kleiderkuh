@@ -272,7 +272,7 @@ $how_text17a  = 'Auftragsverfolgung<br />
 Du erhälst per E-Mail eine Bestätigung, wenn Du eine Auftrag aufgibst, sobald wir deinen Auftrag (das Paket) erhalten und nachdem die Kleidung geprüft wurde.<br />
 Du kannst Deine Bestellung jederzeit verfolgen, indem Du zu ';
 $how_link4  = 'Aufträge wechselst';
-$how_text17b  = ' wechselst und deine E-Mail-Adresse und Bestellnummer eingibst.';
+$how_text17b  = ' und deine E-Mail-Adresse und Bestellnummer eingibst.';
 
 //##################### 
 // Requirements.php
