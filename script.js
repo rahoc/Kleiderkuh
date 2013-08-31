@@ -395,13 +395,13 @@ $(document).ready(function(){
 			});
 			feedbackOpen = false;
 		  });
-		   $("#bkg_feedback").click(function () {
+		   /*$("#bkg_feedback").click(function () {
 			$("#dlg_feedback").hide('800', "swing", function () { $("#bkg_feedback").fadeOut("500"); });
 			$.get('feedback.php', function(data) {
 			  $('#dlg_feedback_content').html(data);
 			});
 			feedbackOpen = false;
-		  });
+		  });*/
 		  $("#opn_feedback").click(function () {
 			  	
 				
@@ -429,10 +429,10 @@ $(document).ready(function(){
 			$("#dlg_buy").hide('800', "swing", function () { $("#bkg_buy").fadeOut("500"); });
 			buyOpen = false;
 		  });
-		  $("#bkg_buy").click(function () {
+		  /*$("#bkg_buy").click(function () {
 			$("#dlg_buy").hide('800', "swing", function () { $("#bkg_buy").fadeOut("500"); });
 			buyOpen = false;
-		  });
+		  });*/
 		  $("#opn_buy").click(function () {
 			// Google Analytics 
 			
