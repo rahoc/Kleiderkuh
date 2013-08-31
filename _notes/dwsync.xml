@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="language_de.php" server="ftp.strato.de//" local="130224264381820791" remote="130224264000000000" Dst="2" />
+<file name="language_de.php" server="ftp.strato.de//" local="130224288177076419" remote="130224288000000000" Dst="2" />
 <file name="db.php" server="ftp.strato.de//" local="130221530623677200" remote="130221530400000000" Dst="2" />
 <file name="foot.php" server="ftp.strato.de//" local="130224181321360777" remote="130224181200000000" Dst="2" />
 <file name="head.php" server="ftp.strato.de//" local="130223397463404917" remote="130223397000000000" Dst="2" />
@@ -33,4 +33,5 @@
 <file name="about.php" server="ftp.strato.de//" local="130223396308090235" remote="130223395800000000" Dst="2" />
 <file name="brandOverview.php" server="ftp.strato.de//" local="130224257704591488" remote="130224257400000000" Dst="2" />
 <file name="HowItWorks.php" server="ftp.strato.de//" local="130224267072299148" remote="130224267000000000" Dst="2" />
+<file name="Requirements.php" server="ftp.strato.de//" local="130224287294741814" remote="130224286800000000" Dst="2" />
 </dwsync>

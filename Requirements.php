@@ -20,10 +20,10 @@ include 'language.php';
 <td><img src="images/checkbox.png" class="checkbox" /></td>
 <td><?php echo $req_text4; ?></td>
 </tr>
-<tr>
+<!--<tr>
 <td><img src="images/checkbox.png" class="checkbox" /></td>
 <td><?php echo $req_text5; ?></td>
-</tr>
+</tr>-->
 <tr>
 <td><img src="images/checkbox.png" class="checkbox" /></td>
 <td><?php echo $req_text6; ?></td>

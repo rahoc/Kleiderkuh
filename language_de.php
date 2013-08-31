@@ -285,14 +285,14 @@ $how_text17b  = ' und deine E-Mail-Adresse und Bestellnummer eingibst.';
 //##################### 
 $req_headline1  = 'Kriterien für Kleidung';
 $req_text1  = 'Keine Löcher oder Risse';
-$req_text2  = 'Keine Flecken oder Striemen';
-$req_text3  = 'Keine fehlenden Knöpfe, Reißverschlüsse etc.';
+$req_text2  = 'Keine Flecken';
+$req_text3  = 'Keine fehlenden Knöpfe, kaputte Reißverschlüsse etc.';
 $req_text4  = 'Keine Gebrauchsspuren';
 $req_text5  = 'Nichtraucherhaushalt (keine Rauchgeruch)';
-$req_text6  = 'Keine Gerüche';
-$req_text7  = 'Kein Ausbleichen';
+$req_text6  = 'Keine Gerüche wie zum Beispiel Rauch';
+$req_text7  = 'Keine ausgeblichene Kleidung';
 $req_text8  = 'Keine Verformungen';
-$req_text9  = 'Kein Einlaufen';
+$req_text9  = 'Keine eingelaufene Kleidung';
 $req_text10  = 'Nicht älter als 5 Jahre';
 $req_text11  = 'Gewaschen und gereinigt, bevor es an uns geschickt wird';
  
@@ -333,9 +333,9 @@ $about_text1  = '<h1>Wer wir sind</h1><br />
 <h1>Warum?</h1>
 <p>Es gibt Millionen von hochwertiger Markenkleidungsstücke für Kinder die in unserem Land in den Schränken liegen und nie mehr getragen werden. Unsere Aufgabe ist es, einen Service anzubieten der ein neues Zuhause für diese Kleidungsstücke findet. 
 <h1>Was machen wir?</h1>
-<p>Unser Service ermöglicht Eltern aus dem ganzen Land Geld für Kinderkleidung, die nicht mehr getragen wird, zu erhalten. Es ist wichtig für uns dass dieser Service unseren Kunden drei Hauptvorteile anbietet:<ul>
+<p>Unser Service ermöglicht Eltern aus dem ganzen Land Geld für Kinderkleidung, die nicht mehr getragen wird, zu erhalten. Es ist wichtig für uns, dass dieser Service unseren Kunden drei Hauptvorteile anbietet:<ul>
 <li>Schnelle und einfache Bezahlung für Kleidung</li>
-<li>Umweltfreundlich, werben für Recycling und Wiederverwendung</li>
+<li>Umweltfreundlich, Einsatz für Recycling und Wiederverwendung</li>
 <li>Eine einfache Methode den Kleiderschrank aufzuräumen</li>
 </ul></p>
 <h1>Wie machen wir das?</h1><p><ul>
