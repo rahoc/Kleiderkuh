@@ -12,6 +12,19 @@ function trackOutboundLink(link, category, action, label) {
 	
 }
 
+function trackOutboundLinkNewWindow(link, category, action, label) { 
+
+	try { 
+		ga('send', 'event', category, action, label); 
+	}
+	catch(err){}
+	setTimeout(function() {
+		window.open(link.href,'_blank');
+	}, 100);
+	
+}
+
+
 function mainNavActive(nav)
 {
 	var allNavItems = document.getElementsByClassName("mainnav");
@@ -382,6 +395,13 @@ $(document).ready(function(){
 			});
 			feedbackOpen = false;
 		  });
+		   $("#bkg_feedback").click(function () {
+			$("#dlg_feedback").hide('800', "swing", function () { $("#bkg_feedback").fadeOut("500"); });
+			$.get('feedback.php', function(data) {
+			  $('#dlg_feedback_content').html(data);
+			});
+			feedbackOpen = false;
+		  });
 		  $("#opn_feedback").click(function () {
 			  	
 				
@@ -406,6 +426,10 @@ $(document).ready(function(){
 		// Buy
 		
 		  $("#closebtn_buy").click(function () {
+			$("#dlg_buy").hide('800', "swing", function () { $("#bkg_buy").fadeOut("500"); });
+			buyOpen = false;
+		  });
+		  $("#bkg_buy").click(function () {
 			$("#dlg_buy").hide('800', "swing", function () { $("#bkg_buy").fadeOut("500"); });
 			buyOpen = false;
 		  });
@@ -441,6 +465,10 @@ $(document).ready(function(){
 	$("#dlg").hide('800', "swing", function () { $("#bkg").fadeOut("500"); });
 	
   });
+//  $("#bkg").click(function () {
+//	$("#dlg").hide('800', "swing", function () { $("#bkg").fadeOut("500"); });
+//	
+//  });
   
 //}); 
 
