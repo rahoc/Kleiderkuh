@@ -728,7 +728,7 @@ a.trash {
 
 .tab_content {
 	width:160px;
-	height:130px;
+	height:145px;
 }
 
 .tab_header {
@@ -736,6 +736,7 @@ a.trash {
 }
 .tab_image {
 	height:70px;
+	margin:5px;
 }
 .tab_date {
 	height:20px;
@@ -745,14 +746,14 @@ a.trash {
 	background-image:url(images/arrow_selected.png);
 	background-repeat:no-repeat;
 	background-size:contain;
-	
+	margin:5px;
 }
 
 .tab {
 
 	background-repeat:no-repeat;
 	background-size: 150px;
-	background-position: 50% 20px;
+	background-position: 50% 23px;
 	background-color:#EEE;
 	border-top-left-radius:10px;
 	border-top-right-radius:10px;
@@ -1060,6 +1061,10 @@ color:#000;
 }
 #customerForm table {
 	margin-bottom: 10px;
+
+}
+#customerForm td {
+	min-width: 150px;
 
 }
 
