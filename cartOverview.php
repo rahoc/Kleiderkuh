@@ -62,12 +62,12 @@
 	<div id="customerForm">
    
 	
-    <form id="#cart_form" method="post" action="confirm.php">
+    <form id="cart_form" method="post" action="confirm.php">
     
     <table>
-    	<tr><td><?php echo $cartOverview_label1; ?></td><td><input type="text" name="fname"
+    	<tr><td><?php echo $cartOverview_label1; ?></td><td><input type="text" name="fname" id="cart_fname"
         		value="<?php echo $firstName?>" onkeyup="checkCartForm()"></td></tr>
-        <tr><td><?php echo $cartOverview_label2; ?></td><td><input type="text" name="lname"
+        <tr><td><?php echo $cartOverview_label2; ?></td><td><input type="text" name="lname" id="cart_lname"
         		value="<?php echo $lastName?>" onkeyup="checkCartForm()"></td></tr>
         <tr><td><?php echo $cartOverview_label3; ?></td><td><input type="text" id="cart_email" name="email"
         		value="<?php echo $email?>" onkeyup="checkCartForm()"></td></tr>
@@ -77,29 +77,29 @@
         <input id="payment_ueberweisung" type="radio" name="payment" value="ueberweisung"
         	onclick="setUeberweisungVisible(true)"><?php echo $cartOverview_label6; ?></td></tr>
    
-        <tr>
+        <tr class="ueberweisung">
         	<td><?php echo $cartOverview_label7; ?></td>
-        	<td><input type="text" id="blz" name="blz" disabled="disabled" onkeyup="checkCartForm()"></td>
+        	<td><input type="text" id="blz" name="blz" onkeyup="checkCartForm()"></td>
         </tr>
-        <tr>
+        <tr class="ueberweisung">
         	<td><?php echo $cartOverview_label8; ?></td>
-            <td><input type="text" id="kto" name="kto" disabled="disabled" onkeyup="checkCartForm()"></td>
+            <td><input type="text" id="kto" name="kto" onkeyup="checkCartForm()"></td>
         </tr>
 
        
-        <tr><td><?php echo $cartOverview_label9; ?></td><td>
+        <tr class="paypal"><td><?php echo $cartOverview_label9; ?></td><td>
         <input type="radio" id="paypalMail1"  name="paypalMail" value="same"
-        	onclick="setDiffPaypalVisible(false)" disabled="disabled">
+        	onclick="setDiffPaypalVisible(false)" >
             <?php echo $cartOverview_label10; ?><br />
         <input type="radio" id="paypalMail2" name="paypalMail" value="different"
-        	onclick="setDiffPaypalVisible(true)" disabled="disabled">
+        	onclick="setDiffPaypalVisible(true)" >
             <?php echo $cartOverview_label11; ?></td></tr>
- 		 <tr><td><?php echo $cartOverview_label12; ?></td><td>
-         <input type="text" id="paypalMailadress" name="paypalMailadress" disabled="disabled"  onkeyup="checkCartForm()">
+ 		 <tr class="paypal_Mailadress"><td><?php echo $cartOverview_label12; ?></td><td>
+         <input type="text" id="paypalMailadress" name="paypalMailadress" onkeyup="checkCartForm()">
          </td></tr>
     </table>
     <div id="error_on_submit" class="orange"></div>
-    <input type="image" src="images/<?php echo $langID; ?>/buttons/submit.png" alt="Submit Form" value="Sell this!" class="button" id="submitCartForm" style="visibility:hidden" />
+    <input type="image" src="images/<?php echo $langID; ?>/buttons/submit.png" alt="Submit Form" value="Sell this!" class="button" id="submitCartForm" />
 	</form>
 	</div>
 </div>
@@ -108,19 +108,56 @@
 
 <script>
 
+$(document).ready(function(e) {
+    checkCartForm();
+});
+
+
 $('#submitCartForm').click(function() {
-  $("#error_on_submit").empty();
-  if (!isEmail($("#cart_email").val())) {
-	  //alert('Email not valid.');
-	  $("#error_on_submit").text("<?php echo $cartOverview_error1; ?>");
-	  return false;
-  }
-  var pp = $("input[name='paypalMail']:checked").val();
-  if (pp == "different" && !isEmail($("#paypalMailadress").val())) {
-	  //alert('PP not valid.');
-	  $("#error_on_submit").text("<?php echo $cartOverview_error2; ?>");
-	  return false;
-  }
+	$("#error_on_submit").empty();
+	if (!isEmail($("#cart_email").val())) {
+		//alert('Email not valid.');
+		$("#error_on_submit").text("<?php echo $cartOverview_error1; ?>");
+		return false;
+	}
+	
+  	if(	$("#cart_fname").val() == "" ||
+  		$("#cart_lname").val() == "" ||
+		$("#cart_email").val() == "")
+	{
+		$("#error_on_submit").text("<?php echo $cartOverview_error3; ?>");
+		return false;
+	}
+	if( !$("input[name='payment']").is(":checked")) {
+		$("#error_on_submit").text("<?php echo $cartOverview_error3; ?>");
+		return false;
+	}
+	if ($("input[name='payment']:checked").val() == "ueberweisung") {
+		if(	$("#kto").val() == "" ||
+			$("#blz").val() == "")
+		{
+			$("#error_on_submit").text("<?php echo $cartOverview_error3; ?>");
+			return false;
+		}
+	}
+	else {
+		if( !$("input[name='paypalMail']").is(":checked")) {
+			$("#error_on_submit").text("<?php echo $cartOverview_error3; ?>");
+			return false;
+		}
+		var pp = $("input[name='paypalMail']:checked").val();
+		if (pp == "different" && !isEmail($("#paypalMailadress").val())) {
+			//alert('PP not valid.');
+			$("#error_on_submit").text("<?php echo $cartOverview_error2; ?>");
+			return false;
+		}
+		else if(pp != "same" && pp != "different") {
+			$("#error_on_submit").text("<?php echo $cartOverview_error3; ?>");
+			return false;
+		}
+	}
+	
+
 
 });
 

@@ -109,7 +109,8 @@ $cartOverview_label12  =  "Paypal Email:";
 $cartOverview_button1  =  "Submit";
 $cartOverview_error1  =  "Email address not valid";
 $cartOverview_error2  =  "Paypal Mail address not valid";
- 
+$cartOverview_error3  = 'Please fill out the form completely!';
+
 //##################### = 
 // cart = 
 //##################### = 

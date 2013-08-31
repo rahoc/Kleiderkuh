@@ -100,17 +100,18 @@ $cartOverview_label1  = 'Vorname:';
 $cartOverview_label2  = 'Nachname:';
 $cartOverview_label3  = 'E-Mail:';
 $cartOverview_label4  = 'Zahlungsart:';
-$cartOverview_label5  = 'PayPal:';
-$cartOverview_label6  = 'Überweisung:';
+$cartOverview_label5  = 'PayPal';
+$cartOverview_label6  = 'Überweisung';
 $cartOverview_label7  = 'Bankleitzahl:';
 $cartOverview_label8  = 'Kontonummer:';
 $cartOverview_label9  = 'PayPal:';
 $cartOverview_label10  = 'Verwende dieselbe E-Mail-Adresse wie oben';
-$cartOverview_label11  = 'Verwende eine andere Emailadresse';
+$cartOverview_label11  = 'Verwende eine andere E-Mail-Adresse';
 $cartOverview_label12  = 'Paypal E-Mail:';
 $cartOverview_button1  = 'Abschicken';
 $cartOverview_error1  = 'Ungültige Emailadresse';
 $cartOverview_error2  = 'Ungültige PayPal E-Mail-Adresse';
+$cartOverview_error3  = 'Bitte fülle das Formular vollstädig aus!';
 
 //#####################
 // cart

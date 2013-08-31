@@ -655,40 +655,32 @@ function checkCartForm() {
 	var ppDifferent = document.getElementById("paypalMail2");
 	var ppMail = document.getElementById("paypalMailadress");
 	
-	// Check personal data
-	if(fname.value == "" || lname.value == "" || email.value == "" ) {
-		submitButton.style.visibility="hidden" ;
-		return;
-	}
-	
+	$(".ueberweisung").hide();
+	$(".paypal").hide();
+	$(".paypal_Mailadress").hide();
 	
 	// Check Ueberweisung
 	if(payUeberweisung.checked) {
-		if(kto.value == "" || blz.value == "") {
-			submitButton.style.visibility="hidden" ;
-			return;
-		}
+		$(".ueberweisung").show();
+		$(".paypal").hide();
 	}
 	// Check paypal
 	else if(payPaypal.checked) {
+		$(".paypal").show();
+		$(".ueberweisung").hide();
+		
 		if(ppDifferent.checked ) {
-			if(ppMail.value == "") {
-			submitButton.style.visibility="hidden" ;
-			return;
-			}
+			$(".paypal_Mailadress").show();
 		}
-		else if(!ppSame.checked) {
-			submitButton.style.visibility="hidden" ;
-			return;
+		else {
+			$(".paypal_Mailadress").hide();
 		}
+
 	}
 	else {
-		submitButton.style.visibility="hidden" ;
-		return;
+		$(".ueberweisung").hide();
+		$(".paypal").hide();
 	}
-
-
-	submitButton.style.visibility="visible" ;
 
 }
 
