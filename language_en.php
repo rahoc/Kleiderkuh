@@ -43,7 +43,8 @@ $home_text5  =  "Print free shipping label, pack and send";
 $home_text6  =  "You will be payed as soon as the package arrives";
 $home_text7  =  "Items should be in excellent condition. Learn more about our detailed requirements ";
 $home_text8  =  "Clothes must look and smell clean. Please wash and fully dry all clothing before sending";
-$home_text9  = "Our service is designed exclusively for premium brands. Based on demand we are often updating our brands so check back regularly";
+$home_text9a  = "Our service is designed exclusively for ";
+$home_text9b  = " Based on demand we are often updating our brands so check back regularly";
 $home_text10  =  "We are only looking for clothes for children between the age of 1 and 10 years old at this time";
 $home_text12  =  "Any clothing with holes, stains, fading, shrinkage, etc., cannot be accepted";
 $home_text13  =  "Only children's clothes are accepted";
@@ -53,6 +54,7 @@ $home_text16  =  "Clothing must be manufactured by the brand represented on the 
 $home_button1  =  "Sell now!";
 $home_link1  =  "More details...";
 $home_link2  =  "here...";
+$home_link3  =  "premium brands.";
 $home_bubble1  =  "Yup!";
 $home_bubble2  =  "No!";
 
@@ -239,10 +241,10 @@ $how_link1  =  "criteria";
 $how_text9a  =  "To sell your clothes navigate ";
 $how_link2  =  "here";
 $how_text9b  =  " and follow the steps pictured below";
-$how_text10 = "Tell us about the item you want to sell by selecting the following:
+$how_text10a = "Tell us about the item you want to sell by selecting the following:
 <br />- Gender
-<br />- Brand
-<br />- Type
+<br />- ";
+$how_text10b = "<br />- Type
 <br />- Size
 <br />In case an option is not able to be selected, for example a certain size, it means we are unfortunately not buying this item at the moment";
 $how_text11 = "How much do you get?<br />
@@ -282,6 +284,7 @@ $how_text17a = "Order Tracking<br />
 You will receive notification by email when you submit an order for sale and also when your order has been received and processed <br />
 At anytime you can track your order by navigating to ";
 $how_link4  =  "Orders";
+$how_link5  =  "Brand";
 $how_text17b  =  " and entering your email address and order number.";
 
 //##################### = 
@@ -365,6 +368,12 @@ $contact_headline1 = "Contact";
 $contact_subheader1 = "To contact Kleider Kuh please send email to:";
 $contact_subheader2 = "Or use this form:";
 $contact_text1 = "support@kleiderkuh.de";
+
+//#####################
+// brandOverview.php
+//#####################
+$brands_headline1 = "Brands";
+$brands_subheader1 = "We buy this brands!";
 
 //#####################
 // AGB.php

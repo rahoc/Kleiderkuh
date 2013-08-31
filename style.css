@@ -92,6 +92,10 @@ h2 {
 	text-align:left;
 }
 
+.padding_top_30 {
+	padding-top:30px;
+}
+
 .margin_left_30 {
 	margin-left:30px;
 }
@@ -392,7 +396,7 @@ div.hline {
 	text-align:center;
 }
 
-#sell_now_button {
+.sell_now_button {
 	display:block;
 	height:48px;
 	text-align:center;
@@ -402,7 +406,7 @@ div.hline {
 	text-shadow:#999;
 	margin-top:15px;
 }
-a#sell_now_button {
+a.sell_now_button {
 	padding-top:10px;
 	background-color:transparent;
 	text-decoration:none;
@@ -481,6 +485,7 @@ div.inline {
 	b order-right-style:solid;
 	b order-color:#CCC;
 	margin:1px;
+	min-width: 130px;
 }
 .selcolumnResult {
 	float:left;
@@ -557,6 +562,17 @@ a.selectActive:hover   { color:#000; background-color:rgba(154,154,154,0.83); }
 	height:40px;
 	width:80px;
 	margin: auto auto;
+}
+
+#brand_overview {
+	margin: auto auto;
+}
+
+.brandO_sel_margin {
+	margin-top: 30px;
+}
+.brandO_col_margin {
+	margin-left: 30px;
 }
 
 .typeimages {

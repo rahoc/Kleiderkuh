@@ -56,8 +56,8 @@
     
     </div>
     
-    <div id="sell_now">
-        <a href="sell.php" id="sell_now_button" class="center" onClick="trackOutboundLink(this, 'Interested to Sell', 'Sell Now button', 'jump to sell page'); return false;">
+    <div class="sell_now">
+        <a href="sell.php" class="sell_now_button" class="center" onClick="trackOutboundLink(this, 'Interested to Sell', 'Sell Now button', 'jump to sell page'); return false;">
 		<img src="images/<?php echo $langID; ?>/buttons/sellNow.png" class="button" />
         </a>
     </div>
@@ -110,7 +110,10 @@
         <tr>
         <td class="left">
         <div class="subheader cyan"><?php echo $home_subheader3; ?></div>
-            <div><?php echo $home_text9; ?></div></td>
+            <div><?php echo $home_text9a; ?>
+            <a href="#" onclick="openOverlay('brandOverview.php')" class="cyan"><?php echo $home_link3; ?></a>
+            <?php echo $home_text9b; ?>
+            </div></td>
         <td class="right">
         <div class="subheader orange"><?php echo $home_subheader8; ?></div>
             <div><?php echo $home_text14; ?></div></td>

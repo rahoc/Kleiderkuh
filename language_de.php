@@ -45,7 +45,8 @@ $home_text5  = 'Drucke den kostenlosen Frankierschein aus, verpacke die Klamotte
 $home_text6  = 'Sobald das Paket bei uns angekommen ist, bekommst du sofort dein Geld.';
 $home_text7  = 'Die Artikel sollten in ausgezeichnetem Zustand sein. Erfahre mehr über unsere genauen Anforderungen ';
 $home_text8  = 'Die Kleidung sollte sauber sein und gut riechen. Bitte wasche und trockne die Kleidung bevor du sie uns schickst.';
-$home_text9  = 'Unser Angebot beschränkt sich ausschließlich auf Top-Marken. Abhängig von der Nachfrage aktualisieren wir häufig unsere Marken, also schau regelmäßig bei uns vorbei';
+$home_text9a  = 'Unser Angebot beschränkt sich ausschließlich auf ';
+$home_text9b  =  ' Abhängig von der Nachfrage aktualisieren wir häufig unsere Marken, also schau regelmäßig bei uns vorbei';
 $home_text10  = 'Momentan suchen wir nur nach Bekleidung für Kinder von 1 bis 10 Jahren.';
 $home_text12  = 'Bekleidung mit Löchern oder Flecken sowie ausgebleichte oder eingegangene Kleidungsstücke können wir nicht annehmen';
 $home_text13  = 'Nur Kinderbekleidung wird akzeptiert';
@@ -55,6 +56,7 @@ $home_text16  = 'Die Kleidung muss von der Marke auf dem Etikett hergestellt wor
 $home_button1  = 'Jetzt verkaufen!';
 $home_link1  = 'Weitere Details...';
 $home_link2  = 'hier...';
+$home_link3  = 'Top-Marken.';
 $home_bubble1  = 'Los!';
 $home_bubble2  = 'Nein!';
 
@@ -242,10 +244,10 @@ $how_link1  = 'Kriterien erfüllen';
 $how_text9a  = 'Um deine Kinderkleidung jetzt zu verkaufen, gehe zur ';
 $how_link2  = 'Verkaufsseite';
 $how_text9b  = ' und folge den unten dargestellten Schritten.';
-$how_text10  = 'Erkläre uns was du verkaufen möchtest indem du folgende Kategorien auswählst:
+$how_text10a  = 'Sag uns was du verkaufen möchtest indem du folgende Kategorien auswählst:
 <br />- Geschlecht
-<br />- Marke
-<br />- Typ
+<br />- ';
+$how_text10b  = '<br />- Typ
 <br />- Größe
 <br />Falls eine Kategorie nicht ausgewählt werden kann wie zum Beispiel eine bestimmte Größe, dann bedeutet das, dass wir diesen Artikel leider im Moment nicht kaufen.';
 $how_text11  = 'Wie viel bekomme ich dafür?<br />Sobald du die Kategorien gewählt hast, siehst du den Wert des Artikels und kannst ihn in den Warenkorb legen.';
@@ -275,6 +277,7 @@ $how_text17a  = 'Auftragsverfolgung<br />
 Du erhälst per E-Mail eine Bestätigung, wenn Du eine Auftrag aufgibst, sobald wir deinen Auftrag (das Paket) erhalten und nachdem die Kleidung geprüft wurde.<br />
 Du kannst Deine Bestellung jederzeit verfolgen, indem Du zu ';
 $how_link4  = 'Aufträge wechselst';
+$how_link5  = 'Marke';
 $how_text17b  = ' und deine E-Mail-Adresse und Bestellnummer eingibst.';
 
 //##################### 
@@ -345,6 +348,11 @@ $contact_subheader1  = 'Um Kleider Kuh zu kontaktieren schicke eine E-mail an:';
 $contact_subheader2  = 'Oder verwende dieses Formular:';
 $contact_text1  = ' support@kleiderkuh.de';
 
+//#####################
+// brandOverview.php
+//#####################
+$brands_headline1 = "Marken";
+$brands_subheader1 = "Diese Marken kaufen wir!";
 
 //#####################
 // AGB.php

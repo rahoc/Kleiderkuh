@@ -59,7 +59,11 @@ include 'language.php';
                     <div class="sd_cell sd_logo">
                     	<img src="images/Steps/step1_v2.png" class="sd_logo_image" />
                     </div>
-                    <div class="sd_cell sd_text_small"><?php echo $how_text10; ?></div>
+                    <div class="sd_cell sd_text_small">
+						<?php echo $how_text10a; ?>
+                        <a href="#" onclick="openOverlay('brandOverview.php')" class="cyan"><?php echo $how_link5; ?></a>
+                        <?php echo $how_text10b; ?>
+                    </div>
                 </div>
             </div>
             <div class="sd_row">

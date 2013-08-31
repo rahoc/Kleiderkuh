@@ -890,6 +890,16 @@ function openOverlay(site) {
 		}
 		ga('send', 'event', category, action, label); 
 	}
+	if (site == "brandOverview.php") {
+		var category = "Understanding KK";
+		var action = "Launch overlay";
+		var label = "Brands from How it works";
+		var pathname = window.location.pathname;
+		if (pathname.slice(-8) == "home.php" || pathname.slice(-9) == "home.php#") {
+			var label = "Brands from Homepage";
+		}
+		ga('send', 'event', category, action, label); 
+	}
 	
 	// AJAX
 	if (window.XMLHttpRequest)
