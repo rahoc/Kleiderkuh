@@ -24,6 +24,19 @@
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Handlee' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Chela+One' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="style.css">
+<!-- CLICKTALE AJAX -->
+<SCRIPT type='text/javascript'>
+  // enable XHR wrapper   
+  window.ClickTaleSettings = { XHRWrapper: { Enable: true, MaxResponseSize: 1000000} };
+</SCRIPT>
+<SCRIPT type='text/javascript'>
+    document.write(unescape("%3Cscript%20src='" +
+(document.location.protocol == 'https:' ?
+  'https://clicktalecdn.sslcs.cdngc.net/www/' :
+  'http://cdn.clicktale.net/www/') +
+"XHRWrapper.js'%20type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+<!-- CLICKTALE AJAX END -->
 <script type="text/javascript" src="jspdf/jspdf.js"></script>
 <script type="text/javascript" src="jspdf/libs/Deflate/adler32cs.js"></script>
 <script type="text/javascript" src="jspdf/libs/FileSaver.js/FileSaver.js"></script>

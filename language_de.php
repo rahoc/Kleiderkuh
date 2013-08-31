@@ -325,8 +325,8 @@ $feedback_mail2 = "Dein Name: ";
 $feedback_mail3 = "E-Mail: ";
 $feedback_mail4 = "Kategorie: ";
 $feedback_mail5 = "Text: ";
-$feedback_error1 = "Sie scheinen keine gültige E-Mail-Adresse eingegeben zu haben!";
-$feedback_error2 = "Bitte geben Sie einen Nachrichtentext ein!";
+$feedback_error1 = "Du scheinst keine gültige E-Mail-Adresse eingegeben zu haben!";
+$feedback_error2 = "Bitte gib einen Nachrichtentext ein!";
 
 $about_text1  = '<h1>Wer wir sind</h1><br />
 <p>Kleider Kuh wurde von einer kleinen Gruppe von Unternehmern in der süddeutschen Stadt Ulm gegründet. Albert Einstein wurde in Ulm geboren und eines Tages traf sich unser Team um zu sehen ob wir eine Idee entwickeln können die Einstein würdig ist ... so entwickelten wir das Konzept von Kleider Kuh.</p>
