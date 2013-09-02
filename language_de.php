@@ -154,7 +154,7 @@ $trans_text1  = 'Deine Auftragsnummer: ';
 $trans_text2  = 'Deine E-Mail-Adresse: ';
 $trans_text3  = 'Dein Auftragsstatus: ';
 $trans_text4  = 'Vielen Dank für deinen Auftrag vom: ';
-$trans_text5  = 'Eine Auftragstätigung wurde an deine E-Mail-Adresse gesendet: ';
+$trans_text5  = 'Eine Auftragsbestätigung wurde an deine E-Mail-Adresse gesendet: ';
 $trans_text6  = 'Bitte fülle das unten stehende Formular aus, um einen kostenlosen DHL-Versandaufkleber und die Versandanweisungen auszudrucken.';
 $trans_text8  = 'Paket eingegangen am: ';
 $trans_text9  = 'Dein Paket ist bei uns angekommen und wird bearbeitet.';
@@ -210,14 +210,15 @@ $trans_text31  = 'Option A: Bezahlung via PayPal an: paypal@kleiderkuh.de
 $trans_text32  = 'Akzeptiert';
 $trans_text33  = 'Abgelehnt';
 $trans_text34  = 'Fehlt';
-$trans_text35  = ' Kostenloser DHL Frankierschhein zum ausdrucken';
-$trans_text36  = '<strong>Anleitung zum einsenden</strong>
+$trans_text35  = ' Kostenloser DHL-Frankierschein zum Ausdrucken';
+$trans_text36  = '<strong>Anleitung für den Versand</strong>
 					<ol>
 					<li>Versanddokumente drucken</li>
 					<li>Artikel ins Paket legen</li>
 					<li>DHL-Frankierschein gut sichtbar aufs Paket kleben</li>
-					<li>Sie haben folgende Möglichkeiten das Paket aufzugeben:
+					<li>Du hast folgende Möglichkeiten das Paket aufzugeben:
 						<ul>
+						<li>Postfiliale</li>
 						<li>Packstation</li>
 						<li>Paketbox</li>
 						<li>An DHL Fahrer übergeben</li>
@@ -232,8 +233,8 @@ $trans_text37  = 'Ein PopUp Fenster sollte sich innerhalb der nächsten 10 Sekun
 //##################### = '';
 $how_headline1  = 'So geht\'s';
 $how_subheader1  = '6 Schritte...';
-$how_text1  = 'Wähle Produkt aus den Kategorien';
-$how_text2  = 'Schau den Verkaufspreis an und und lege es in den Warenkorb';
+$how_text1  = 'Wähle ein Produkt aus den Kategorien aus';
+$how_text2  = 'Schau dir den Verkaufspreis an und lege es in den Warenkorb';
 $how_text3  = 'Zur Kasse';
 $how_text4  = 'Drucke den kostenlosen Frankierschein aus';
 $how_text5  = 'Verpacken und senden';
@@ -251,31 +252,31 @@ $how_text10b  = '<br />- Typ
 <br />- Größe
 <br />Falls eine Kategorie nicht ausgewählt werden kann wie zum Beispiel eine bestimmte Größe, dann bedeutet das, dass wir diesen Artikel leider im Moment nicht kaufen.';
 $how_text11  = 'Wie viel bekomme ich dafür?<br />Sobald du die Kategorien gewählt hast, siehst du den Wert des Artikels und kannst ihn in den Warenkorb legen.';
-$how_text12  = 'Kasse<br />Bevor du zur Kasse gehen kannst, musst du Artikel im Gesamtwert von mindestens 15 Euro im Warenkorb haben. Sobald Du alle Artikel hinzugefügt hast, klicke den "Jetzt verkaufen"-Knopf im Warenkorb und du gelangst zur Bestätigungsseite';
+$how_text12  = 'Kasse<br />Bevor du zur Kasse gehen kannst, musst du Artikel im Gesamtwert von mindestens 15 Euro im Warenkorb haben. Sobald du alle Artikel hinzugefügt hast, klicke den "Jetzt verkaufen"-Knopf im Warenkorb und du gelangst zur Bestätigungsseite';
 $how_text13  = 'Bezahlung und deine Daten<br />
 Um deinen Verkauf zu bestätigen, gib deine E-Mail-Adresse ein und gib an wie du bezahlt werden möchtest.<br />
 Die Zahlungsoptionen sind Überweisung oder PayPal.<br />
 Um eine Überweisung zu erhalten, gib einfach deine Kontonummer und die Bankleitzahl ein.<br />
 Um PayPal zu nutzen, gib an welche E-Mail-Adresse für die Zahlung verwendet werden soll. (Hinweis: Es entstehen PayPal-Gebühren. Dies bedeutet, PayPal berechnet dir die normalen Gebühren für den Erhalt von Zahlungen. Üblicherweise sind das 0,10 € + 3,5% des Zahlungsbetrags)';
 $how_text14  = 'Kostenlosen Frankierschein drucken<br />
-Sobald du an der Kasse fertig bist, kannst Du einen kostenlosen DHL-Frankierschein ausdrucken<br />
-Falls Du keinen Drucker hast, kannst Du Dir den kostenlosen Frankierschein per Post schicken lassen<br />
+Sobald du an der Kasse fertig bist, kannst du einen kostenlosen DHL-Frankierschein ausdrucken<br />
+Falls du keinen Drucker hast, kannst du dir den kostenlosen Frankierschein per Post schicken lassen<br />
 Alternativ kannst du uns das Paket auch mit einem anderen Versanddienstleister schicken. Beachte aber, dass wir leider nur die Versankosten bezahlen, wenn du den DHL-Frankierschein von unserer Website verwendest.';
 $how_text15  = 'Verpacken und senden<br />
 Packe alle Artikel und die ausgedruckten Unterlagen in ein Paket.<br />
 Bringe den Frankierschein außen am Paket an.<br />
-Du kannst das Paket in jedem Postamt oder jeder DHL Packstation abgeben.';
+du kannst das Paket in jedem Postamt oder jeder DHL Packstation abgeben.';
 $how_text16a  = 'Wir erhalten und bearbeiten den Auftrag<br />
 Sobald wir das Paket erhalten, prüfen wir  ob alle Artikel den ';
 $how_link3  = 'Kriterien für unsere Kleidung entsprechen.';
-$how_text16b  = '<br />Akzeptiert: Wenn alle Kriterien eingehalten werden, veranlassen wir unverzüglich Deine Bezahlung<br />
+$how_text16b  = '<br />Akzeptiert: Wenn alle Kriterien eingehalten werden, veranlassen wir unverzüglich deine Bezahlung<br />
 Nicht akzeptiert: Falls die Kriterien nicht eingehalten werden oder der Artikel nicht den angegebenen Artikeldaten entspricht, informieren wir dich, dass wir den Artikel nicht akzeptieren können<br />
 In diesem Fall hat der Kunde zwei Möglichkeiten:<br />
-<strong>Zurücksenden</strong> - der Artikel wird anden Kunden zurückgeschickt, der Kunde zahlt die Versandkosten<br />
+<strong>Zurücksenden</strong> - der Artikel wird an den Kunden zurückgeschickt, der Kunde zahlt die Versandkosten<br />
 <strong>Spenden</strong> - der Artikel wird an eine Wohltätigkeitsorganisation gespendet';
 $how_text17a  = 'Auftragsverfolgung<br />
-Du erhälst per E-Mail eine Bestätigung, wenn Du eine Auftrag aufgibst, sobald wir deinen Auftrag (das Paket) erhalten und nachdem die Kleidung geprüft wurde.<br />
-Du kannst Deine Bestellung jederzeit verfolgen, indem Du zu ';
+du erhälst per E-Mail eine Bestätigung, wenn du einen Auftrag aufgibst, sobald wir deinen Auftrag (das Paket) erhalten haben und nachdem die Kleidung geprüft wurde.<br />
+du kannst deine Bestellung jederzeit verfolgen, indem du zu ';
 $how_link4  = 'Aufträge wechselst';
 $how_link5  = 'Marke';
 $how_text17b  = ' und deine E-Mail-Adresse und Bestellnummer eingibst.';
@@ -301,7 +302,7 @@ $req_text11  = 'Gewaschen und gereinigt, bevor es an uns geschickt wird';
 //#####################
 $buy_headline1  = 'Kleidung kaufen';
 $buy_subheader1  = 'Tut uns leid...';
-$buy_text1  = 'Wir haben derzeit leider noch nicht mit dem Verkauf unserer Kollektion begonnen. Die ersten Artikel werden in Kürze angeboten. Wenn Du möchtest informieren wir Dich über den Verkaufstart unserer qualitativ hochwertigen, wenig genutzten Kinderbekleidung. Trage Deine E-Mail Adresse in das nebenstehende Feld ein und sei der/die Erste beim Verkaufstart unserer Kollektion.';
+$buy_text1  = 'Wir haben derzeit leider noch nicht mit dem Verkauf unserer Kollektion begonnen. Die ersten Artikel werden in Kürze angeboten. Wenn du möchtest informieren wir Dich über den Verkaufstart unserer qualitativ hochwertigen, wenig genutzten Kinderbekleidung. Trage deine E-Mail Adresse in das nebenstehende Feld ein und sei der/die Erste beim Verkaufstart unserer Kollektion.';
 $buy_text2  = 'Uns ist aufgefallen, dass wir deine E-Mail-Adresse bereits gespeichert haben. Wir informieren dich sobald es etwas neues gibt und bedanken uns für dein Interesse.';
 $buy_text3  = 'Deine E-Mail-Adresse wurde erfolgreich in unserer Datenbank gespeichert. Vielen Dank für dein Interesse. Wir informieren dich sobald wir mit dem Verkauf von qualitativ hochwertiger, wenig genutzter Kinderbekleidung beginnen.';
 $buy_button1  = 'Speichert meine E-Mail-Adresse und haltet mich auf dem Laufenden!';
@@ -485,7 +486,7 @@ $email_c_subject  = 'Kleider Kuh - Neuer Auftrag erstellt';
 $email_c_text1  = '<p>Lieber Kunde,</p>
 <p>Vielen Dank für deinen neuen Auftrag!</p>
 <p><ul><li>Das sind die nächsten Schritte:
-Schick uns deine Artikel. Falls du deinen DHL-Frankierschein nicht schon gefunden hast, findest du es bei den Versandinformationen: ';
+Schick uns deine Artikel. Falls du deinen DHL-Frankierschein nicht schon gefunden hast, findest du diesen bei den Versandinformationen: ';
 $email_c_text2  = '</a></li><li>Sobald wir deine Artikel empfangen haben, bekommst du von uns eine Empfangsbestätigung.</li><li>
 Anschließend werden wir deinen Auftrag und die Auszahlung bearbeiten.</li></ul></p>
 <p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/auftraege abrufen.</p> 
