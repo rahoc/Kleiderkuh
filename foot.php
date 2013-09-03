@@ -44,12 +44,13 @@
             </div>
             <div class="hline ">|</div>
             <div class="footer">
-            <a href="http://www.facebook.de" target="_blank" onClick="trackOutboundLinkNewWindow(this, 'Understanding KK', 'External Link', 'Facebook'); return false;"><img class="footimage" src="images/fb.png" /></a>
+            <a href="#" id="lang"><img class="footimage" src="images/English-German_128.png" /></a>
             </div>
             <div class="hline ">|</div>
             <div class="footer">
-            <a href="#" id="lang"><img class="footimage" src="images/English-German_128.png" /></a>
+            <a href="http://www.facebook.de" onClick="trackOutboundLinkNewWindow(this, 'Understanding KK', 'External Link', 'Facebook'); return false;"><img class="footimage" src="images/fb.png" /></a>
             </div>
+            
         </div>
         <div class="lastfooter center">
         	<?php echo $foot_text7; ?>

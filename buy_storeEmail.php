@@ -2,12 +2,12 @@
 <div>
 <?php
 
-	include 'db.php';
-	include 'language.php';
-	
-	$email=$_POST['buy_email'];
-	
-	if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+include 'db.php';
+include 'language.php';
+
+$email=$_POST['buy_email'];
+
+if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	
 	$verbindung = connectDB();
 		
@@ -35,10 +35,10 @@
 
 	closeDB($verbindung);
 	
-	}
-	else {
-		include 'buy.php';
-		echo "<div>$buy_error1</div>";
-	}
+}
+else {
+	include 'buy.php';
+	echo "<br /><br /><br /><div class='orange'>$buy_error1 $email</div>";
+}
 ?>
 </div>

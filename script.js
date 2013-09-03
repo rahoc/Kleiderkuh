@@ -18,9 +18,9 @@ function trackOutboundLinkNewWindow(link, category, action, label) {
 		ga('send', 'event', category, action, label); 
 	}
 	catch(err){}
-	setTimeout(function() {
+	//setTimeout(function() {
 		window.open(link.href,'_blank');
-	}, 100);
+	//}, 100);
 	
 }
 
@@ -752,7 +752,7 @@ function buy_storeEmail(parameters)
 	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
 		document.getElementById("dlg_buy_content").innerHTML=xmlhttp.responseText;
-		ga_buy();
+		ga('send', 'event', "Interested to buy", "Submit email button", "Buy");
 		}
 	  }
 	xmlhttp.open("POST","buy_storeEmail.php",true);
@@ -763,7 +763,7 @@ function buy_storeEmail(parameters)
 }
 
 function get_storeEmail(obj) {
- var poststr = "email=" + escape(encodeURI( document.getElementById("buy_email").value ));
+ var poststr = "buy_email=" + escape(encodeURI( document.getElementById("buy_email").value ));
       buy_storeEmail(poststr);
 }
 
