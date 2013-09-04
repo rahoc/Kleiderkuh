@@ -635,8 +635,9 @@ a.selectActive:hover   { color:#000; background-color:rgba(154,154,154,0.83); }
 }
 
 #condition_text {
-	padding-top:20px;
-	font-size:14pt;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:12pt;
 }
 
 

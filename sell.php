@@ -83,7 +83,7 @@ session_start();
 	// Initial show Gender selection
     showTable('Gender');
     </script>
-    <div class="headline"><?php echo $sell_headline2; ?></div>
+    <div class="headline center"><?php echo $sell_headline2; ?></div>
 
     <div id="selector">
     
