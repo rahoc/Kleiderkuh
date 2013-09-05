@@ -36,4 +36,17 @@
 <file name="Requirements.php" server="ftp.strato.de//" local="130224287294741814" remote="130224286800000000" Dst="2" />
 <file name="shareFbTest.php" server="ftp.strato.de//" local="130226197210000000" remote="130226197200000000" Dst="2" />
 <file name="buy_storeEmail.php" server="ftp.strato.de//" local="130226882648672652" remote="130226882400000000" Dst="2" />
+<file name="dblogin.php" server="h2211303.stratoserver.net//httpdocs/" local="130228568784116985" remote="130228568400000000" Dst="2" />
+<file name="Transaction.php" server="h2211303.stratoserver.net//httpdocs/" local="130228605056213040" remote="130228605000000000" Dst="2" />
+<file name="manageTransactions2.php" server="h2211303.stratoserver.net//httpdocs/" local="130228790737035914" remote="130228790400000000" Dst="2" />
+<file name="getItemMetricCSV.php" server="h2211303.stratoserver.net//httpdocs/" local="130228604774745647" remote="130228604400000000" Dst="2" />
+<file name="db.php" server="h2211303.stratoserver.net//httpdocs/" local="130228534521032743" remote="130228534200000000" Dst="2" />
+<file name="cart.php" server="h2211303.stratoserver.net//httpdocs/" local="130228493819976787" remote="130228493400000000" Dst="2" />
+<file name="dbtest.php" server="h2211303.stratoserver.net//httpdocs/" local="130228602201664981" remote="130228602000000000" Dst="2" />
+<file name="getTransaction.php" server="h2211303.stratoserver.net//httpdocs/" local="130228550365334161" remote="130228549800000000" Dst="2" />
+<file name="Cloth.php" server="h2211303.stratoserver.net//httpdocs/" local="130228781554900270" remote="130228781400000000" Dst="2" />
+<file name="changeTransactionState.php" server="h2211303.stratoserver.net//httpdocs/" local="130228796248848749" remote="130228795800000000" Dst="2" />
+<file name="script.js" server="h2211303.stratoserver.net//httpdocs/" local="130228810523148915" remote="130228810200000000" Dst="2" />
+<file name="feedback.php" server="h2211303.stratoserver.net//httpdocs/" local="130228822136930572" remote="130228821600000000" Dst="2" />
+<file name="sendFeedback.php" server="h2211303.stratoserver.net//httpdocs/" local="130228840681916701" remote="130228840200000000" Dst="2" />
 </dwsync>

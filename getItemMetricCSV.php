@@ -5,7 +5,11 @@ require_once('Transaction.php');
 $file = 'item_metric.csv';
 
 // CONNECT
-$mysqli = new mysqli("rdbms.strato.de","U1401681", "22qmuh22", "DB1401681");
+$db_server = "";
+$db_name = "DB1401681";
+$db_user = "kkdbuser1";
+  $db_password = "22qmuh22";
+$mysqli = new mysqli($db_server,$db_user, $db_password, $db_name);
 if ($mysqli->connect_errno) {
 	echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . 
 			") " . $mysqli->connect_error;

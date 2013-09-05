@@ -15,9 +15,9 @@ require_once("language.php");
     
 <div id="feedbackContent" class="margin_left_30">
  	<div class="subheader cyan"><?php echo $feedback_subheader1; ?></div>
-    <!--<button onclick="closeFeedback()">x</button>-->
+    <!--<button onclick="closeFeedback()">x</button>    -->
     <div id="close"></div>
-    <form action="javascript:get(document.getElementById('myform'));" id="myform" name="myform">
+    <form id="myform" name="myform" action="javascript:get(document.getElementById('myform'));">
     
         <input type="radio" name="category" value="idea")><?php echo $feedback_label1; ?> <br />
         <input type="radio" name="category" value="question")><?php echo $feedback_label2; ?> <br />
@@ -34,7 +34,7 @@ require_once("language.php");
             <tr><td>Your name:</td><td><input type="text" id="name"></td></tr>
             <tr><td>Email:</td><td><input type="text" id="email"></td></tr>
             <tr><td></td>
-            	<td><input type="image" src="images/<?php echo $langID; ?>/buttons/send.png" value="Send" class="button" id="submitFeedback" onclick="javascript:getFeedback(this.parentNode); ga_feedback();"/>
+            	<td><input type="image" src="images/<?php echo $langID; ?>/buttons/send.png" value="Send" class="button" id="submitFeedback" onclick="javascript:getFeedback(this.parentNode);"/>
              	</td>
             </tr>
         </table>

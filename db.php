@@ -1,11 +1,22 @@
 <?php
 
 function connectDB() {
-	$verbindung = mysql_connect ("rdbms.strato.de","U1401681", "22qmuh22")
-or die ("keine Verbindung möglich.  Benutzername oder Passwort sind falsch");
-mysql_select_db("DB1401681");
 
-return $verbindung;
+	require_once('dblogin.php');
+	
+	//mysql_connect($db_server) or die ("Connect error");
+
+	/*$res = mysql_query("SHOW DATABASES");
+	while ($row = mysql_fetch_row($res))
+	{
+		echo $row[0], '<br/>';
+	}*/
+	
+	$verbindung = mysql_connect ($db_server,$db_user, $db_password) or die ("Error mysql_connect: ".mysql_error()); 
+	
+	mysql_select_db($db_name, $verbindung); // or die ("Error select_db: ".mysql_error());
+
+	return $verbindung;
 }
 
 function closeDB($verbindung) {
@@ -162,8 +173,8 @@ function getTransactionId() {
 }
 
 
-function showCartByTransaction($transaction, $site) {
-	$verbindung = connectDB();
+function showCartByTransaction($transaction, $site, $verbindung) {
+	
 	
 	include 'language.php';
 	
@@ -171,6 +182,10 @@ function showCartByTransaction($transaction, $site) {
 		$langID = "en";
 	}
 	
+	
+	//$verbindung = connectDB();
+	$abfrage1 = "USE DB1401681";
+	mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
 	$abfrage = "SELECT g.Name as gender,
 						b.Name as brand,
 						t.Name as type,
@@ -186,7 +201,15 @@ function showCartByTransaction($transaction, $site) {
 				JOIN Transactions_Clothes tc ON c.id=tc.fk_Clothes 
 				WHERE tc.fk_Transactions=$transaction
 				ORDER BY transactionClothId";
-	$ergebnis = mysql_query($abfrage);
+	//echo $abfrage;
+	$ergebnis = mysql_query($abfrage) or die(mysql_error());
+	$num_rows = mysql_num_rows($ergebnis);
+
+	if (!$ergebnis) {
+		die('Ungültige Anfrage: ' . mysql_error());
+	}
+	//echo "$num_rows Zeilen\n";
+	//print_r($ergebnis);
 	echo "<table id=\"cartTable\">";
 	echo "<tr>
 				<th>Gender</th>
@@ -245,7 +268,7 @@ function showCartByTransaction($transaction, $site) {
 		}
 		
 	
-	closeDB($verbindung);
+	//closeDB($verbindung);
 		
 }
 

@@ -533,8 +533,8 @@ function sendFeedback(parameters)
 	  }
 	xmlhttp.open("POST","sendFeedback.php",true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.setRequestHeader("Content-length", parameters.length);
- 	xmlhttp.setRequestHeader("Connection", "close");
+	//xmlhttp.setRequestHeader("Content-length", parameters.length);
+ 	//xmlhttp.setRequestHeader("Connection", "close");
 	xmlhttp.send(parameters);
 }
 
@@ -610,8 +610,8 @@ function sendFeedbackC(parameters)
 	  }
 	xmlhttp.open("POST","sendFeedback.php",true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.setRequestHeader("Content-length", parameters.length);
- 	xmlhttp.setRequestHeader("Connection", "close");
+	//xmlhttp.setRequestHeader("Content-length", parameters.length);
+ 	//xmlhttp.setRequestHeader("Connection", "close");
 	xmlhttp.send(parameters);
 }
 

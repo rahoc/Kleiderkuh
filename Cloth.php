@@ -25,6 +25,8 @@ class Cloth
 		$this->id = $transactionClothId;
 		
 		$connection = connectDB();
+		$abfrage1 = "USE DB1401681";
+		mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
 		$query = "SELECT g.Name as Gender,
 						b.Name as Brand,
 						t.Name as Type,
@@ -73,6 +75,8 @@ class Cloth
 	
 	public function saveTransactionData() {
 		$connection = connectDB();
+		$abfrage1 = "USE DB1401681";
+		mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
 		$query = "UPDATE Transactions_Clothes
 					SET Accepted = $this->accepted,
 					Rejected = $this->rejected,
@@ -86,6 +90,8 @@ class Cloth
 
 	public function saveClothData() {
 		$connection = connectDB();
+		$abfrage1 = "USE DB1401681";
+		mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
 		$query = "UPDATE Clothes
 					SET ActualAmount = $this->actualAmount
 					WHERE id=$this->fk_Clothes";

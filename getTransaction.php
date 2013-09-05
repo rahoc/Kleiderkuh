@@ -12,6 +12,7 @@ if (isset($_POST["id"])) {
 	// Create new Transaction and load it by ID
 	$t = new Transaction;
 	$result = $t->loadById($id);
+	echo $result;
 	if ($t->loadResult == "error") {
 		echo "error";
 		return;
@@ -24,7 +25,7 @@ if (isset($_POST["id"])) {
 
 else
 {
-	echo "error";
+	echo "post error";
 }
 
 ?>

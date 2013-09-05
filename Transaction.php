@@ -148,18 +148,40 @@ class Transaction {
 	
 	
 	public function loadById($transactionId) {
-		
+		//echo "tid= $transactionId";
 		// CONNECT
-		$mysqli = new mysqli("rdbms.strato.de","U1401681", "22qmuh22", "DB1401681");
+		/*require_once('dblogin.php');
+		
+		$mysqli = new mysqli($db_server ,$db_user, $db_password, $db_name);
+	//$mysqli = new mysqli($db_server,$db_user, $db_password, $db_name);
+	if ($mysqli->connect_errno) {
+		echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . 
+				") " . $mysqli->connect_error;
+	}
+	
+		// QUERY - Transaction
+		$query = "SELECT * FROM Transactions WHERE Id=$transactionId";
+		//echo $query;*/
+		
+		$db_server = "";
+$db_name = "DB1401681";
+$db_user = "kkdbuser1";
+  $db_password = "22qmuh22";
+
+
+		$mysqli = new mysqli($db_server ,$db_user, $db_password, $db_name);
+		//$mysqli = new mysqli($db_server,$db_user, $db_password, $db_name);
 		if ($mysqli->connect_errno) {
 			echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . 
 					") " . $mysqli->connect_error;
 		}
-		
+	
 		// QUERY - Transaction
 		$query = "SELECT * FROM Transactions WHERE Id=$transactionId";
 		$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 		
+		//$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+		//echo "5 <br />";
 		// GOING THROUGH THE DATA
 		if($result->num_rows > 0) {
 			while ($row = $result->fetch_assoc()) {
@@ -267,6 +289,8 @@ class Transaction {
 	
 	public function save() {
 		$connection = connectDB();
+		$abfrage1 = "USE DB1401681";
+		mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
 		$query = "UPDATE Transactions
 				SET Status = '$this->status',
 				FirstName = '$this->fname',

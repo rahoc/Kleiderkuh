@@ -45,9 +45,12 @@
 				/*" | <a href='#' onclick='removeFromCart(\"cartItem" +
 				cart.childNodes.length + "\")'>" +"remove</a>" +*/
 				
+	
+	
+	
+	
+	echo showCartByTransaction($transaction, "cart", $verbindung);
+	
+	
 	closeDB($verbindung);
-	
-	
-	
-	echo showCartByTransaction($transaction, "cart");
 ?>

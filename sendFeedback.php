@@ -14,24 +14,25 @@
     </table>";
 	
 	
-	$to = "feedback@kleiderkuh.de";
+	$to = "feedback@kleiderkuh.com";
 	$subject = "Kleider Kuh Feedback";
 	$message = "Feedback Kleider Kuh\n
-Feedback from: $name \n
-Email: $email \n
-Category: $category \n
-Text: \n
-$exact	";
+	Feedback from: $name \n
+	Email: $email \n
+	Category: $category \n
+	Text: \n
+	$exact	";
 	$from = "$name <$email>";
 	// für HTML-E-Mails muss der 'Content-type'-Header gesetzt werden
-$header  = 'MIME-Version: 1.0' . "\r\n";
-$header .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-// zusätzliche Header
-$header .= 'To: Kleider Kuh Feedback <feedback@kleiderkuh.de>' . "\r\n";
-//$header .= 'From: $from' . "\r\n";
-//$header .= 'Cc: geburtstagsarchiv@example.com' . "\r\n";
-//$header .= 'Bcc: geburtstagscheck@example.com' . "\r\n";
-	$header = "From:" . $from;
+	$header  = 'MIME-Version: 1.0' . "\r\n";
+	$header .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+	
+	// zusätzliche Header
+	//$header .= 'To: Kleider Kuh Feedback <feedback@kleiderkuh.de>' . "\r\n";
+	//$header .= 'From: $from' . "\r\n";
+	//$header .= 'Cc: geburtstagsarchiv@example.com' . "\r\n";
+	//$header .= 'Bcc: geburtstagscheck@example.com' . "\r\n";
+	$header .= "From:" . $from;
+	echo $to." ".$subject." ".$message." ".$header;
 	mail($to,$subject,$message,$header);
 ?>

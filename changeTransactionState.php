@@ -75,6 +75,14 @@
 				//$transaction->PaymentDate = date("Y-m-d H:i:s");
 				break;
 			}
+			case "Return": {
+				$transaction->PaymentDate = date("Y-m-d H:i:s");
+				break;
+			}
+			case "Donate": {
+				$transaction->PaymentDate = date("Y-m-d H:i:s");
+				break;
+			}
 			case "Payment": {
 				$transaction->PaymentDate = date("Y-m-d H:i:s");
 				break;
@@ -90,7 +98,7 @@
 		
 		
 		// Send email
-		post_request("http://kleiderkuh.de/sendStatusMail.php", array("id" => $id));
+		post_request("http://".$_SERVER['HTTP_HOST']."/sendStatusMail.php", array("id" => $id));
 		
 		echo "successfully stored $id with new status $statusName";
 

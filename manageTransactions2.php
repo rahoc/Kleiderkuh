@@ -56,31 +56,46 @@ else {
 	
 	$orderBy = "id";
 	
-	// CONNECT
-	$mysqli = new mysqli("rdbms.strato.de","U1401681", "22qmuh22", "DB1401681");
+
+	$db_server = "";
+	$db_name = "DB1401681";
+	$db_user = "kkdbuser1";
+	$db_password = "22qmuh22";
+	
+	
+	$mysqli = new mysqli($db_server ,$db_user, $db_password, $db_name);
+	//$mysqli = new mysqli($db_server,$db_user, $db_password, $db_name);
 	if ($mysqli->connect_errno) {
 		echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . 
 				") " . $mysqli->connect_error;
 	}
 	
-	// QUERY - Related Clothes
-	$query = "SELECT Id FROM Transactions ORDER BY Id DESC";
-	$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+		// QUERY - Transaction
+		$query = "SELECT * FROM Transactions";
+		$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+		
+		//print_r($result);
+		
+		
 	
 	$transactions;
 	// GOING THROUGH THE DATA
 	if($result->num_rows > 0) {
+
 		while ($row = $result->fetch_assoc()) {
+			
 			//print_r($row);
 			$transaction = new Transaction;
-			$transaction->loadById($row['Id']);
+
+			$transaction->loadById($row['id']);
+
 			$transactions[] = $transaction;
 		}
 	}
 	else {
 		echo 'NO RESULTS - No Transactions at all';	
 	}
-
+	
     ?>
     
     <table id="fullTable">
@@ -300,7 +315,7 @@ $('.status').change(function() {
 			doPost=true;
 		}
 		else {
-			$.post("http://kleiderkuh.de/getTransactionStateByID.php", { id: id })
+			$.post("hgetTransactionStateByID.php", { id: id })
 			.done(function(data) {
 			 	//alert("Data Loaded" + data);
 			 	dropdown.val(data) ;
@@ -314,7 +329,7 @@ $('.status').change(function() {
 	
 	if (doPost) {
 		//alert( "POST: " + status + " " + id );
-		$.post("http://kleiderkuh.de/changeTransactionState.php", { id: id , status: status , language: lang})
+		$.post("changeTransactionState.php", { id: id , status: status , language: lang})
 		.done(function(data) {
 		  //alert("Data Loaded: " + data);
 		  $( "#result" ).empty().append( data );
@@ -331,14 +346,14 @@ $('.accepted').click(function() {
 		// uncheck the other
 		$("#rejected_" + id).removeAttr("checked");
 		$("#missing_" + id).removeAttr("checked");
-		$.post("http://kleiderkuh.de/changeTransClothAccepted.php", { id: id , accepted: 1 })
+		$.post("changeTransClothAccepted.php", { id: id , accepted: 1 })
 		.done(function(data) {
 		  //alert("Data Loaded: " + data);
 		  $( "#result" ).empty().append( data );
 		});
 	}
 	else {
-		$.post("http://kleiderkuh.de/changeTransClothAccepted.php", { id: id , accepted: 0 })
+		$.post("changeTransClothAccepted.php", { id: id , accepted: 0 })
 		.done(function(data) {
 		  //alert("Data Loaded: " + data);
 		  $( "#result" ).empty().append( data );
@@ -354,7 +369,7 @@ $('.rejected').click(function() {
 		$("#accepted_" + id).removeAttr("checked");
 		$("#missing_" + id).removeAttr("checked");
 		
-		$.post("http://kleiderkuh.de/changeTransClothAccepted.php", { id: id , rejected: 1 })
+		$.post("changeTransClothAccepted.php", { id: id , rejected: 1 })
 		.done(function(data) {
 		  //alert("Data Loaded: " + data);
 		  $( "#result" ).empty().append( data );
@@ -364,7 +379,7 @@ $('.rejected').click(function() {
 		});
 	}
 	else {
-		$.post("http://kleiderkuh.de/changeTransClothAccepted.php", { id: id , rejected: 0 })
+		$.post("changeTransClothAccepted.php", { id: id , rejected: 0 })
 		.done(function(data) {
 		  //alert("Data Loaded: " + data);
 		  $( "#result" ).empty().append( data );
@@ -379,14 +394,14 @@ $('.missing').click(function() {
 		// uncheck the other
 		$("#rejected_" + id).removeAttr("checked");
 		$("#accepted_" + id).removeAttr("checked");
-		$.post("http://kleiderkuh.de/changeTransClothAccepted.php", { id: id , missing: 1 })
+		$.post("changeTransClothAccepted.php", { id: id , missing: 1 })
 		.done(function(data) {
 		  //alert("Data Loaded: " + data);
 		  $( "#result" ).empty().append( data );
 		});
 	}
 	else {
-		$.post("http://kleiderkuh.de/changeTransClothAccepted.php", { id: id , missing: 0 })
+		$.post("changeTransClothAccepted.php", { id: id , missing: 0 })
 		.done(function(data) {
 		  //alert("Data Loaded: " + data);
 		  $( "#result" ).empty().append( data );
@@ -399,7 +414,7 @@ $('.comment').change(function() {
 	var id =  $(this).attr( "name" ).valueOf().substring(8);
 	var comment =  $(this).val();
 	//alert( "POST: " + status + " " + id );
-	$.post("http://kleiderkuh.de/changeTransClothComment.php", { id: id , comment: comment })
+	$.post("changeTransClothComment.php", { id: id , comment: comment })
 	.done(function(data) {
 	 // alert("Data Loaded: " + data);
 	 $( "#result" ).empty().append( data );
