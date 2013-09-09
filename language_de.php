@@ -534,7 +534,7 @@ $email_w_text1  = '<p>Lieber Kunde,</p>
 <p>Leider können einer oder mehrere Artikel nicht bestätigt werden.</p>
 <p>Das sind die nächsten Schritte:<ul>
 <li>Bitte besuche ';
-$email_w_text2  = 'um den oder die Artikel, die nicht bestätigt werden konnten, zu sehen.</li>
+$email_w_text2  = ' um den oder die Artikel, die nicht bestätigt werden konnten, zu sehen.</li>
 <li>Außerdem kannst du dort auswählen, was mit diesen Artikeln passieren soll.
 Du hast du Möglichkeit, dir die Artikel zurücksenden zu lassen, kannst sie aber auch spenden.
 </li>
@@ -551,7 +551,7 @@ $email_f_text1  = '<p>Lieber Kunde,</p>
 <p>Dies ist eine automatische E-Mail um dir mitzuteilen, dass dein Auftrag vollständig bearbeitet und abgeschlossen ist.</p>
 <p>Details:
 <ul>
-<li>Bezahlung wurde gesendet an ';
+<li>Dein Geld wird überwiesen an ';
 $email_f_paypal  = 'Zahlungsmethode: PayPal ';
 $email_f_ppmail  = 'PayPal E-Mail-Adresse: ';
 $email_f_uebwerweisung  = 'Zahlungsmethode: Überweisung';
@@ -559,8 +559,8 @@ $email_f_accountNr  = 'Konto Nr.: ';
 $email_f_amount  = 'Gesamtsumme: ';
 $email_f_text2  = '</ul>
 </p>
-<p>Du kannst deinen Auftragsstatus jederzeit auf www.kleiderkuh.de/auftraege überprüfen</p>
-<p>Vielen dank noch einmal für deine Bestellung!</p>
+<p>Du kannst deinen Auftragsstatus jederzeit auf www.kleiderkuh.de/auftraege überprüfen.</p>
+<p>Vielen Dank noch einmal für deine Bestellung!</p>
 <p>Mit freundlichen Grüssen,<br />
 Dein Kleider Kuh Team<br />
 info@kleiderkuh.de</p>';

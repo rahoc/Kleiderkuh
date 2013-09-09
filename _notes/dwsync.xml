@@ -57,7 +57,8 @@
 <file name="jquery.fileDownload.js" server="h2211303.stratoserver.net//httpdocs/" local="130231997069408126" remote="130231996800000000" Dst="2" />
 <file name="head.php" server="h2211303.stratoserver.net//httpdocs/" local="130231998903856455" remote="130231998600000000" Dst="2" />
 <file name="download.php" server="h2211303.stratoserver.net//httpdocs/" local="130232013441847767" remote="130232013000000000" Dst="2" />
-<file name="language_de.php" server="h2211303.stratoserver.net//httpdocs/" local="130232021042825431" remote="130232020800000000" Dst="2" />
+<file name="language_de.php" server="h2211303.stratoserver.net//httpdocs/" local="130232045739008926" remote="130232045400000000" Dst="2" />
 <file name="language_en.php" server="h2211303.stratoserver.net//httpdocs/" local="130232021156340952" remote="130232020800000000" Dst="2" />
 <file name="DhlRetoure.php" server="h2211303.stratoserver.net//httpdocs/" local="130232019918055758" remote="130232019600000000" Dst="2" />
+<file name="sendStatusMail.php" server="h2211303.stratoserver.net//httpdocs/" local="130232043958785568" remote="130232043600000000" Dst="2" />
 </dwsync>

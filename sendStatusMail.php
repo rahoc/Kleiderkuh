@@ -179,7 +179,7 @@ function getWaitingForCustomer($t, $webPath) {
 		'&email=' . 
 	 	$t->email .
 		'" style="color:#028E9B;">' . 
-	 	$email_w_link1 . $t->id . 
+	 	$email_w_link1 . $t->id . "</a>" .
 		$email_w_text2;
 }
 
