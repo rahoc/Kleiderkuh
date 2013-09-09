@@ -1011,6 +1011,11 @@ color:#000;
 	height:150px;
 }
 
+#exactC {
+	width:720px;
+	height:150px;
+}
+
 /******** Modal popup ****************************/
   /* This is the CSS for the modal dialog window */
 .modal {

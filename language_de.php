@@ -313,6 +313,12 @@ $buy_error1  = 'Anscheinend ist bei der Eingabe deiner E-Mail-Adresse ein Fehler
 //##################### 
 $feedback_headline1  = 'Gib uns Feedback!';
 $feedback_subheader1  = 'Wähle eine Möglichkeit aus';
+$feedback_cat1 = "Idee";
+$feedback_cat2 = "Frage";
+$feedback_cat3 = "Problem";
+$feedback_cat4 = "Das will ich";
+$feedback_cat5 = "Das fehlt mir";
+$feedback_cat6 = "Sonstiges";
 $feedback_label1  = 'Teile eine Idee';
 $feedback_label2  = 'Stell deine Frage';
 $feedback_label3  = 'Teile uns ein Problem mit';

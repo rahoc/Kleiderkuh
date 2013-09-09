@@ -35,6 +35,6 @@
 	//$header .= 'Cc: geburtstagsarchiv@example.com' . "\r\n";
 	//$header .= 'Bcc: geburtstagscheck@example.com' . "\r\n";
 	$header .= "From:" . $from;
-	echo $to." ".$subject." ".$message." ".$header;
+	//echo $to." ".$subject." ".$message." ".$header;
 	mail($to,$subject,$message,$header);
 ?>

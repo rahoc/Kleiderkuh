@@ -25,8 +25,8 @@ include 'language.php';
         <br /><br />
         <p><?php echo $feedback_text2; ?></p>
         <table>
-            <tr><td>Your name:</td><td><input type="text" id="nameC"></td></tr>
-            <tr><td>Email:</td><td><input type="text" id="emailC"></td></tr>
+            <tr><td><?php echo $feedback_mail2; ?></td><td><input type="text" id="nameC"></td></tr>
+            <tr><td><?php echo $feedback_mail3; ?></td><td><input type="text" id="emailC"></td></tr>
             <tr><td></td>
             	<td><input type="image" src="images/<?php echo $langID; ?>/buttons/send.png" value="Send" class="button" id="submitFeedbackC" onclick="javascript:getFeedbackC(this.parentNode); ga_feedback();"/>
              	</td>
