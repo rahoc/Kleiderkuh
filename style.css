@@ -1227,8 +1227,7 @@ color:#ffffff;
 	display:table-cell;
 	font-size:10pt;
 	text-align:left;
-	padding-top:5px;
-	padding-bottom:4px;
+	padding:5px;
 	background-color:#5EC4CD;
 	color:#ffffff;
 }
@@ -1242,8 +1241,7 @@ color:#ffffff;
 	display:table-cell;
 	font-size:10pt;
 	text-align:left;
-	padding-top:5px;
-	padding-bottom:4px;
+	padding:5px;
 	border:1px solid #5EC4CD;
 	vertical-align:top;
 }
