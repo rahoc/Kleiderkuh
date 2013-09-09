@@ -695,6 +695,10 @@ a#addToCart {
 	margin-right:30px;
 }
 
+#cartList {
+	margin-top:20px;
+}
+
 #cartTable {
 	text-align:left;
 	font-size:12px;
