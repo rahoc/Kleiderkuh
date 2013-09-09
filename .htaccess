@@ -9,9 +9,9 @@
 
 DirectoryIndex home.php
  
-#Redirect /auftraege /goToTransaction.php?language=de
-#Redirect /orders /goToTransaction.php?language=en
-#Redirect /backend /login.php
+Redirect /auftraege /goToTransaction.php?language=de
+Redirect /orders /goToTransaction.php?language=en
+Redirect /backend /login.php
 
 
 
