@@ -1172,6 +1172,8 @@ margin-top:20px; }
 	z-index:1;
 	t op:180px;
 	width:100%;
+	position: absolute;
+top: 200px;
 }
 
 thead {
