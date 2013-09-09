@@ -212,9 +212,10 @@ $trans_text36  = "<strong>Instructions for sending</strong>
 					<ol>
 					<li>Print shipping documents</li>
 					<li>Put items in the package</li>
-					<li>Glue the DHL shipping label clearly visible on the package</li>
-					<li>You can ship the package as follows:
+					<li>Attach the DHL shipping label to the package, making sure its clearly visible</li>
+					<li>You can ship the package the following ways:
 						<ul>
+						<li>Postoffice</li>
 						<li>Packstation</li>
 						<li>Paketbox</li>
 						<li>Give it to a DHL driver</li>
