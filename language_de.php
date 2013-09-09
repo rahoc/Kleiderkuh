@@ -338,9 +338,9 @@ $feedback_error2 = "Bitte gib einen Nachrichtentext ein!";
 $about_text1  = '<h1>Wer wir sind</h1><br />
 <p>Kleider Kuh wurde von einer kleinen Gruppe von Unternehmern in der süddeutschen Stadt Ulm gegründet. Albert Einstein wurde in Ulm geboren und eines Tages traf sich unser Team um zu sehen ob wir eine Idee entwickeln können die Einstein würdig ist ... so entwickelten wir das Konzept von Kleider Kuh.</p>
 <h1>Warum?</h1>
-<p>Es gibt Millionen von hochwertiger Markenkleidungsstücke für Kinder die in unserem Land in den Schränken liegen und nie mehr getragen werden. Unsere Aufgabe ist es, einen Service anzubieten der ein neues Zuhause für diese Kleidungsstücke findet. 
+<p>Es gibt Millionen hochwertiger Markenkleidungsstücke für Kinder die in unserem Land in den Schränken liegen und nie mehr getragen werden. Unsere Aufgabe ist es, einen Service anzubieten der ein neues Zuhause für diese Kleidungsstücke findet. 
 <h1>Was machen wir?</h1>
-<p>Unser Service ermöglicht Eltern aus dem ganzen Land Geld für Kinderkleidung, die nicht mehr getragen wird, zu erhalten. Es ist wichtig für uns, dass dieser Service unseren Kunden drei Hauptvorteile anbietet:<ul>
+<p>Unser Service ermöglicht Eltern aus dem ganzen Land Geld für Kinderkleidung, die nicht mehr getragen wird, zu erhalten. Es ist uns wichtig, dass dieser Service unseren Kunden drei Hauptvorteile bietet:<ul>
 <li>Schnelle und einfache Bezahlung für Kleidung</li>
 <li>Umweltfreundlich, Einsatz für Recycling und Wiederverwendung</li>
 <li>Eine einfache Methode den Kleiderschrank aufzuräumen</li>
