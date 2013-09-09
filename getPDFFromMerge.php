@@ -1,6 +1,6 @@
 <?php
 
-$url = "http://goessinger.eu/merge.php";
+$url = "merge.php";
 $url1 = $_POST[url1];
 $url2 = $_POST[url2];
 

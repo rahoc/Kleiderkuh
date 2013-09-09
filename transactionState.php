@@ -614,15 +614,17 @@ $("#print_shipping").click(function() {
 		});*/
 		
 	
-	  $.post("getPDFFromMerge.php", {
+	  //$.post("getPDFFromMerge.php", {
+		$.post("merge.php", {
 				url1: data,
 				url2: url2
 			})
 		.done(function(data) {
 			//$("#testOutput").text(data);
-			window.open("http://goessinger.eu/" + data, '', '_blank');
+			window.open(data, '', '_blank');
 			//window.location.href = "http://goessinger.eu/" + data;
 			//window.location = "http://goessinger.eu/" + data;
+			
 		});
 	});
 
