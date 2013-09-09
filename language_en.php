@@ -221,7 +221,8 @@ $trans_text36  = "<strong>Instructions for sending</strong>
 						</ul>
 					</li>
 					</ol>";
-$trans_text37  = 'A PopUp window should open within the next 10 seconds!';
+$trans_text37  = 'A download dialog should open within the next 10 seconds!';
+$trans_text38  = 'Download started.';
 
 
 //##################### = 

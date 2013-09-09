@@ -225,8 +225,8 @@ $trans_text36  = '<strong>Anleitung für den Versand</strong>
 						</ul>
 					</li>
 					</ol>';
-$trans_text37  = 'Ein PopUp Fenster sollte sich innerhalb der nächsten 10 Sekunden öffnen!';
-
+$trans_text37  = 'Die Versanddokumente werden generiert, der Download sollte innerhalb von 10 Sekunden starten!';
+$trans_text38  = 'Download gestartet.';
 
 //##################### = '';
 // HowItWorks.php = '';

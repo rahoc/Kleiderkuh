@@ -65,8 +65,12 @@ if (isset($_POST)) {
         convertbase64topdf($file_base64_2, $file_pdf_2);
         mergepdf($file_pdf_1, $file_pdf_2, $finalpdf);
         //	header(sprintf('Location: %s', $finalpdf)); //open the merged pdf file in the browser
-		header("Content-Type: application/pdf");
-		header("Content-Disposition: attachment; filename=\"shipping.pdf\"");
+		/*header('Cache-Control: public'); 
+		header('Content-Type: application/pdf');
+		header('Content-Disposition: attachment; filename="some-file.pdf"');
+		header('Content-Length: '.filesize($finalpdf));
+		
+		readfile($finalpdf);*/
         echo $finalpdf;
 
         //clean up! Nicht $finalpdf sonnst kann es nicht angezeigt werden!

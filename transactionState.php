@@ -130,6 +130,7 @@ require_once('language.php');
             </div>
             <div class="clear"></div>
             <p id="popups" class="orange" hidden="hidden"><?php echo $trans_text37; ?></p>
+            <p id="download" class="cyan" hidden="hidden"><?php echo $trans_text38; ?></p>
         </div>
 		<p id="testOutput"></p>
         <!-- RECEIVED -->
@@ -239,7 +240,7 @@ require_once('language.php');
 
 
 </div>
-
+<iframe id="downloadframe" style="display:none"></iframe>
 
 <script>
 
@@ -533,6 +534,7 @@ $("#print_checklist").click(function() {
 
 $("#print_shipping").click(function() {
 	$("#print_error").empty();
+	$("#download").attr("hidden", "hidden");
 	
 	var fname = $("#fName").val();
 	var lname = $("#lName").val();
@@ -573,7 +575,7 @@ $("#print_shipping").click(function() {
 	var url2 = createShippingPDF(transaction);
 	//window.open(url2, '', '_blank');
 	//openPopUp(url2);
-	var url = "http://kleiderkuh.de/getShippingLabel.php?" + 
+	var url = "getShippingLabel.php?" + 
 	"fname=" +	fname + 
 	"&lname=" + lname +
 	"&street=" + street +
@@ -621,7 +623,11 @@ $("#print_shipping").click(function() {
 			})
 		.done(function(data) {
 			//$("#testOutput").text(data);
-			window.open(data, '', '_blank');
+			//window.open(data, '', '_blank');
+			var ifrm = document.getElementById('downloadframe');
+    		ifrm.src = "download.php?path=" +  data;
+			$("#download").removeAttr("hidden");
+			$("#popups").attr("hidden", "hidden");
 			//window.location.href = "http://goessinger.eu/" + data;
 			//window.location = "http://goessinger.eu/" + data;
 			
