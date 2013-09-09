@@ -146,6 +146,9 @@ $goToTrans_headline1  = 'Auftrag auswählen';
 $goToTrans_label1  = 'Auftragsnummer';
 $goToTrans_label2  = 'E-Mail-Adresse';
 $goToTrans_error1  = 'Wir konnten leider keine Bestellung unter der angegebenen Auftragsnummer und/oder E-Mail-Adresse finden. Bitte versuche es erneut oder kontaktiere uns, um Hilfe zu erhalten';
+$goToTrans_error2  = 'Ungültige Email-Adresse';
+$goToTrans_error3  = 'Bitte fülle das Formular vollstädig aus';
+$goToTrans_error4  = 'Die Auftragsnummer muss eine Zahl sein';
 
 //#####################
 // transactionState.php

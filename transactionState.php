@@ -19,7 +19,7 @@ require_once('language.php');
 
 
 
-<div id="tab_view" class="center">
+<div id="tab_view" class="center" style="display:none">
 	<div id="transactionInfo">
         <div class="transactionLabel"><?php echo $trans_text1; ?></div>
         <div class="transactionValue" id="tinfo_id"></div>
@@ -273,7 +273,7 @@ $(document).ready(function() {
 
 	$(".tab_arrow").hide();
 	$(".hide").hide();
-	//$("#tab_view").hide();
+	
 	
 	var confirmed = <?php echo $confirmed; ?>;
 	var email = "<?php echo $email; ?>";
@@ -294,7 +294,7 @@ $(document).ready(function() {
 	$.post("getTransaction.php", { id: id })
 		.done(function(json) {
 			//alert( json );
-			if (json == "error") {
+			if (json.substr(0,5) == "error") {
 				window.location.replace("goToTransaction.php?error=true");
 				return;
 			}

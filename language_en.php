@@ -144,6 +144,9 @@ $goToTrans_headline1  =  "Select Order";
 $goToTrans_label1  =  "Order Number:";
 $goToTrans_label2  =  "Email address:";
 $goToTrans_error1  =  "No order found with this number and/or email address. Please try again or contact us for assistance";
+$goToTrans_error2  = 'Email invalid';
+$goToTrans_error3  = 'Form not filled completely';
+$goToTrans_error4  = 'Order number is not a number';
 
 //##################### = 
 // transactionState.php = 
