@@ -246,6 +246,7 @@ require_once('language.php');
 
 var transaction;
 var new_sum = 0;
+var language;
 
 function getDateGerman(d) {
 	var ndate = new Date(d);
@@ -277,16 +278,16 @@ $(document).ready(function() {
 	
 	var confirmed = <?php echo $confirmed; ?>;
 	var email = "<?php echo $email; ?>";
-	var lang = "<?php echo $language; ?>";
+	language = "<?php echo $langID; ?>";
 
 	// CHECK CONFIRM
 	if (confirmed == 1) {
 
 	var c = "Confirmed";
-	$.post('changeTransactionState.php', { id: id , status: c, language: lang })
+	$.post('changeTransactionState.php', { id: id , status: c, language: language })
 	.done(function(data) {
 		//alert("transactionState.php?email=" + email + "&id=" + id + "");
-		 window.location.replace("transactionState.php?email=" + email + "&transaction=" + id + "" + "&language=" + lang + "");
+		 window.location.replace("transactionState.php?email=" + email + "&transaction=" + id + "" + "&language=" + language + "");
 	}); } // END CONFIRMED TRUE 
 	//alert(id);
 	
@@ -627,6 +628,7 @@ $("#print_shipping").click(function() {
 			var ifrm = document.getElementById('downloadframe');
     		ifrm.src = "download.php?path=" +  data;
 			$("#download").removeAttr("hidden");
+			$("#print_shipping").attr("src", "images/"+language+"/buttons/versand.png");
 			$("#popups").attr("hidden", "hidden");
 			//window.location.href = "http://goessinger.eu/" + data;
 			//window.location = "http://goessinger.eu/" + data;
@@ -640,7 +642,7 @@ $("#print_shipping").click(function() {
 	
 	//var mergeUrl = "http://goessinger.eu/merge.php?url1="+ url +"&url2="+ url2
 	
-	
+	$("#print_shipping").attr("src", "images/load_button.gif");
 	$("#popups").removeAttr("hidden");
 });
 
