@@ -417,7 +417,7 @@ $(document).ready(function() {
 				$("#t_id").text(transaction.id);
 				$("#t_finalAmountAbs").text(Math.abs(parseFloat(transaction.finalToPay).toFixed(2)));
 				
-				var rejectedItems = transaction.rejectedItems + transaction.missingItems;
+				var rejectedItems = transaction.rejectedItems; // Removed: + transaction.missingItems; as it should if no rejected items behave like accepted
 				if (rejectedItems <=0) {
 					$(".rejected_items").hide();
 				}

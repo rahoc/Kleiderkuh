@@ -49,7 +49,7 @@
 					echo "error - not all clothes processed";
 					return;
 				}
-				if ($transaction->rejectedItems <= 0 && $transaction->missingItems <= 0) {
+				if ($transaction->rejectedItems <= 0) { // removed  (&& $transaction->missingItems <= 0) to follow flow of accepted if just items are missing
 					$transaction->status = "Payment";
 					$transaction->PaymentDate = date("Y-m-d H:i:s");
 					$transaction->finalToPay = $transaction->getSumAccepted();

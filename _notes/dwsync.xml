@@ -45,7 +45,7 @@
 <file name="dbtest.php" server="h2211303.stratoserver.net//httpdocs/" local="130228602201664981" remote="130228602000000000" Dst="2" />
 <file name="getTransaction.php" server="h2211303.stratoserver.net//httpdocs/" local="130228550365334161" remote="130228549800000000" Dst="2" />
 <file name="Cloth.php" server="h2211303.stratoserver.net//httpdocs/" local="130228781554900270" remote="130228781400000000" Dst="2" />
-<file name="changeTransactionState.php" server="h2211303.stratoserver.net//httpdocs/" local="130228796248848749" remote="130228795800000000" Dst="2" />
+<file name="changeTransactionState.php" server="h2211303.stratoserver.net//httpdocs/" local="130232047835740735" remote="130232048400000000" Dst="2" />
 <file name="script.js" server="h2211303.stratoserver.net//httpdocs/" local="130228810523148915" remote="130228810200000000" Dst="2" />
 <file name="feedback.php" server="h2211303.stratoserver.net//httpdocs/" local="130228822136930572" remote="130228821600000000" Dst="2" />
 <file name="sendFeedback.php" server="h2211303.stratoserver.net//httpdocs/" local="130228866546709342" remote="130228866000000000" Dst="2" />
@@ -53,7 +53,7 @@
 <file name="testFPDI.php" server="h2211303.stratoserver.net//httpdocs/" local="130231957296651087" remote="130231957200000000" Dst="2" />
 <file name="merge.php" server="h2211303.stratoserver.net//httpdocs/" local="130232012069764969" remote="130232011800000000" Dst="2" />
 <file name="getPDFFromMerge.php" server="h2211303.stratoserver.net//httpdocs/" local="130231938836711983" remote="130231938600000000" Dst="2" />
-<file name="transactionState.php" server="h2211303.stratoserver.net//httpdocs/" local="130232022895821659" remote="130232022600000000" Dst="2" />
+<file name="transactionState.php" server="h2211303.stratoserver.net//httpdocs/" local="130232097610000000" remote="130232097600000000" Dst="2" />
 <file name="jquery.fileDownload.js" server="h2211303.stratoserver.net//httpdocs/" local="130231997069408126" remote="130231996800000000" Dst="2" />
 <file name="head.php" server="h2211303.stratoserver.net//httpdocs/" local="130231998903856455" remote="130231998600000000" Dst="2" />
 <file name="download.php" server="h2211303.stratoserver.net//httpdocs/" local="130232013441847767" remote="130232013000000000" Dst="2" />
