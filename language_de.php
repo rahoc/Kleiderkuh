@@ -250,40 +250,43 @@ $how_text9a  = 'Um deine Kinderkleidung jetzt zu verkaufen, gehe zur ';
 $how_link2  = 'Verkaufsseite';
 $how_text9b  = ' und folge den unten dargestellten Schritten.';
 $how_text10a  = 'Sag uns was du verkaufen möchtest indem du folgende Kategorien auswählst:
-<br />- Geschlecht
-<br />- ';
-$how_text10b  = '<br />- Typ
-<br />- Größe
-<br />Falls eine Kategorie nicht ausgewählt werden kann wie zum Beispiel eine bestimmte Größe, dann bedeutet das, dass wir diesen Artikel leider im Moment nicht kaufen.';
-$how_text11  = 'Wie viel bekomme ich dafür?<br />Sobald du die Kategorien gewählt hast, siehst du den Wert des Artikels und kannst ihn in den Warenkorb legen.';
-$how_text12  = 'Kasse<br />Bevor du zur Kasse gehen kannst, musst du Artikel im Gesamtwert von mindestens 15 Euro im Warenkorb haben. Sobald du alle Artikel hinzugefügt hast, klicke den "Jetzt verkaufen"-Knopf im Warenkorb und du gelangst zur Bestätigungsseite';
-$how_text13  = 'Bezahlung und deine Daten<br />
-Um deinen Verkauf zu bestätigen, gib deine E-Mail-Adresse ein und gib an wie du bezahlt werden möchtest.<br />
-Die Zahlungsoptionen sind Überweisung oder PayPal.<br />
-Um eine Überweisung zu erhalten, gib einfach deine Kontonummer und die Bankleitzahl ein.<br />
-Um PayPal zu nutzen, gib an welche E-Mail-Adresse für die Zahlung verwendet werden soll. (Hinweis: Es entstehen PayPal-Gebühren. Dies bedeutet, PayPal berechnet dir die normalen Gebühren für den Erhalt von Zahlungen. Üblicherweise sind das 0,10 € + 3,5% des Zahlungsbetrags)';
+<ul><li>Geschlecht</li><li>';
+$how_text10b  = '</li><li>Typ
+</li><li>Größe
+</li><ul><li>Falls eine Kategorie nicht ausgewählt werden kann wie zum Beispiel eine bestimmte Größe, dann bedeutet das, dass wir diesen Artikel leider im Moment nicht kaufen.</li></ul></li></ul>';
+$how_text11  = 'Wie viel bekomme ich dafür?
+<ul><li>Sobald du die Kategorien gewählt hast, siehst du den Wert des Artikels und kannst ihn in den Warenkorb legen.</li></ul>';
+$how_text12  = 'Kasse
+<ul><li>Bevor du zur Kasse gehen kannst, musst du Artikel im Gesamtwert von mindestens 15 Euro im Warenkorb haben.</li><li>
+Sobald du alle Artikel hinzugefügt hast, klicke den "Jetzt verkaufen"-Knopf im Warenkorb und du gelangst zur Bestätigungsseite</li></ul>';
+$how_text13  = 'Bezahlung und deine Daten<ul><li>
+Um deinen Verkauf zu bestätigen, gib deine E-Mail-Adresse ein und gib an wie du bezahlt werden möchtest.</li><li>
+Die Zahlungsoptionen sind Überweisung oder PayPal.</li><li>
+Um eine Überweisung zu erhalten, gib einfach deine Kontonummer und die Bankleitzahl ein.</li><li>
+Um PayPal zu nutzen, gib an welche E-Mail-Adresse für die Zahlung verwendet werden soll. (Hinweis: Es entstehen PayPal-Gebühren. Dies bedeutet, PayPal berechnet dir die normalen Gebühren für den Erhalt von Zahlungen. Üblicherweise sind das 0,10 € + 3,5% des Zahlungsbetrags)</li></ul>';
 $how_text14  = 'Kostenlosen Frankierschein drucken<br />
-Sobald du an der Kasse fertig bist, kannst du einen kostenlosen DHL-Frankierschein ausdrucken<br />
-Falls du keinen Drucker hast, kannst du dir den kostenlosen Frankierschein per Post schicken lassen<br />
-Alternativ kannst du uns das Paket auch mit einem anderen Versanddienstleister schicken. Beachte aber, dass wir leider nur die Versankosten bezahlen, wenn du den DHL-Frankierschein von unserer Website verwendest.';
+<ul><li>Sobald du an der Kasse fertig bist, kannst du einen kostenlosen DHL-Frankierschein ausdrucken</li><li>
+Falls du keinen Drucker hast, kannst du dir den kostenlosen Frankierschein per Post schicken lassen</li><li>
+Alternativ kannst du uns das Paket auch mit einem anderen Versanddienstleister schicken. Beachte aber, dass wir leider nur die Versankosten bezahlen, wenn du den DHL-Frankierschein von unserer Website verwendest.</li></ul>';
 $how_text15  = 'Verpacken und senden<br />
-Packe alle Artikel und die ausgedruckten Unterlagen in ein Paket.<br />
-Bringe den Frankierschein außen am Paket an.<br />
-du kannst das Paket in jedem Postamt oder jeder DHL Packstation abgeben.';
+<ul><li>Packe alle Artikel und die ausgedruckten Unterlagen in ein Paket.</li><li>
+Bringe den Frankierschein außen am Paket an.</li><li>
+Du kannst das Paket in jedem Postamt oder jeder DHL Packstation abgeben.</li></ul>';
 $how_text16a  = 'Wir erhalten und bearbeiten den Auftrag<br />
-Sobald wir das Paket erhalten, prüfen wir  ob alle Artikel den ';
+<ul><li>Sobald wir das Paket erhalten, prüfen wir  ob alle Artikel den ';
 $how_link3  = 'Kriterien für unsere Kleidung entsprechen.';
-$how_text16b  = '<br />Akzeptiert: Wenn alle Kriterien eingehalten werden, veranlassen wir unverzüglich deine Bezahlung<br />
-Nicht akzeptiert: Falls die Kriterien nicht eingehalten werden oder der Artikel nicht den angegebenen Artikeldaten entspricht, informieren wir dich, dass wir den Artikel nicht akzeptieren können<br />
+$how_text16b  = '<br /></li><li>Akzeptiert: Wenn alle Kriterien eingehalten werden, veranlassen wir unverzüglich deine Bezahlung<br />
+</li>
+<li>Nicht akzeptiert: Falls die Kriterien nicht eingehalten werden oder der Artikel nicht den angegebenen Artikeldaten entspricht, informieren wir dich, dass wir den Artikel nicht akzeptieren können<br />
 In diesem Fall hat der Kunde zwei Möglichkeiten:<br />
-<strong>Zurücksenden</strong> - der Artikel wird an den Kunden zurückgeschickt, der Kunde zahlt die Versandkosten<br />
-<strong>Spenden</strong> - der Artikel wird an eine Wohltätigkeitsorganisation gespendet';
+<ul><li><strong>Zurücksenden</strong> - der Artikel wird an den Kunden zurückgeschickt, der Kunde zahlt die Versandkosten</li><li>
+<strong>Spenden</strong> - der Artikel wird an eine Wohltätigkeitsorganisation gespendet</li></ul></li></ul>';
 $how_text17a  = 'Auftragsverfolgung<br />
-du erhälst per E-Mail eine Bestätigung, wenn du einen Auftrag aufgibst, sobald wir deinen Auftrag (das Paket) erhalten haben und nachdem die Kleidung geprüft wurde.<br />
-du kannst deine Bestellung jederzeit verfolgen, indem du zu ';
+<ul><li>Du erhälst per E-Mail eine Bestätigung, wenn du einen Auftrag aufgibst, sobald wir deinen Auftrag (das Paket) erhalten haben und nachdem die Kleidung geprüft wurde.</li><li>
+Du kannst deine Bestellung jederzeit verfolgen, indem du zu ';
 $how_link4  = 'Aufträge wechselst';
 $how_link5  = 'Marke';
-$how_text17b  = ' und deine E-Mail-Adresse und Bestellnummer eingibst.';
+$how_text17b  = ' und deine E-Mail-Adresse und Bestellnummer eingibst.</li></ul>';
 
 //##################### 
 // Requirements.php

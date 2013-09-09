@@ -1028,7 +1028,7 @@ color:#000;
     top: 10px;
     right: 10px;
     width: 800px;
-    height: 2200px;
+    height: 2400px;
 	z-index:1;
   }
   
@@ -1040,7 +1040,7 @@ color:#000;
     background-color: rgba(0,0,0,0.90);
     width: 100%;
 	min-width:1170px;
-    min-height: 2300px;
+    min-height: 2500px;
     overflow: hidden;
     position: absolute;
     top: 0;
