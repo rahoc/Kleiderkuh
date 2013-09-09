@@ -14,6 +14,8 @@
     </table>";
 	
 	
+	//$to = "feedback@kleiderkuh.com";
+	//$to = "rainer.hochdorfer@gmail.com";
 	$to = "feedback@kleiderkuh.com";
 	$subject = "Kleider Kuh Feedback";
 	$message = "Feedback Kleider Kuh\n

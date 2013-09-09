@@ -46,6 +46,7 @@
 <script type="text/javascript" src="jspdf/jspdf.plugin.split_text_to_size.js"></script>
 <script type="text/javascript" src="jspdf/jspdf.plugin.from_html.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="jquery.fileDownload.js"></script>
 <script src="script.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
