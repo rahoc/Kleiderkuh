@@ -57,10 +57,12 @@
 <file name="jquery.fileDownload.js" server="h2211303.stratoserver.net//httpdocs/" local="130231997069408126" remote="130231996800000000" Dst="2" />
 <file name="head.php" server="h2211303.stratoserver.net//httpdocs/" local="130231998903856455" remote="130231998600000000" Dst="2" />
 <file name="download.php" server="h2211303.stratoserver.net//httpdocs/" local="130232013441847767" remote="130232013000000000" Dst="2" />
-<file name="language_de.php" server="h2211303.stratoserver.net//httpdocs/" local="130232114153890195" remote="130232113800000000" Dst="2" />
-<file name="language_en.php" server="h2211303.stratoserver.net//httpdocs/" local="130232116259732971" remote="130232116200000000" Dst="2" />
+<file name="language_de.php" server="h2211303.stratoserver.net//httpdocs/" local="130232118674823268" remote="130232119200000000" Dst="2" />
+<file name="language_en.php" server="h2211303.stratoserver.net//httpdocs/" local="130232118405456878" remote="130232118000000000" Dst="2" />
 <file name="DhlRetoure.php" server="h2211303.stratoserver.net//httpdocs/" local="130232019918055758" remote="130232019600000000" Dst="2" />
 <file name="sendStatusMail.php" server="h2211303.stratoserver.net//httpdocs/" local="130232043958785568" remote="130232043600000000" Dst="2" />
 <file name="style.css" server="h2211303.stratoserver.net//httpdocs/" local="130232111362201057" remote="130232110800000000" Dst="2" />
 <file name="contact.php" server="h2211303.stratoserver.net//httpdocs/" local="130232111165239849" remote="130232111400000000" Dst="2" />
+<file name="cartOverview.php" server="h2211303.stratoserver.net//httpdocs/" local="130232119057375420" remote="130232118600000000" Dst="2" />
+<file name="confirm.php" server="h2211303.stratoserver.net//httpdocs/" local="130232120019595501" remote="130232119800000000" Dst="2" />
 </dwsync>

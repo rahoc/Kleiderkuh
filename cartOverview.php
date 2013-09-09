@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$site='sell';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -59,8 +60,10 @@
        
     </div>
 	<br />
+    
 	<div id="customerForm">
-   
+   	<div class="subheader"><?php echo $cartOverview_text1; ?></div>
+    <br />
 	
     <form id="cart_form" method="post" action="confirm.php">
     

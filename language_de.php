@@ -114,6 +114,7 @@ $cartOverview_button1  = 'Abschicken';
 $cartOverview_error1  = 'Ungültige Emailadresse';
 $cartOverview_error2  = 'Ungültige PayPal E-Mail-Adresse';
 $cartOverview_error3  = 'Bitte fülle das Formular vollstädig aus!';
+$cartOverview_text1 = 'Bitte gib deine persönlichen Daten ein um fortzufahren';
 
 //#####################
 // cart
