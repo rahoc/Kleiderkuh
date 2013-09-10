@@ -437,7 +437,8 @@ $(document).ready(function() {
 					transaction.accountNrMasked + ")");
 				}
 				if (transaction.payment == "paypal") {
-					$("#t_paymentMethod").text("<?php echo $trans_text15; ?>");
+					$("#t_paymentMethod").text("<?php echo $trans_text15; ?> (" +
+					transaction.PaypalMail + ")");
 				}
 				$("#t_paymentDate").text(getDateGerman(transaction.PaymentDate));
 				
