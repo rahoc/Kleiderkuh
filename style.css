@@ -853,6 +853,39 @@ a.trash {
 	vertical-align:top;
 }
 
+.question {
+	background-image:url(images/question_grey.png);
+	background-position: 1px 1px;
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	margin-left: 5px;
+	
+}
+
+.question:hover {
+	background-image:url(images/question_black.png);
+	cursor:pointer;
+}
+
+.tooltip {
+	display:none;
+	min-width:160px;
+	min-height:90px;
+	z-index:2;
+	position: absolute;
+	background-color:white;
+	border-style:solid;
+	border-color:#028E9B;
+	border-radius:5px;
+	padding: 3px;
+}
+
+#tt_dhl {
+	height:160px;
+}
+
 
 /*  ====================
     Transaction

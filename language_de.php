@@ -231,6 +231,13 @@ $trans_text36  = '<strong>Anleitung für den Versand</strong>
 					</ol>';
 $trans_text37  = 'Die Versanddokumente werden generiert, der Download sollte innerhalb von 10 Sekunden starten!';
 $trans_text38  = 'Download gestartet.';
+$trans_tooltip1  = 'Dieser Service ist im Moment nur in Deutschland verfügbar.<br />
+Du kannst uns deine Artikel auch auf eigene Kosten anderweitig zukommen lassen:<br />
+Kleider Kuh<br />
+Deinselsgasse 6<br />
+89073 Ulm<br />
+Germany<br />';
+
 
 //##################### = '';
 // HowItWorks.php = '';

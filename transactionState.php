@@ -80,7 +80,7 @@ require_once('language.php');
             <p><?php echo $trans_text5; ?><span id="t_email"></span></p>
             <p><?php echo $trans_text6; ?></p>
             <img id="dhl_logo" src="images/dhl.png" />
-            <p><?php echo $trans_text35; ?></p>
+            <p><?php echo $trans_text35; ?><span class="question quest_dhl"></span></p>
             <div id="dhl_form">
                 <fieldset>
                 <div class="tableRow"><div class="tableCell">
@@ -115,9 +115,11 @@ require_once('language.php');
                 </div></div>
                 <div class="tableRow"><div class="tableCell"> 
                 </div><div class="tableCell">
-                    <div id="print_error" class="orange"></div>
+                    
                     <input type='image' src='images/<?php echo $langID; ?>/buttons/versand.png'
                     class='button_medium' id='print_shipping' />
+                    <div id="print_error" class="orange"></div>
+                    <span id="quest_error_plz" class='question quest_dhl' style="display:none"></span>
 					<br />
 					
 					
@@ -241,7 +243,7 @@ require_once('language.php');
 
 </div>
 <iframe id="downloadframe" style="display:none"></iframe>
-
+<div id="tt_dhl" class="tooltip"><?php echo $trans_tooltip1; ?></div>
 <script>
 
 var transaction;
@@ -535,6 +537,7 @@ $("#print_checklist").click(function() {
 
 $("#print_shipping").click(function() {
 	$("#print_error").empty();
+	$("#quest_error_plz").hide();
 	$("#download").attr("hidden", "hidden");
 	
 	var fname = $("#fName").val();
@@ -555,11 +558,13 @@ $("#print_shipping").click(function() {
 	}
 	if (isNaN(plz)) {
 		$("#print_error").text("<?php echo $trans_error2; ?>");
+		$("#quest_error_plz").show();
 		return;
 	}
 	
 	if (!(plz.toString().length==5)) {
 		$("#print_error").text("<?php echo $trans_error2; ?>");
+		$("#quest_error_plz").show();
 		return;
 	}
 	
@@ -763,6 +768,15 @@ $("#submit_rejectOption").click(function() {
 });
 
 
+// Mouseover on questionmark
+$(".quest_dhl").mouseenter(function(e) {
+	$("#tt_dhl").css({top: e.pageY-160, bottom: e.pageY-2, left: e.pageX+2});
+	$("#tt_dhl").show();
+	
+});
+$(".quest_dhl").mouseleave(function() {
+	$("#tt_dhl").hide();
+});
 
 </script>
 <?php require_once('foot.php'); ?>

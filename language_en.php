@@ -228,7 +228,12 @@ $trans_text36  = "<strong>Instructions for sending</strong>
 					</ol>";
 $trans_text37  = 'A download dialog should open within the next 10 seconds!';
 $trans_text38  = 'Download started.';
-
+$trans_tooltip1  = 'This service is only available in Germany.<br />
+Alternatively, you can send your items to us on your own expense at:<br />
+Kleider Kuh<br />
+Deinselsgasse 6<br />
+89073 Ulm<br />
+Germany<br />';
 
 //##################### = 
 // HowItWorks.php = 
