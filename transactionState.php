@@ -243,7 +243,7 @@ require_once('language.php');
 
 </div>
 <iframe id="downloadframe" style="display:none"></iframe>
-<div id="tt_dhl" class="tooltip"><?php echo $trans_tooltip1; ?></div>
+<div id="tt_dhl" class="tooltip" style="display:none"><?php echo $trans_tooltip1; ?></div>
 <script>
 
 var transaction;
@@ -569,10 +569,11 @@ $("#print_shipping").click(function() {
 		return;
 	}
 	
-	if (isNaN(streetNr)) {
+	// Steingasse 6a should be allowed
+	/*if (isNaN(streetNr)) {
 		$("#print_error").text("<?php echo $trans_error3; ?>");
 		return;
-	}
+	}*/
 	
 	if (!(streetNr.toString().length<=5)) {
 		$("#print_error").text("<?php echo $trans_error3; ?>");
