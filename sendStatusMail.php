@@ -127,7 +127,7 @@ $message= '
 
 // für HTML-E-Mails muss der 'Content-type'-Header gesetzt werden
 $header  = 'MIME-Version: 1.0' . "\r\n";
-$header .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$header .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
 // zusätzliche Header
 //$header .= 'To: Simone <simone@example.com>, Andreas <andreas@example.com>' . "\r\n";
