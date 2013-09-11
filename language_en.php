@@ -115,6 +115,7 @@ $cartOverview_button1  =  "Submit";
 $cartOverview_error1  =  "Email address not valid";
 $cartOverview_error2  =  "Paypal Mail address not valid";
 $cartOverview_error3  = 'Please fill out the form completely!';
+$cartOverview_error4 = 'Your cart has to have a value of 15 € least!';
 $cartOverview_text1 = 'Please enter your personal information to proceed';
 
 //##################### = 
@@ -241,6 +242,7 @@ $trans_text36  = "<strong>Instructions for sending</strong>
 					</ol>";
 $trans_text37  = 'A download dialog should open within the next 10 seconds!';
 $trans_text38  = 'Download started.';
+$trans_text39  = 'Your order will be further processed. We notify you on Email.';
 $trans_tooltip1  = 'This service is only available in Germany.<br />
 Alternatively, you can send your items to us on your own expense at:<br />
 Kleider Kuh<br />

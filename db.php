@@ -216,9 +216,12 @@ function showCartByTransaction($transaction, $site, $verbindung) {
 				<th>$cart_text4</th>
 				<th>$cart_text5</th>
 				<th>$cart_text6</th>
-				<th>$cart_text7</th>
-				<th></th>
-			  </tr>";
+				<th>$cart_text7</th>";
+	if($site!='email' && $site!='confirm' ) {
+		echo	"<th></th>";
+	}
+	echo  "</tr>";
+	
 	while($row = mysql_fetch_object($ergebnis))
 	{
 		echo "<tr>
@@ -227,7 +230,7 @@ function showCartByTransaction($transaction, $site, $verbindung) {
 				<td>$row->type</td>
 				<td>$row->size</td>
 				<td>".number_format($row->price,2)." €</td>";
-				if($site!='email') {
+				if($site!='email' && $site!='confirm' ) {
 					echo "<td><a href='#' onclick='removeFromCart($row->transactionClothId); return false' class='trash'>
 						x</a></td>";
 				}
@@ -250,21 +253,21 @@ function showCartByTransaction($transaction, $site, $verbindung) {
 	if($sum == "") {
 		$sum = 0;
 	}
-	if($site == "overview") {
-			echo "<br />$cart_text1 ".number_format($sum,2)." €<br />";
+	if($site == "overview" || $site=='confirm') {
+			echo "<br />$cart_text1 ".number_format($sum,2)." €<br /><span id='cartsum' style='display:none'>$sum</span>";
 			
 		}
 		else {
 			// check if sum higher than 15 Euro
 			if($row->summe >=15) {
-				echo "<br />$cart_text1 ".number_format($sum,2)." €<br />
+				echo "<br />$cart_text1 ".number_format($sum,2)." €<br /><span id='cartsum' style='display:none'>$sum</span>
 					<form method=\"post\" action=\"cartOverview.php\">
 					
 					<input type='image' src='images/$langID/buttons/sellNow.png' alt='Submit Form' value=\"Sell this!\" class='button' />
 					</form>";
 			}
 			else {
-				echo "<br />$cart_text1 ".number_format($sum,2)." €<br />
+				echo "<br />$cart_text1 ".number_format($sum,2)." €<br /><span id='cartsum' style='display:none'>$sum</span>
 						$cart_text2";
 			}
 		}

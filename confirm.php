@@ -29,7 +29,7 @@
             //echo $transaction;
             include 'db.php';
             
-            showCartByTransaction($transaction, "overview");
+            showCartByTransaction($transaction, "confirm");
         ?>
        
     </div>

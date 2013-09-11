@@ -116,6 +116,7 @@ $cartOverview_button1  = 'Abschicken';
 $cartOverview_error1  = 'Ungültige Emailadresse';
 $cartOverview_error2  = 'Ungültige PayPal E-Mail-Adresse';
 $cartOverview_error3  = 'Bitte fülle das Formular vollstädig aus!';
+$cartOverview_error4 = 'Du musst Artikel im Wert von mindestens 15 € im Warenkorb haben!';
 $cartOverview_text1 = 'Bitte gib deine persönlichen Daten ein um fortzufahren';
 
 //#####################
@@ -169,7 +170,7 @@ $trans_text5  = 'Eine Auftragsbestätigung wurde an deine E-Mail-Adresse gesende
 $trans_text6  = 'Bitte fülle das unten stehende Formular aus, um einen kostenlosen DHL-Versandaufkleber und die Versandanweisungen auszudrucken.';
 $trans_text8  = 'Paket eingegangen am: ';
 $trans_text9  = 'Dein Paket ist bei uns angekommen und wird bearbeitet.';
-$trans_state_confirmed  = 'Verschickt';
+$trans_state_confirmed  = 'Verschicken';
 $trans_state_received  = 'Empfangen';
 $trans_state_processed  = 'Bearbeitet';
 $trans_state_payment  = 'Bezahlung';
@@ -216,7 +217,7 @@ $trans_text27  = 'Zurücksenden';
 $trans_text28  = 'Spenden';
 $trans_text29  = '5€ Versandkosten wurden abgezogen, neuer Zahlungsbetrag: ';
 $trans_text30a  = 'Bitte überweise uns ';
-$trans_text30b  = '€ unter Angabe der Bestellnummer: ';
+$trans_text30b  = '€ unter Angabe der Auftragsnummer: ';
 $trans_text31  = '<ul><li>Option A: Bezahlung via PayPal an: paypal@kleiderkuh.de
 </li><li>Option B: Bezahlung via Überweisung auf folgendes Konto:<br />
 Deutsche Bank<br />
@@ -242,6 +243,7 @@ $trans_text36  = '<strong>Anleitung für den Versand</strong>
 					</ol>';
 $trans_text37  = 'Die Versanddokumente werden generiert, der Download sollte innerhalb von 10 Sekunden starten!';
 $trans_text38  = 'Download gestartet.';
+$trans_text39  = 'Dein Auftrag wird weiter bearbeitet. Wir informieren dich per E-Mail sobald es Neuigkeiten gibt.';
 $trans_tooltip1  = 'Dieser Service ist im Moment nur in Deutschland verfügbar.<br />
 Du kannst uns deine Artikel auch auf eigene Kosten anderweitig zukommen lassen:<br />
 Kleider Kuh<br />

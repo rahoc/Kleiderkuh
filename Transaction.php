@@ -252,11 +252,11 @@ $db_user = "kkdbuser1";
 				break;
 			}
 			case "donate": {
-				$stateNumber = 4;
+				$stateNumber = 3;
 				break;
 			}
 			case "return": {
-				$stateNumber = 4;
+				$stateNumber = 3;
 				break;
 			}
 			case "waiting for payment"; {
@@ -264,7 +264,7 @@ $db_user = "kkdbuser1";
 				break;
 			}
 			case "payment": {
-				$stateNumber = 4;
+				$stateNumber = 3;
 				break;
 			}
 			case "canceled": {

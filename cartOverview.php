@@ -102,6 +102,9 @@
          </td></tr>
     </table>
     <div id="error_on_submit" class="orange"></div>
+    <a href="sell.php">
+		<img src="images/<?php echo $langID; ?>/buttons/back.png" class="button" />
+    </a>
     <input type="image" src="images/<?php echo $langID; ?>/buttons/submit.png" alt="Submit Form" value="Sell this!" class="button" id="submitCartForm" />
 	</form>
 	</div>
@@ -118,6 +121,11 @@ $(document).ready(function(e) {
 
 $('#submitCartForm').click(function() {
 	$("#error_on_submit").empty();
+	
+	if (parseFloat($("#cartsum").text()) < 15) {
+		$("#error_on_submit").text("<?php echo $cartOverview_error4; ?>");
+		return false;
+	}
 	if (!isEmail($("#cart_email").val())) {
 		//alert('Email not valid.');
 		$("#error_on_submit").text("<?php echo $cartOverview_error1; ?>");

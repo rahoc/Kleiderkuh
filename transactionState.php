@@ -206,6 +206,7 @@ require_once('language.php');
                     
                 </div></div>
               </div>
+              <div id="notifyProcessingRejection" class="cyan"><br /><?php echo $trans_text39; ?></div>
               <div id="error_on_submit" class="orange"></div>
                     <input type='image' src='images/<?php echo $langID; ?>/buttons/submit.png' 
                     class='button_medium' id='submit_rejectOption' disabled="disabled"/>
@@ -334,6 +335,16 @@ $(document).ready(function() {
 					$("#plz").val(transaction.plz);
 				}
 				$("#city").val(transaction.city);
+						$("#fName_reject").val(transaction.fname);
+						$("#lName_reject").val(transaction.lname);
+						$("#street_reject").val(transaction.street);
+						if (transaction.streetNr > 0) {
+							$("#streetNr_reject").val(transaction.streetNr);
+						}
+						if (transaction.plz > 0) {
+							$("#plz_reject").val(transaction.plz);
+						}
+						$("#city_reject").val(transaction.city);
 			}
 			if (status_id >= 2) {
 				$("#tab_2").addClass("tab_active");
@@ -353,7 +364,7 @@ $(document).ready(function() {
 					sumAcc = transaction.sumAccepted;
 				}
 				$("#t_processedDate").text(getDateGerman(transaction.ProcessedDate));
-				if(status_id==3) {
+				if(status_id==3 && transaction.RejectOption == "undefined") {
 					$(".t_finalAmount").text(parseFloat(sumAcc).toFixed(2));
 				}
 				else {
@@ -400,10 +411,12 @@ $(document).ready(function() {
 				if(transaction.RejectOption == "return") {
 					$("#t_sumAccepted").text(parseFloat(transaction.sumAccepted).toFixed(2));
 					$("#t_rejectOption").text("<?php echo $trans_text27; ?>");
+						
 					$(".return").show();
 					$("#reject_return").attr("checked", "checked");
-					$("#adress_box").hide();
+					//$("#adress_box").hide();
 					$("#submit_rejectOption").hide();
+					$("#notifyProcessingRejection").show();
 				}
 				else if (transaction.RejectOption == "donate") {
 					$("#t_rejectOption").text("<?php echo $trans_text28; ?>");
@@ -411,6 +424,7 @@ $(document).ready(function() {
 					$("#reject_donate").attr("checked", "checked");
 					$("#adress_box").hide();
 					$("#submit_rejectOption").hide();
+					$("#notifyProcessingRejection").show();
 				}
 				else {
 					$(".return").hide();
@@ -418,6 +432,7 @@ $(document).ready(function() {
 					$("#reject_donate").removeAttr("disabled");
 					$("#reject_return").removeAttr("disabled");
 					$("#submit_rejectOption").removeAttr("disabled");
+					$("#notifyProcessingRejection").hide();
 				}
 				$("#t_id").text(transaction.id);
 				$("#t_finalAmountAbs").text(Math.abs(parseFloat(transaction.finalToPay).toFixed(2)));
@@ -430,8 +445,8 @@ $(document).ready(function() {
 			}
 			if (status_id >= 4) {
 				$("#tab_4").addClass("tab_active");
-				$("#tab_4").children().children(".tab_date").text(getDateGerman(transaction.PaymentDate));
 				
+				$("#notifyProcessingRejection").hide();
 				// FILL CONTENT
 				$("#t_finalToPay").text(parseFloat(transaction.finalToPay).toFixed(2));
 				if (transaction.payment == "ueberweisung") {
@@ -455,6 +470,7 @@ $(document).ready(function() {
 			}
 			if (status_id >= 5) {
 				$("#tab_5").addClass("tab_active");
+				$("#tab_4").children().children(".tab_date").text(getDateGerman(transaction.PaymentDate));
 				$("#tab_5").children().children(".tab_date").text(getDateGerman(transaction.FinishedDate));
 				
 				// FILL CONTENT
@@ -489,8 +505,8 @@ $(document).ready(function() {
 			// STATUS
 			var statusname = "";
 			if (language != "en") {
-				if(transaction.status == "confirmed") {
-					statusname = "Neu erstellt";
+				if(transaction.status.toLowerCase() == "confirmed") {
+					statusname = "Verschicken";
 				}
 				else if(transaction.status.toLowerCase() == "received") {
 					statusname = "Sendung Empfangen";
@@ -711,7 +727,7 @@ $("#reject_donate").click(function() {
 		sumAcc = transaction.sumAccepted;
 	}
 	new_sum =sumAcc;
-	$(".t_finalAmount").text(new_sum);
+	$(".t_finalAmount").text(parseFloat(new_sum).toFixed(2));
 	$(".return").hide();
 });
 $("#reject_return").click(function() {
@@ -783,7 +799,7 @@ $("#submit_rejectOption").click(function() {
 			  $("#reject_donate").attr("disabled", "disabled");
 			  $("#rejection_submit").attr("disabled", "disabled");
 			  $("#submit_rejectOption").hide();
-			  
+			  $("#notifyProcessingRejection").show();
 		  }
 		  else {
 			  $("#error_on_submit").text("No success returned!");
@@ -794,7 +810,13 @@ $("#submit_rejectOption").click(function() {
 		 
 		 //alert (new_sum[5]);
 		 // Set STATUS
-		 new_sum = transaction.sumAccepted-5;
+		 if (reject_option == "return") {
+			 new_sum = transaction.sumAccepted-5;
+		 }
+		 else {
+			new_sum = transaction.sumAccepted; 
+		 }
+		 
 		 if (new_sum < 0 ) {
 			 status = "Waiting for payment";
 		 }
