@@ -217,8 +217,11 @@ $trans_text28  = 'Spenden';
 $trans_text29  = '5€ Versandkosten wurden abgezogen, neuer Zahlungsbetrag: ';
 $trans_text30a  = 'Bitte überweise uns ';
 $trans_text30b  = '€ unter Angabe der Bestellnummer: ';
-$trans_text31  = 'Option A: Bezahlung via PayPal an: paypal@kleiderkuh.de
-<br />Option B: Bezahlung via Überweisung auf folgendes Konto: ';
+$trans_text31  = '<ul><li>Option A: Bezahlung via PayPal an: paypal@kleiderkuh.de
+</li><li>Option B: Bezahlung via Überweisung auf folgendes Konto:<br />
+Deutsche Bank<br />
+Konto Nr.: 043522200<br />
+BLZ: 63070024</li></ul>';
 $trans_text32  = 'Akzeptiert';
 $trans_text33  = 'Abgelehnt';
 $trans_text34  = 'Fehlt';
@@ -572,6 +575,38 @@ Du hast du Möglichkeit, dir die Artikel zurücksenden zu lassen, kannst sie abe
 Dein Kleider Kuh Team<br />
 info@kleiderkuh.de</p>';
 $email_w_link1  = 'Dein Auftrag: ';
+
+
+// Waiting for Payment
+$email_wp_subject = "Kleider Kuh - Artikel zur Rücksendung, DEINE SCHRITTE";
+$email_wp_text1 = "<p>Lieber Kunde,</p>
+	<p>Du hast angegeben, dass die Artikel zu dir zurückgeschickt werden sollen. Die Rücksendung kostet dich 5 Euro.</p>
+	<p>Das sind die nächsten Schritte:
+	<ul>
+	<li>Nach deinen Angaben musst du uns nun folgenden Betrag überweisen: ";
+	
+$email_wp_text2 = " Euro.</li>
+<li>Bei diesem Betrag wurden alle akteptierten Artikeln zusammengerechnet. Sollte kein Artikel akzeptiert worden sein, so wäre dieser 5 Euro.</li>
+<li>Bitte überweise das Geld mit einer der folgenden Optionen, gib dabei folgende Nummer als Referenz an: ";
+$email_wp_link1 = "Auftragsnummer: ";
+$email_wp_text3 = "<ul>
+<li>Option A: Bezahlung via PayPal an: paypal@kleiderkuh.de
+</li><li>Option B: Bezahlung via Überweisung auf folgendes Konto:<br />
+Deutsche Bank<br />
+Konto Nr.: 043522200<br />
+BLZ: 63070024</li>
+<li>Um den kompletten Auftrag anzusehen besuche 
+";
+$email_wp_text4 = "</li>
+	</ul></li>
+	</ul>
+	</p>
+	<p>Du kannst deinen Auftragsstatus jederzeit auf www.kleiderkuh.de/auftraege überprüfen.</p>
+<p>Vielen Dank noch einmal für deine Bestellung!</p>
+<p>Mit freundlichen Grüssen,<br />
+Dein Kleider Kuh Team<br />
+info@kleiderkuh.de</p>";
+
 
 
 $email_f_subject  = 'Kleider Kuh - Auftrag abgeschlossen';

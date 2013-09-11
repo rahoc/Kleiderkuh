@@ -217,7 +217,10 @@ $trans_text28  =  "Donated to charity";
 $trans_text29  =  "5 € shipping fee has been deducted from total to be paid, new amount is: ";
 $trans_text30a  =  "Please send us ";
 $trans_text30b  =  " € and include reference to Order Number: ";
-$trans_text31  =  "Option A: Send PayPal payment to: paypal@kleiderkuh.de<br />Option B: Uberweisung, Konto nummer, BLZ";
+$trans_text31  =  "Option A: Send PayPal payment to: paypal@kleiderkuh.de<br />Option B: Uberweisung:<br />
+Deutsche Bank<br />
+Konto Nr.: 043522200<br />
+BLZ: 63070024";
 $trans_text32  =  "Accepted";
 $trans_text33  =  "Rejected";
 $trans_text34  =  "Missing";
@@ -615,7 +618,10 @@ $email_wp_text2 = " Euro.</li>
 $email_wp_link1 = "order number: ";
 $email_wp_text3 = "<ul>
 <li>Option A: Send PayPal payment to: paypal@kleiderkuh.de</li>
-Option B: Uberweisung, Konto nummer, BLZ</li>
+Option B: Überweisung auf folgendes Konto:<br />
+Deutsche Bank<br />
+Konto Nr.: 043522200<br />
+BLZ: 63070024</li>
 <li>To view full order details please visit
 ";
 $email_wp_text4 = "</li>
