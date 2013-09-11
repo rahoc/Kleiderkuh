@@ -93,11 +93,7 @@ $sell_text10 = 'Größe';
 $sell_text11 = 'Dafür erhältst du von uns:';
 $sell_link1  = 'hier findest du mehr Informationen';
 
-$cart_text1 = 'Geschlecht';
-$cart_text2 = 'Marke';
-$cart_text3 = 'Typ';
-$cart_text4 = 'Größe';
-$cart_text4 = 'Preis';
+
 
 //#####################
 // cartOverview.php
@@ -127,6 +123,11 @@ $cartOverview_text1 = 'Bitte gib deine persönlichen Daten ein um fortzufahren';
 //#####################
 $cart_text1  = 'Gesamt:';
 $cart_text2  = 'Du hast den Mindest-Verkaufsbetrag von 15 € noch nicht erreicht!';
+$cart_text3 = 'Geschlecht';
+$cart_text4 = 'Marke';
+$cart_text5 = 'Typ';
+$cart_text6 = 'Größe';
+$cart_text7 = 'Preis';
 
 //#####################
 // confirm.php

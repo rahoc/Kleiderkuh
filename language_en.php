@@ -91,11 +91,7 @@ $sell_text10 = "Size:";
 $sell_text11 = "We pay you:";
 $sell_link1  =  "click here for details";
  
-$cart_text1 = 'Gender';
-$cart_text2 = 'Brand';
-$cart_text3 = 'Type';
-$cart_text4 = 'Size';
-$cart_text4 = 'Price';
+
 
 
 //##################### = 
@@ -126,7 +122,13 @@ $cartOverview_text1 = 'Please enter your personal information to proceed';
 //##################### = 
 $cart_text1  =  "Total: ";
 $cart_text2  =  "You haven't reached the minimum selling amount of 15 € yet!";
- 
+ $cart_text3 = 'Gender';
+$cart_text4 = 'Brand';
+$cart_text5 = 'Type';
+$cart_text6 = 'Size';
+$cart_text7 = 'Price';
+
+
 //##################### = 
 // confirm.php = 
 //##################### = 
