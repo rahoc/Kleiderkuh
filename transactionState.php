@@ -232,9 +232,11 @@ require_once('language.php');
          <div id="t_stat_5" class="hide align_left">
            	<p><?php echo $trans_text16; ?><span id="t_finishedDate"></span></p>
             <p><?php echo $trans_text17; ?><span id="t_finalToPayFin"></span> €</p>
-            <p><?php echo $trans_text18; ?><span id="t_acceptedItems"></span></p>
-            <p id="t_rejectedItems_label"><?php echo $trans_text19; ?><span id="t_rejectedItems"></span></p>
-            <p id="t_missingItems_label"><?php echo $trans_text20; ?><span id="t_missingItems"></span></p>
+            <p class="open_tab_3"><?php echo $trans_text18; ?><span id="t_acceptedItems"></span></p>
+            <p id="t_rejectedItems_label" class="open_tab_3"><?php echo $trans_text19; ?>
+            	<span id="t_rejectedItems"></span></p>
+            <p id="t_missingItems_label" class="open_tab_3"><?php echo $trans_text20; ?>
+            	<span id="t_missingItems"></span></p>
          </div>
          
          
@@ -508,6 +510,14 @@ $("#tab_2").click(function() {
 });
 $("#tab_3").click(function() {
 	if($(this).hasClass("tab_active")) {
+		$(".hide").hide();
+		$(".tab").removeClass("tab_selected");
+		$("#tab_3").addClass("tab_selected");
+		$("#t_stat_3").show();
+	}
+});
+$(".open_tab_3").click(function() {
+	if($("#tab_3").hasClass("tab_active")) {
 		$(".hide").hide();
 		$(".tab").removeClass("tab_selected");
 		$("#tab_3").addClass("tab_selected");

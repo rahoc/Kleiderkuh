@@ -891,6 +891,10 @@ a.trash {
 	height:160px;
 }
 
+.open_tab_3 {	
+	color:#028E9B;
+	cursor:pointer;
+}
 
 /*  ====================
     Transaction
