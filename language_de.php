@@ -93,6 +93,12 @@ $sell_text10 = 'Größe';
 $sell_text11 = 'Dafür erhältst du von uns:';
 $sell_link1  = 'hier findest du mehr Informationen';
 
+$cart_text1 = 'Geschlecht';
+$cart_text2 = 'Marke';
+$cart_text3 = 'Typ';
+$cart_text4 = 'Größe';
+$cart_text4 = 'Preis';
+
 //#####################
 // cartOverview.php
 //#####################
@@ -596,7 +602,7 @@ $checklist_header1  = 'Deine persönliche Checkliste';
 $checklist_text1  = 'Alle von dir verkauften Artikel sind im Paket.';
 $checklist_text2  = 'Alle Artikel sind gewaschen und komplett trocken.';
 $checklist_text3  = 'Alle Artikel erfüllen die Kleider Kuh Kleidungs-Kriterien.';
-$checklist_text4  = 'Leg den "LEG MICH INS PAKET SCHEIN" in jedes Paket!';
+$checklist_text4  = 'Leg den "LEG MICH IN DAS PAKET SCHEIN" in jedes Paket!';
 $checklist_text5  = 'Das Paket ist sicher verschlossen.';
 $checklist_text6  = 'Nächster Schritt';
 $checklist_text7  = 'Sobald wir deine Sendung erhalten haben, senden wir dir eine Bestätigungs-E-Mail.';
@@ -608,7 +614,7 @@ $checklist_text10  = 'Unseren Support erreichst du über:';
 //#####################
 // Lay me in paket
 //##################### 
-$layInPaket_header1  = '"LEG MICH INS PAKET SCHEIN"';
+$layInPaket_header1  = 'LEG MICH IN DAS PAKET SCHEIN';
 $layInPaket_text1  = 'Bestelldatum: ';
 $layInPaket_text2  = 'Auftragsnummer: ';
 $layInPaket_text3  = 'E-Mail: ';

@@ -91,6 +91,13 @@ $sell_text10 = "Size:";
 $sell_text11 = "We pay you:";
 $sell_link1  =  "click here for details";
  
+$cart_text1 = 'Gender';
+$cart_text2 = 'Brand';
+$cart_text3 = 'Type';
+$cart_text4 = 'Size';
+$cart_text4 = 'Price';
+
+
 //##################### = 
 // cartOverview.php = 
 //##################### = 

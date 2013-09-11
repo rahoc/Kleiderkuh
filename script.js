@@ -1009,9 +1009,9 @@ function createShippingPDF(transaction) {
 	doc.rect(25, 140, 155, 7, 'F'); // filled gray square
 	doc.line(25, 140, 180, 140);
 	doc.setFontType("bold");
-	doc.text(25, 145, 'Id');
-	doc.text(35, 145, 'Article');
-	doc.text(150, 145, 'Price');
+	doc.text(25, 145, 'Nr');
+	doc.text(35, 145, 'Artikel');
+	doc.text(150, 145, 'Preis');
 	doc.line(25, 147, 180, 147);
 	doc.setFontType("normal");
 	

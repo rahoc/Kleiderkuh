@@ -212,11 +212,11 @@ function showCartByTransaction($transaction, $site, $verbindung) {
 	//print_r($ergebnis);
 	echo "<table id=\"cartTable\">";
 	echo "<tr>
-				<th>Gender</th>
-				<th>Brand</th>
-				<th>Type</th>
-				<th>Size</th>
-				<th>Price</th>
+				<th>$cart_text1</th>
+				<th>$cart_text2</th>
+				<th>$cart_text3</th>
+				<th>$cart_text4</th>
+				<th>$cart_text5</th>
 				<th></th>
 			  </tr>";
 	while($row = mysql_fetch_object($ergebnis))
