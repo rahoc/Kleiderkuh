@@ -102,9 +102,7 @@
          </td></tr>
     </table>
     <div id="error_on_submit" class="orange"></div>
-    <a href="sell.php">
-		<img src="images/<?php echo $langID; ?>/buttons/back.png" class="button" />
-    </a>
+    <a href="sell.php"><img src="images/<?php echo $langID; ?>/buttons/back.png" class="button" /></a>
     <input type="image" src="images/<?php echo $langID; ?>/buttons/submit.png" alt="Submit Form" value="Sell this!" class="button" id="submitCartForm" />
 	</form>
 	</div>

@@ -37,7 +37,7 @@
 <file name="shareFbTest.php" server="ftp.strato.de//" local="130226197210000000" remote="130226197200000000" Dst="2" />
 <file name="buy_storeEmail.php" server="ftp.strato.de//" local="130226882648672652" remote="130226882400000000" Dst="2" />
 <file name="dblogin.php" server="h2211303.stratoserver.net//httpdocs/" local="130228568784116985" remote="130228568400000000" Dst="2" />
-<file name="Transaction.php" server="h2211303.stratoserver.net//httpdocs/" local="130233927817820367" remote="130233927600000000" Dst="2" />
+<file name="Transaction.php" server="h2211303.stratoserver.net//httpdocs/" local="130234020678202942" remote="130234020600000000" Dst="2" />
 <file name="manageTransactions2.php" server="h2211303.stratoserver.net//httpdocs/" local="130233842019908742" remote="130233841800000000" Dst="2" />
 <file name="getItemMetricCSV.php" server="h2211303.stratoserver.net//httpdocs/" local="130228604774745647" remote="130228604400000000" Dst="2" />
 <file name="db.php" server="h2211303.stratoserver.net//httpdocs/" local="130233959671070703" remote="130233959400000000" Dst="2" />
@@ -57,13 +57,13 @@
 <file name="jquery.fileDownload.js" server="h2211303.stratoserver.net//httpdocs/" local="130231997069408126" remote="130231996800000000" Dst="2" />
 <file name="head.php" server="h2211303.stratoserver.net//httpdocs/" local="130231998903856455" remote="130231998600000000" Dst="2" />
 <file name="download.php" server="h2211303.stratoserver.net//httpdocs/" local="130232013441847767" remote="130232013000000000" Dst="2" />
-<file name="language_de.php" server="h2211303.stratoserver.net//httpdocs/" local="130233975688335488" remote="130233975600000000" Dst="2" />
+<file name="language_de.php" server="h2211303.stratoserver.net//httpdocs/" local="130234004149724951" remote="130234003800000000" Dst="2" />
 <file name="language_en.php" server="h2211303.stratoserver.net//httpdocs/" local="130233975614144864" remote="130233975600000000" Dst="2" />
 <file name="DhlRetoure.php" server="h2211303.stratoserver.net//httpdocs/" local="130232019918055758" remote="130232019600000000" Dst="2" />
 <file name="sendStatusMail.php" server="h2211303.stratoserver.net//httpdocs/" local="130233850701695166" remote="130233850200000000" Dst="2" />
 <file name="style.css" server="h2211303.stratoserver.net//httpdocs/" local="130233868039980285" remote="130233867600000000" Dst="2" />
 <file name="contact.php" server="h2211303.stratoserver.net//httpdocs/" local="130232111165239849" remote="130232111400000000" Dst="2" />
-<file name="cartOverview.php" server="h2211303.stratoserver.net//httpdocs/" local="130233954769164487" remote="130233954600000000" Dst="2" />
+<file name="cartOverview.php" server="h2211303.stratoserver.net//httpdocs/" local="130233996546774155" remote="130233996600000000" Dst="2" />
 <file name="confirm.php" server="h2211303.stratoserver.net//httpdocs/" local="130233959076103306" remote="130233958800000000" Dst="2" />
 <file name="goToTransaction.php" server="h2211303.stratoserver.net//httpdocs/" local="130232128853204491" remote="130232128800000000" Dst="2" />
 <file name="brandOverview.php" server="h2211303.stratoserver.net//httpdocs/" local="130233872831438011" remote="130233872400000000" Dst="2" />

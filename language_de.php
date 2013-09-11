@@ -588,7 +588,7 @@ $email_wp_text1 = "<p>Lieber Kunde,</p>
 	<li>Nach deinen Angaben musst du uns nun folgenden Betrag überweisen: ";
 	
 $email_wp_text2 = " Euro.</li>
-<li>Bei diesem Betrag wurden alle akteptierten Artikeln zusammengerechnet. Sollte kein Artikel akzeptiert worden sein, so wäre dieser 5 Euro.</li>
+<li>Bei diesem Betrag wurden alle akzeptierten Artikelpreise zusammengerechnet. Sollte kein Artikel akzeptiert worden sein, so wäre dieser 5 Euro.</li>
 <li>Bitte überweise das Geld mit einer der folgenden Optionen, gib dabei folgende Nummer als Referenz an: ";
 $email_wp_link1 = "Auftragsnummer: ";
 $email_wp_text3 = "<ul>
