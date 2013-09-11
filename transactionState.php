@@ -206,7 +206,7 @@ require_once('language.php');
                     
                 </div></div>
               </div>
-              <div id="notifyProcessingRejection" class="cyan"><br /><?php echo $trans_text39; ?></div>
+              <div id="notifyProcessingRejection" class="cyan"><br />	<?php echo $trans_text39; ?></div>
               <div id="error_on_submit" class="orange"></div>
                     <input type='image' src='images/<?php echo $langID; ?>/buttons/submit.png' 
                     class='button_medium' id='submit_rejectOption' disabled="disabled"/>
@@ -328,9 +328,7 @@ $(document).ready(function() {
 				$("#fName").val(transaction.fname);
 				$("#lName").val(transaction.lname);
 				$("#street").val(transaction.street);
-				if (transaction.streetNr > 0) {
-					$("#streetNr").val(transaction.streetNr);
-				}
+				$("#streetNr").val(transaction.streetNr);
 				if (transaction.plz > 0) {
 					$("#plz").val(transaction.plz);
 				}
@@ -338,9 +336,7 @@ $(document).ready(function() {
 						$("#fName_reject").val(transaction.fname);
 						$("#lName_reject").val(transaction.lname);
 						$("#street_reject").val(transaction.street);
-						if (transaction.streetNr > 0) {
-							$("#streetNr_reject").val(transaction.streetNr);
-						}
+						$("#streetNr_reject").val(transaction.streetNr);
 						if (transaction.plz > 0) {
 							$("#plz_reject").val(transaction.plz);
 						}

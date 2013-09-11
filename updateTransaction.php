@@ -52,6 +52,24 @@ require_once("Transaction.php");
 				}
 				$t->finalToPay = $sum;
 				$t->RejectOption = $reject_option;
+				if(isset($_POST["fname"])) {
+					$t->fname = $_POST["fname"];
+				}
+				if(isset($_POST["lname"])) {
+					$t->lname = $_POST["lname"];
+				}
+				if(isset($_POST["street"])) {
+					$t->street = $_POST["street"];
+				}
+				if(isset($_POST["streetNr"])) {
+					$t->streetNr = $_POST["streetNr"];
+				}
+				if(isset($_POST["plz"])) {
+					$t->plz = $_POST["plz"];
+				}
+				if(isset($_POST["city"])) {
+					$t->city = $_POST["city"];
+				}
 				$t->save();
 				echo "success";
 				return;
