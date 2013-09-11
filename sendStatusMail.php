@@ -222,7 +222,7 @@ function getFinished($t, $webPath) {
 		$payment = $email_f_uebwerweisung;
 		$account = $email_f_accountNr . $t->getAccountNr();
 	}
-	$amount = $email_f_amount . $t->finalToPay . " Euro";
+	$amount = $email_f_amount . number_format($t->finalToPay,2) . " Euro";
 	
 	if ($t->rejectedItems > 0) {
 		if ($t->RejectOption == "donate") {
