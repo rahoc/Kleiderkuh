@@ -122,7 +122,7 @@ $cartOverview_text1 = 'Bitte gib deine persönlichen Daten ein um fortzufahren';
 // cart
 //#####################
 $cart_text1  = 'Gesamt:';
-$cart_text2  = 'Du hast den Mindest-Verkaufsbetrag von 15 € noch nicht erreicht!';
+$cart_text2  = 'Du hast den Mindest-Verkaufs-Betrag von 15 € noch nicht erreicht!';
 $cart_text3 = 'Geschlecht';
 $cart_text4 = 'Marke';
 $cart_text5 = 'Typ';

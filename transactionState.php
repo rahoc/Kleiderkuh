@@ -234,9 +234,9 @@ require_once('language.php');
             <p><?php echo $trans_text17; ?><span id="t_finalToPayFin"></span> €</p>
             <p class="open_tab_3"><?php echo $trans_text18; ?><span id="t_acceptedItems"></span></p>
             <p id="t_rejectedItems_label" class="open_tab_3"><?php echo $trans_text19; ?>
-            	<span id="t_rejectedItems"></span></p>
+       	   <span id="t_rejectedItems"></span></p>
             <p id="t_missingItems_label" class="open_tab_3"><?php echo $trans_text20; ?>
-            	<span id="t_missingItems"></span></p>
+       	   <span id="t_missingItems"></span></p>
          </div>
          
          
@@ -485,7 +485,48 @@ $(document).ready(function() {
 			// FILL INFO
 			$("#tinfo_id").text(transaction.id);
 			$("#tinfo_email").text(transaction.email);
-			$("#tinfo_status").text(transaction.status);
+			
+			// STATUS
+			var statusname = "";
+			if (language != "en") {
+				if(transaction.status == "confirmed") {
+					statusname = "Neu erstellt";
+				}
+				else if(transaction.status.toLowerCase() == "received") {
+					statusname = "Sendung Empfangen";
+				}
+				else if(transaction.status.toLowerCase() == "processed") {
+					statusname = "Bearbeitet";
+				}
+				else if(transaction.status.toLowerCase() == "waiting for customer") {
+					statusname = "Warten auf Kunde";
+				}
+				else if(transaction.status.toLowerCase() == "donate") {
+					statusname = "Spenden";
+				}
+				else if(transaction.status.toLowerCase() == "return") {
+					statusname = "Rücksendung";
+				}
+				else if(transaction.status.toLowerCase() == "waiting for payment") {
+					statusname = "Warten auf Zahlung";
+				}
+				else if(transaction.status.toLowerCase() == "payment") {
+					statusname = "Bezahlung";
+				}
+				else if(transaction.status.toLowerCase() == "canceled") {
+					statusname = "Storniert";
+				}
+				else if(transaction.status.toLowerCase() == "finished") {
+					statusname = "Abgeschlossen";
+				}
+				$("#tinfo_status").text(statusname);
+			}
+			else {
+				$("#tinfo_status").text(transaction.status);
+			}
+			
+			
+			
 		}); // END LOAD JSON
 		
 
