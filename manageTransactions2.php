@@ -71,7 +71,7 @@ else {
 	}
 	
 		// QUERY - Transaction
-		$query = "SELECT * FROM Transactions";
+		$query = "SELECT * FROM Transactions ORDER BY id DESC";
 		$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 		
 		//print_r($result);

@@ -38,7 +38,7 @@
 <file name="buy_storeEmail.php" server="ftp.strato.de//" local="130226882648672652" remote="130226882400000000" Dst="2" />
 <file name="dblogin.php" server="h2211303.stratoserver.net//httpdocs/" local="130228568784116985" remote="130228568400000000" Dst="2" />
 <file name="Transaction.php" server="h2211303.stratoserver.net//httpdocs/" local="130228605056213040" remote="130228605000000000" Dst="2" />
-<file name="manageTransactions2.php" server="h2211303.stratoserver.net//httpdocs/" local="130228790737035914" remote="130228790400000000" Dst="2" />
+<file name="manageTransactions2.php" server="h2211303.stratoserver.net//httpdocs/" local="130233842019908742" remote="130233841800000000" Dst="2" />
 <file name="getItemMetricCSV.php" server="h2211303.stratoserver.net//httpdocs/" local="130228604774745647" remote="130228604400000000" Dst="2" />
 <file name="db.php" server="h2211303.stratoserver.net//httpdocs/" local="130232880916142662" remote="130232880600000000" Dst="2" />
 <file name="cart.php" server="h2211303.stratoserver.net//httpdocs/" local="130228493819976787" remote="130228493400000000" Dst="2" />
