@@ -149,6 +149,7 @@ if ($sendMail) {
 
 function getConfirmed($t, $webPath) {
 	include('language.php');
+
 	return $email_c_text1 . 
 		' <a href="'.$webPath.'/transactionState.php?transaction=' . 
 	 	$t->id .
@@ -157,6 +158,7 @@ function getConfirmed($t, $webPath) {
 		'" style="color:#028E9B;">' . 
 	 	$email_c_link1 . $t->id . 
 		$email_c_text2;
+
 }
 
 function getCancelled($t, $webPath) {

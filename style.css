@@ -879,7 +879,12 @@ a.trash {
 	border-style:solid;
 	border-color:#028E9B;
 	border-radius:5px;
-	padding: 3px;
+	padding: 7px;
+	-webkit-box-shadow: 2px 2px 2px #9A9A9A;
+	-moz-box-shadow: 2px 2px 2px #9A9A9A;
+	-o-box-shadow: 2px 2px 2px #9A9A9A;
+	-ms-box-shadow: 2px 2px 2px #9A9A9A;
+	box-shadow: 2px 2px 2px #9A9A9A;
 }
 
 #tt_dhl {

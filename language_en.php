@@ -177,6 +177,7 @@ $trans_label7  =  "Donate to charity (no charge)";
 $trans_label8  =  "Return to me (5 € shipping fee, will be deducted from total to be paid)";
 $trans_error1  =  "Please fill out the form completely!";
 $trans_error2  =  "PLZ seems not valid!";
+$trans_error3  = 'Nr. seems not valid!';
 $trans_th1  =  "Gender";
 $trans_th2  =  "Brand";
 $trans_th3  =  "Type";
@@ -390,7 +391,7 @@ $contact_text1 = "support@kleiderkuh.de";
 // brandOverview.php
 //#####################
 $brands_headline1 = "Brands";
-$brands_subheader1 = "We buy this brands!";
+$brands_subheader1 = "We buy these brands!";
 
 //#####################
 // AGB.php

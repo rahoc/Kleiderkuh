@@ -991,7 +991,7 @@ function createShippingPDF(transaction) {
 	doc.setFontType("bold");
 	
 	doc.setFontSize(14);
-	doc.text(20, 100, 'LEG MICH IN DAS PAKET SCHEIN');
+	doc.text(20, 100, 'LEG MICH INS PAKET SCHEIN');
 	
 	doc.setFontType("normal");
 	doc.setFontSize(12);
@@ -1059,7 +1059,7 @@ function createShippingPDF(transaction) {
 	doc.text(30, 70, 'Sind alle verkauften Artikel vollständig im Paket?');
 	doc.text(30, 77, 'Alle Artikel sind gewaschen und komplett trocken?');
 	doc.text(30, 84, 'Alle Artikel erfüllen die Kleider Kuh Kleidungs-Kriterien?');
-	doc.text(30, 91, 'Leg den LEG-MICH-INS-PAKET Schein in jedes Paket!');
+	doc.text(30, 91, 'Leg den "LEG MICH INS PAKET SCHEIN" in jedes Paket!');
 	doc.text(30, 98, 'Das Paket ist sicher verschlossen?');
 	doc.text(30, 105, 'Klebe den Frankierschein auf das Paket! Bitte verschicke das Paket nicht unfrei!');
 
@@ -1076,7 +1076,7 @@ function createShippingPDF(transaction) {
 	doc.circle(25, 138, 1, 'F');
 	doc.circle(25, 145, 1, 'F');
 	doc.circle(25, 152, 1, 'F');
-	doc.text(30, 140, 'Sobald wir deine Sendung erhalten haben, senden wir dir eine Bestätigungs-E-Mail.');
+	doc.text(30, 140, 'Sobald wir deine Sendung erhalten haben senden wir dir eine Bestätigungs-E-Mail.');
 	doc.text(30, 147, 'Beachte die üblichen Lieferzeiten der Versanddienstleister (1-3 Tage).');
 	doc.text(30, 154, 'Überprüfe deinen Auftragstatus jederzeit auf www.kleiderkuh.de/auftraege');
 

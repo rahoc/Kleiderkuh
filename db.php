@@ -226,10 +226,12 @@ function showCartByTransaction($transaction, $site, $verbindung) {
 				<td>$row->brand</td>
 				<td>$row->type</td>
 				<td>$row->size</td>
-				<td>".number_format($row->price,2)." €</td>
-				<td><a href='#' onclick='removeFromCart($row->transactionClothId); return false' class='trash'>
-					x</a></td>
-			  </tr>";
+				<td>".number_format($row->price,2)." €</td>";
+				if($site!='email') {
+					echo "<td><a href='#' onclick='removeFromCart($row->transactionClothId); return false' class='trash'>
+						x</a></td>";
+				}
+			  echo"</tr>";
 	}
 	echo "</table>";
 	

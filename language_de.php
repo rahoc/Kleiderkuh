@@ -179,6 +179,7 @@ $trans_label7  = 'Spenden (keine Gebühren)';
 $trans_label8  = 'An mich zurücksenden (5€ Versandkosten werden von deiner Gesamtsumme abgezogen)';
 $trans_error1  = 'Bitte fülle alle Felder aus!';
 $trans_error2  = 'PLZ scheint ungültig zu sein!';
+$trans_error3  = 'Nr. scheint ungültig zu sein!';
 $trans_th1  = 'Geschlecht';
 $trans_th2  = 'Marke';
 $trans_th3  = 'Typ';
@@ -350,7 +351,7 @@ $feedback_error1 = "Du scheinst keine gültige E-Mail-Adresse eingegeben zu habe
 $feedback_error2 = "Bitte gib einen Nachrichtentext ein!";
 
 $about_text1  = '<h1>Wer wir sind</h1><br />
-<p>Kleider Kuh wurde von einer kleinen Gruppe von Unternehmern in der süddeutschen Stadt Ulm gegründet. Albert Einstein wurde in Ulm geboren und eines Tages traf sich unser Team um zu sehen ob wir eine Idee entwickeln können die Einstein würdig ist ... so entwickelten wir das Konzept von Kleider Kuh.</p>
+<p>Kleider Kuh wurde von einem Team kreativer Denker in der süddeutschen Stadt Ulm gegründet. Albert Einstein wurde in Ulm geboren und eines Tages traf sich unser Team um zu sehen ob wir eine Idee entwickeln können die Einstein würdig ist ... so entwickelten wir das Konzept von Kleider Kuh.</p>
 <h1>Warum?</h1>
 <p>Es gibt Millionen hochwertiger Markenkleidungsstücke für Kinder die in unserem Land in den Schränken liegen und nie mehr getragen werden. Unsere Aufgabe ist es, einen Service anzubieten der ein neues Zuhause für diese Kleidungsstücke findet. 
 <h1>Was machen wir?</h1>
@@ -533,14 +534,14 @@ info@kleiderkuh.de</p>';
 
 $email_r_subject  = 'Kleider Kuh - Paket eingegangen';
 $email_r_text1 = '<p>Lieber Kunde,</p>
-<p>Dies ist eine automatisch generierte Email, um dir mitzuteilen dass wir dein Paket am ';
+<p>Dies ist eine automatisch generierte Email um dir mitzuteilen, dass wir dein Paket am ';
 $email_r_text2  = ' erhalten haben.</p>
 <p>Das sind die nächsten Schritte:
 <ul>
 <li>Wir werden deinen Auftrag und jeden Artikel einzeln prüfen.</li>
 <li>Sollten alle Artikel deiner Bestellung erfolgreich geprüft und bestätigt werden, werden wir die Auszahlung an dich veranlassen.
 </li>
-<li>Für den Fall dass nicht alle deine Artikel unseren Auflagen genügen, werden wir dich per Email kontaktieren.</li>
+<li>Für den Fall, dass nicht alle deine Artikel unseren Auflagen genügen, werden wir dich per Email kontaktieren.</li>
 </ul>
 </p><p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/auftraege abrufen.</p>
 <p>Mit freundlichen Grüßen<br />
@@ -551,7 +552,7 @@ info@kleiderkuh.de</p>';
 $email_w_subject  = 'Kleider Kuh - Artikel nicht aktzeptiert, AKTION ERFORDERLICH';
 $email_w_text1  = '<p>Lieber Kunde,</p>
 <p>nochmals vielen Dank für deine Bestellung.</p>
-<p>Leider können einer oder mehrere Artikel nicht bestätigt werden.</p>
+<p>Leider können einer oder mehrere Artikel nicht akzeptiert werden.</p>
 <p>Das sind die nächsten Schritte:<ul>
 <li>Bitte besuche ';
 $email_w_text2  = ' um den oder die Artikel, die nicht bestätigt werden konnten, zu sehen.</li>
@@ -571,7 +572,7 @@ $email_f_text1  = '<p>Lieber Kunde,</p>
 <p>Dies ist eine automatische E-Mail um dir mitzuteilen, dass dein Auftrag vollständig bearbeitet und abgeschlossen ist.</p>
 <p>Details:
 <ul>
-<li>Dein Geld wird überwiesen an ';
+<li>Dein Geld wurde überwiesen am ';
 $email_f_paypal  = 'Zahlungsmethode: PayPal ';
 $email_f_ppmail  = 'PayPal E-Mail-Adresse: ';
 $email_f_uebwerweisung  = 'Zahlungsmethode: Überweisung';
@@ -595,7 +596,7 @@ $checklist_header1  = 'Deine persönliche Checkliste';
 $checklist_text1  = 'Alle von dir verkauften Artikel sind im Paket.';
 $checklist_text2  = 'Alle Artikel sind gewaschen und komplett trocken.';
 $checklist_text3  = 'Alle Artikel erfüllen die Kleider Kuh Kleidungs-Kriterien.';
-$checklist_text4  = 'Leg den LEG-MICH-INS-PAKET Schein in jedes Paket!';
+$checklist_text4  = 'Leg den "LEG MICH INS PAKET SCHEIN" in jedes Paket!';
 $checklist_text5  = 'Das Paket ist sicher verschlossen.';
 $checklist_text6  = 'Nächster Schritt';
 $checklist_text7  = 'Sobald wir deine Sendung erhalten haben, senden wir dir eine Bestätigungs-E-Mail.';
@@ -607,7 +608,7 @@ $checklist_text10  = 'Unseren Support erreichst du über:';
 //#####################
 // Lay me in paket
 //##################### 
-$layInPaket_header1  = 'LEG-MICH-INS-PAKET Schein';
+$layInPaket_header1  = '"LEG MICH INS PAKET SCHEIN"';
 $layInPaket_text1  = 'Bestelldatum: ';
 $layInPaket_text2  = 'Auftragsnummer: ';
 $layInPaket_text3  = 'E-Mail: ';
