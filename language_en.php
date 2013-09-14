@@ -399,6 +399,7 @@ Our service enables parents throughout the country to create value from children
 $contact_headline1 = "Contact";
 $contact_subheader1 = "To contact Kleider Kuh please send email to:";
 $contact_subheader2 = "Or use this form:";
+$contact_subheader3 = 'Visit us on Facebook:';
 $contact_text1 = "support@kleiderkuh.de";
 
 //#####################

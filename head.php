@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="image_src" href="http://www.kleiderkuh.de/images/KKFB_50.png" />
+<meta property="og:image" content="http://www.kleiderkuh.de/images/KKFB_50.png"/> 
 <?php
 	include 'language.php';
 	

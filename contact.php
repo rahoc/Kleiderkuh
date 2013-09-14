@@ -5,6 +5,8 @@ include 'language.php';
 <div class="subheader cyan"><?php echo $contact_subheader1; ?></div>
 <div><?php echo $contact_text1; ?></div>
 <br />
+<div class="subheader cyan"><?php echo $contact_subheader3; ?></div>
+<a href="http://www.facebook.com/kleiderkuh" onClick="trackOutboundLinkNewWindow(this, 'Understanding KK', 'External Link Contact', 'Facebook'); return false;"><img class="footimage" src="images/fb.png" /></a>
 <div class="subheader cyan"><?php echo $contact_subheader2; ?></div>
 
 <div id="feedbackContentC" class="margin_left_30">

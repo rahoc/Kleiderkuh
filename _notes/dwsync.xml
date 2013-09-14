@@ -55,18 +55,21 @@
 <file name="getPDFFromMerge.php" server="h2211303.stratoserver.net//httpdocs/" local="130231938836711983" remote="130231938600000000" Dst="2" />
 <file name="transactionState.php" server="h2211303.stratoserver.net//httpdocs/" local="130234033838809295" remote="130234033800000000" Dst="2" />
 <file name="jquery.fileDownload.js" server="h2211303.stratoserver.net//httpdocs/" local="130231997069408126" remote="130231996800000000" Dst="2" />
-<file name="head.php" server="h2211303.stratoserver.net//httpdocs/" local="130231998903856455" remote="130231998600000000" Dst="2" />
+<file name="head.php" server="h2211303.stratoserver.net//httpdocs/" local="130234505006543052" remote="130234504800000000" Dst="2" />
 <file name="download.php" server="h2211303.stratoserver.net//httpdocs/" local="130232013441847767" remote="130232013000000000" Dst="2" />
-<file name="language_de.php" server="h2211303.stratoserver.net//httpdocs/" local="130234004149724951" remote="130234003800000000" Dst="2" />
-<file name="language_en.php" server="h2211303.stratoserver.net//httpdocs/" local="130233975614144864" remote="130233975600000000" Dst="2" />
+<file name="language_de.php" server="h2211303.stratoserver.net//httpdocs/" local="130236295856317123" remote="130236295800000000" Dst="2" />
+<file name="language_en.php" server="h2211303.stratoserver.net//httpdocs/" local="130234598100037821" remote="130234597800000000" Dst="2" />
 <file name="DhlRetoure.php" server="h2211303.stratoserver.net//httpdocs/" local="130232019918055758" remote="130232019600000000" Dst="2" />
 <file name="sendStatusMail.php" server="h2211303.stratoserver.net//httpdocs/" local="130233850701695166" remote="130233850200000000" Dst="2" />
 <file name="style.css" server="h2211303.stratoserver.net//httpdocs/" local="130233868039980285" remote="130233867600000000" Dst="2" />
-<file name="contact.php" server="h2211303.stratoserver.net//httpdocs/" local="130232111165239849" remote="130232111400000000" Dst="2" />
+<file name="contact.php" server="h2211303.stratoserver.net//httpdocs/" local="130234598616088536" remote="130234598400000000" Dst="2" />
 <file name="cartOverview.php" server="h2211303.stratoserver.net//httpdocs/" local="130233996546774155" remote="130233996600000000" Dst="2" />
 <file name="confirm.php" server="h2211303.stratoserver.net//httpdocs/" local="130233959076103306" remote="130233958800000000" Dst="2" />
 <file name="goToTransaction.php" server="h2211303.stratoserver.net//httpdocs/" local="130232128853204491" remote="130232128800000000" Dst="2" />
 <file name="brandOverview.php" server="h2211303.stratoserver.net//httpdocs/" local="130233872831438011" remote="130233872400000000" Dst="2" />
 <file name="updateTransaction.php" server="h2211303.stratoserver.net//httpdocs/" local="130234028389364152" remote="130234028400000000" Dst="2" />
 <file name="robots.txt" server="h2211303.stratoserver.net//httpdocs/" local="130234095195240333" remote="130234095000000000" Dst="2" />
+<file name="www.kleiderkuh.de_sitemap.xml" server="h2211303.stratoserver.net//httpdocs/" local="130234591689210573" remote="130234591800000000" Dst="2" />
+<file name="foot.php" server="h2211303.stratoserver.net//httpdocs/" local="130234595783184925" remote="130234595400000000" Dst="2" />
+<file name="displayBuyFeedback.php" server="h2211303.stratoserver.net//httpdocs/" local="130234922078141141" remote="130234921800000000" Dst="2" />
 </dwsync>

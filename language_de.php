@@ -13,7 +13,7 @@ $head_link3  = 'Kaufen';
 $head_link4  = 'Aufträge';
 $head_link5  = 'So geht\'s';
 $title_home = "Kleider Kuh - Verkaufe und kaufe ganz einfach Marken-Kinder-Bekleidung";
-$description_home = "Kleider Kuh ist der beste Weg um deine Kinderkleidung zu kaufen und zu verkaufen.  Leere deinen Kleiderschrank, füll deinen Geldbeutel und hilf dabei noch der Umwelt indem du alte Klamotten recyelst und Ihnen ein neues Zuhause gibst. Wir sind spezialisiert auf Kinderbekleidung in exzellentem Zustand von Premium Herstellern wie z.B. Abercrombie & Fitch, Armani, Benetton, Dolce & Gabbana, Hugo Boss, Jack Wolfskin, Lacoste, Napapijri, Ralph Lauren, Tommy Hilfiger und Vingino.";
+$description_home = "Kleider Kuh ist der beste Weg um deine Kinderkleidung zu kaufen und zu verkaufen.  Leere deinen Kleiderschrank, füll deinen Geldbeutel und hilf dabei noch der Umwelt indem du alte Klamotten recycelst und Ihnen ein neues Zuhause gibst. Wir sind spezialisiert auf Kinderbekleidung in exzellentem Zustand von Premium Herstellern wie z.B. Abercrombie & Fitch, Armani, Benetton, Dolce & Gabbana, Hugo Boss, Jack Wolfskin, Lacoste, Napapijri, Ralph Lauren, Tommy Hilfiger und Vingino.";
 $title_sell = "Kleider Kuh - Leere deinen Kleiderschrank und füll deinen Geldbeutel";
 $description_sell = "Kleider Kuh bietet dir einen einfachen Weg deine gebrauchte Kinderkleidung zu verkaufen. Mit nur wenigen Klicks kannst du exakt erfahren was deine Kinderkleidung noch wert ist und dir einen kostenlosen Frankierschein ausdrucken.  Sobald wir die Kleidung erhalten und geprüft haben, erhältst du von uns dein Geld.  Wir kaufen Kinderbekleidung in hervorragendem Zustand von Top Marken wie z.B. Abercrombie & Fitch, Armani, Benetton, Dolce & Gabbana, Hugo Boss, Jack Wolfskin, Lacoste, Napapijri, Ralph Lauren, Tommy Hilfiger und Vingino.";
 $title_transaction = "Kleider Kuh - Überprüfe deinen Auftragsstatus";
@@ -287,7 +287,7 @@ Um PayPal zu nutzen, gib an welche E-Mail-Adresse für die Zahlung verwendet wer
 $how_text14  = 'Kostenlosen Frankierschein drucken<br />
 <ul><li>Sobald du an der Kasse fertig bist, kannst du einen kostenlosen DHL-Frankierschein ausdrucken</li><li>
 Falls du keinen Drucker hast, kannst du dir den kostenlosen Frankierschein per Post schicken lassen</li><li>
-Alternativ kannst du uns das Paket auch mit einem anderen Versanddienstleister schicken. Beachte aber, dass wir leider nur die Versankosten bezahlen, wenn du den DHL-Frankierschein von unserer Website verwendest.</li></ul>';
+Alternativ kannst du uns das Paket auch mit einem anderen Versanddienstleister schicken. Beachte aber, dass wir leider nur die Versandkosten bezahlen, wenn du den DHL-Frankierschein von unserer Website verwendest.</li></ul>';
 $how_text15  = 'Verpacken und senden<br />
 <ul><li>Packe alle Artikel und die ausgedruckten Unterlagen in ein Paket.</li><li>
 Bringe den Frankierschein außen am Paket an.</li><li>
@@ -380,6 +380,7 @@ $about_text1  = '<h1>Wer wir sind</h1><br />
 $contact_headline1  = 'Kontakt';
 $contact_subheader1  = 'Um Kleider Kuh zu kontaktieren schicke eine E-mail an:';
 $contact_subheader2  = 'Oder verwende dieses Formular:';
+$contact_subheader3 = 'Besuch uns auf Facebook:';
 $contact_text1  = ' support@kleiderkuh.de';
 
 //#####################
@@ -525,7 +526,8 @@ Anschließend werden wir deinen Auftrag und die Auszahlung bearbeiten.</li></ul>
 <p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/auftraege abrufen.</p> 
 <p>Mit freundlichen Grüßen<br />
 Dein Kleider Kuh Team<br />
-info@kleiderkuh.de</p>';
+info@kleiderkuh.de</p>
+<p>www.facebook.com/kleiderkuh</p>';
 $email_c_link1  = 'Dein Auftrag: ';
 
 
@@ -541,7 +543,8 @@ $email_ca_text1  = '<p>Lieber Kunde,</p>
 </p>
 <p>Mit freundlichen Grüßen<br />
 Dein Kleider Kuh Team<br />
-info@kleiderkuh.de</p>';
+info@kleiderkuh.de</p>
+<p>www.facebook.com/kleiderkuh</p>';
 
 
 $email_r_subject  = 'Kleider Kuh - Paket eingegangen';
@@ -558,7 +561,8 @@ $email_r_text2  = ' erhalten haben.</p>
 </p><p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/auftraege abrufen.</p>
 <p>Mit freundlichen Grüßen<br />
 Dein Kleider Kuh Team<br />
-info@kleiderkuh.de</p>';
+info@kleiderkuh.de</p>
+<p>www.facebook.com/kleiderkuh</p>';
 
 
 $email_w_subject  = 'Kleider Kuh - Artikel nicht aktzeptiert, AKTION ERFORDERLICH';
@@ -575,7 +579,8 @@ Du hast du Möglichkeit, dir die Artikel zurücksenden zu lassen, kannst sie abe
 </p><p>Du kannst den Status deines Auftrags jederzeit unter www.kleiderkuh.de/auftraege abrufen.</p>
 <p>Mit freundlichen Grüßen<br />
 Dein Kleider Kuh Team<br />
-info@kleiderkuh.de</p>';
+info@kleiderkuh.de</p>
+<p>www.facebook.com/kleiderkuh</p>';
 $email_w_link1  = 'Dein Auftrag: ';
 
 
@@ -607,7 +612,8 @@ $email_wp_text4 = "</li>
 <p>Vielen Dank noch einmal für deine Bestellung!</p>
 <p>Mit freundlichen Grüssen,<br />
 Dein Kleider Kuh Team<br />
-info@kleiderkuh.de</p>";
+info@kleiderkuh.de</p>
+<p>www.facebook.com/kleiderkuh</p>";
 
 
 
@@ -628,7 +634,8 @@ $email_f_text2  = '</ul>
 <p>Vielen Dank noch einmal für deine Bestellung!</p>
 <p>Mit freundlichen Grüssen,<br />
 Dein Kleider Kuh Team<br />
-info@kleiderkuh.de</p>';
+info@kleiderkuh.de</p>
+<p>www.facebook.com/kleiderkuh</p>';
 $email_f_donate  = ' Artikel wurde(n) gespendet';
 $email_f_return  = ' Artikel wurde(n) zurückgeschickt';
 
