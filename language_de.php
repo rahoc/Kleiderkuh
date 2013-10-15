@@ -329,7 +329,7 @@ $req_text11  = 'Gewaschen und gereinigt, bevor es an uns geschickt wird';
 //#####################
 $buy_headline1  = 'Kleidung kaufen';
 $buy_subheader1  = 'Tut uns leid...';
-$buy_text1  = 'Wir haben derzeit leider noch nicht mit dem Verkauf unserer Kollektion begonnen. Die ersten Artikel werden in Kürze angeboten. Wenn du möchtest informieren wir Dich über den Verkaufstart unserer qualitativ hochwertigen, wenig genutzten Kinderbekleidung. Trage deine E-Mail Adresse in das nebenstehende Feld ein und sei der/die Erste beim Verkaufstart unserer Kollektion.';
+$buy_text1  = 'Wir haben derzeit leider noch nicht mit dem Verkauf unserer Kollektion begonnen. Die ersten Artikel werden in Kürze angeboten. Wenn du möchtest informieren wir Dich über den Verkaufsstart unserer qualitativ hochwertigen, wenig genutzten Kinderbekleidung. Trage deine E-Mail Adresse in das nebenstehende Feld ein und sei der/die Erste beim Verkaufsstart unserer Kollektion.';
 $buy_text2  = 'Uns ist aufgefallen, dass wir deine E-Mail-Adresse bereits gespeichert haben. Wir informieren dich sobald es etwas neues gibt und bedanken uns für dein Interesse.';
 $buy_text3  = 'Deine E-Mail-Adresse wurde erfolgreich in unserer Datenbank gespeichert. Vielen Dank für dein Interesse. Wir informieren dich sobald wir mit dem Verkauf von qualitativ hochwertiger, wenig genutzter Kinderbekleidung beginnen.';
 $buy_button1  = 'Speichert meine E-Mail-Adresse und haltet mich auf dem Laufenden!';
