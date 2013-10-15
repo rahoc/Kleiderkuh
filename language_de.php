@@ -494,7 +494,7 @@ Die Nutzer können die Installation der Cookies durch eine entsprechende Einstel
 //#####################
 $impressum_headline1 = "Impressum";
 $impressum_text1 = "<p>Angaben gemäß § 5 TMG:<br/><br/></p>
-<p>Kleider Kuh<br />
+<p>Kleider Kuh UG<br />
 Deinselsgasse 6<br />
 89073 Ulm<br />
 </p>
