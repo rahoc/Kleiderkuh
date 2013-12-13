@@ -22,4 +22,15 @@
 <file name="send.png" server="ftp.strato.de//" local="130205162540000000" remote="130214859000000000" Dst="2" />
 <file name="submit.png" server="ftp.strato.de//" local="130181040559498831" remote="130214859000000000" Dst="2" />
 <file name="versand.png" server="ftp.strato.de//" local="130202064020000000" remote="130214859000000000" Dst="2" />
+<file name="back.png" server="h2211303.stratoserver.net//httpdocs/" local="130181040475607888" remote="130269903000000000" Dst="2" />
+<file name="confirm.png" server="h2211303.stratoserver.net//httpdocs/" local="130181040522133967" remote="130269903000000000" Dst="2" />
+<file name="email.png" server="h2211303.stratoserver.net//httpdocs/" local="130180099614519814" remote="130269903000000000" Dst="2" />
+<file name="finder.png" server="h2211303.stratoserver.net//httpdocs/" local="130202064010000000" remote="130269903000000000" Dst="2" />
+<file name="inTheCart.png" server="h2211303.stratoserver.net//httpdocs/" local="130214832140000000" remote="130269903600000000" Dst="2" />
+<file name="login.png" server="h2211303.stratoserver.net//httpdocs/" local="130214832030000000" remote="130269903600000000" Dst="2" />
+<file name="sell.png" server="h2211303.stratoserver.net//httpdocs/" local="130180099614669844" remote="130269903600000000" Dst="2" />
+<file name="sellNow.png" server="h2211303.stratoserver.net//httpdocs/" local="130180099622313278" remote="130269903600000000" Dst="2" />
+<file name="send.png" server="h2211303.stratoserver.net//httpdocs/" local="130205162540000000" remote="130269903600000000" Dst="2" />
+<file name="submit.png" server="h2211303.stratoserver.net//httpdocs/" local="130181040559498831" remote="130269903600000000" Dst="2" />
+<file name="versand.png" server="h2211303.stratoserver.net//httpdocs/" local="130202064020000000" remote="130269903600000000" Dst="2" />
 </dwsync>

@@ -11,9 +11,11 @@
 <title>Kleider Kuh</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<script src="script.js"></script>
+
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="jquery.fixedheadertable.min.js"></script>
+<script src="script.js"></script>
 </head>
 
 <body>
@@ -71,7 +73,7 @@ else {
 	}
 	
 		// QUERY - Transaction
-		$query = "SELECT * FROM Transactions ORDER BY id DESC";
+		$query = "SELECT * FROM Transactions WHERE Status NOT LIKE 'InCart' OR LastName NOT LIKE '' ORDER BY id DESC";
 		$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 		
 		//print_r($result);
@@ -99,6 +101,7 @@ else {
     ?>
     
     <table id="fullTable">
+    <thead>
 	<tr>
         <th>Id</th>
         <th>Status</th>
@@ -119,7 +122,7 @@ else {
         <th>Reject Option</th>
         
     </tr>
-    
+    </thead>
     <?php
 	foreach ($transactions as $i => $value) {
 		
@@ -285,9 +288,13 @@ else {
 
 
 </div>
+
 <br />
 
 <script>
+$('selector').fixedHeaderTable({ footer: false, cloneHeadToFoot: false, fixedColumn: true });
+
+
 function textAreaAdjust(o) {
     o.style.height = "1px";
     o.style.height = (25+o.scrollHeight)+"px";

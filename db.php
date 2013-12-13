@@ -24,26 +24,42 @@ function closeDB($verbindung) {
 }
 
 function showNames($tableName, $gender) {
-	
-	$abfrage = "SELECT Name FROM $tableName ORDER BY Name";
+	if($tableName=="Brand") {
+		$abfrage = "SELECT Id, Name, NameEn, Keywords FROM $tableName ORDER BY Name";
+	}
+	else {
+		$abfrage = "SELECT Id, Name FROM $tableName ORDER BY Name";
+	}
 	$ergebnis = mysql_query($abfrage);
 	include 'language.php';
 	// Column description
-	echo "<div class='selectDescription'>
-			<div id='selectDescription$tableName' class='bubble right'>
-			$sell_bubble1</div>
-		</div>";
-
+	if($tableName=="Brand") {
+		echo "<div class='selectDescription'>
+				<div id='selectDescription$tableName' class='bubble right'>
+				$sell_bubble2</div>
+			</div>";
+	}
+	else {
+		echo "<div class='selectDescription'>
+				<div id='selectDescription$tableName' class='bubble right'>
+				$sell_bubble1</div>
+			</div>";
+	}
 	
 	// Column name
 	if($tableName=="Gender") {
-		echo "<div  id=\"$row->Name\" class=\"selectHeader\">Geschlecht</div>";
+		echo "<div  id=\"$row->Name\" class=\"selectHeader\">$sell_text7</div>";
 	}
 	else if($tableName=="Brand") {
-		echo "<div  id=\"$row->Name\" class=\"selectHeader\">Marke</div>";
+		
+		echo "<div  id=\"$row->Name\" class=\"selectHeader\">$sell_text8</div>";
+		echo "<div><input type='text' id='brandSearch' onkeyup='filterBrands()' onclick='resetAkkordean()' class='filterBox' />
+			</div>
+			<div id='noSearchResults' class='center orange'>$sell_text12</div>
+			<div id='openBrandListTxt' onclick='openBrandListOverlay()'>$sell_link2</div>";
 	}
 	else if($tableName=="Type") {
-		echo "<div  id=\"$row->Name\" class=\"selectHeader\">Typ</div>";
+		echo "<div  id=\"$row->Name\" class=\"selectHeader\">$sell_text9</div>";
 	}
 	// Column data
 	while($row = mysql_fetch_object($ergebnis))
@@ -61,9 +77,10 @@ function showNames($tableName, $gender) {
 		else if ($tableName=="Brand") {
 			$brandimage  = substr($row->Name, 0,4);
 		echo "
-			<a id=\"$row->Name\" class=\"select\" 
+			<a id=\"$row->Name\" class=\"select\" name='brand$row->Id' title='$row->Name' 
 			href=\"#\" onclick=\"showByCategory('$row->Name', '$tableName', '$gender'); return false\">
 			<div class='brandimage_wrapper'><img src=\"images/brands/$brandimage.png\" class=\"brandimages\" /></div>
+			<input type='hidden' name='brand" . $row->Id . "keywords' value='$row->Keywords $row->NameEn' />
 			</a>
 			";
 		}
@@ -81,11 +98,16 @@ function showNames($tableName, $gender) {
 			";
 		}
 	}
-
+	// Dots
+	if ($tableName=="Brand") {
+		echo "<div id='dots' onclick='showAllBrands()' class='cyan center'>$sell_text13</div>";
+	
+	}
 	// Feedback
 	if($tableName != Gender) {
 		echo "<a href='#' onclick=\"showFeedback()\" id=\"$row->Name\" class='selectFeedback'>$sell_text4</a>";
 	}
+
 }
 
 function showSizeNames($gender, $brand, $type) {
@@ -102,7 +124,7 @@ include 'language.php';
 	
 	
 	// Column name
-	echo "<div id=\"$row->Name\" class=\"selectHeader\">Größe</div>";
+	echo "<div id=\"$row->Name\" class=\"selectHeader\">$sell_text10</div>";
 	
 	// Column data
 	while($row = mysql_fetch_object($ergebnis))

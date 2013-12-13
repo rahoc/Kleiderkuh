@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+#browser_check {
+	z-index: 10;
+	position: fixed;
+	bottom: 20px;
+	width: 100%;
+	background-color: #FF7800;
+	color: #FFF;
+	padding: 10;
+	font-weight: bold;
+}

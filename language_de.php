@@ -77,12 +77,13 @@ $foot_text7  = '&copy; Copyright 2013 Kleider Kuh';
 //#####################
 $sell_button1  = 'In den Warenkorb';
 $sell_bubble1  = 'Wähle';
-$sell_headline1  = 'Verkauf deine Kinderkleidung.';
+$sell_bubble2  = 'Start';
+$sell_headline1  = 'Verkauf deine Kinderkleidung';
 $sell_headline2  = 'Bitte wähle aus den folgenden Kategorien';
 $sell_subheader1  = 'Warenkorb';
-$sell_text1  = 'Wähle die Kategorien. Beginn unten mit "Geschlecht"';
-$sell_text2  = 'Schau dir den Verkaufspreis der Kleidung an und leg sie in den Warenkorb';
-$sell_text3  = 'Geh weiter zum Verkauf';
+$sell_text1  = 'Kategorien wählen';
+$sell_text2  = 'Preis ansehen';
+$sell_text3  = 'Kleider verkaufen';
 $sell_text4  = 'Sollen wir etwas hinzufügen? Gib uns Feedback...';
 $sell_text5  = 'Wir kaufen ausschließlich Ware in ausgezeichnetem Zustand, ';
 $sell_text6 = 'Das hast du gewählt:';
@@ -91,9 +92,17 @@ $sell_text8  = 'Marke';
 $sell_text9  = 'Typ';
 $sell_text10 = 'Größe';
 $sell_text11 = 'Dafür erhältst du von uns:';
-$sell_link1  = 'hier findest du mehr Informationen';
+$sell_text12 = 'Keine Suchergebnisse...';
+$sell_text13 = 'Mehr Marken...';
+$sell_link1  = 'Kriterien für Kleidung';
+$sell_link2  = 'Wähle aus Liste';
 
-
+//#####################
+// brandList.php
+//#####################
+$brandList1 = 'Weiter Marken mit ';
+$brandList2 = 'Sonstige';
+$brandList3 = 'Übersicht';
 
 //#####################
 // cartOverview.php
@@ -144,7 +153,11 @@ $confirm_label6  = 'Bankleitzahl';
 $confirm_label7  = 'Kontonummer';
 $confirm_button1  = 'Zurück';
 $confirm_button2  = 'Bestätigen';
-$confirm_checkbox1  = 'Ich habe die Allgemeinen Geschäftsbedigungen gelesen und akzeptiere diese';
+$confirm_checkbox1  = 'Ich habe die ';
+$confirm_checkbox2  = ' und die ';
+$confirm_checkbox3  = ' gelesen und akzeptiere diese';
+$confirm_link1  = 'Allgemeinen Geschäftsbedigungen';
+$confirm_link2  = 'Kriterien für Kleidung';
 $confirm_error1  = 'Bitte lies und akzeptiere unsere Allgmeinen Geschäftsbedingungen';
 
 //#####################

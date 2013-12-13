@@ -40,6 +40,167 @@ function mainNavActive(nav)
 	alert(elem.classList);
 }
 
+function resetAkkordean() {
+	$("#Brand").removeClass("third");
+	$("#Brand").removeClass("second");
+	$("#Brand").removeClass("first");
+	$("#Gender").removeClass("second");	
+	$("#Gender").removeClass("first");	
+	$("#Type").removeClass("first");
+	$("#Type").hide(1);
+	$("#Size").hide(1);	
+	$("#Gender").hide(1);
+	
+	// Reset selection:
+	$("#Brand").children(".selectActive").addClass("select");
+	$("#Brand").children(".selectActive").removeClass("selectActive");
+	$("#Brand").children().show();
+	$("#noSearchResults").hide();
+	$("#dots").hide();
+	
+	document.getElementById("result").style.visibility="hidden";
+	document.getElementById("price").style.visibility="hidden";
+	document.getElementById("addToCart").style.visibility="hidden";
+	document.getElementById("selectedBrand").style.visibility="hidden";
+	document.getElementById("selectedType").style.visibility="hidden";
+	document.getElementById("selectedGender").style.visibility="hidden";
+	document.getElementById("selectedSize").style.visibility="hidden";
+	
+	document.getElementById("selectDescriptionBrand").style.visibility="visible";
+	showJustFewBrands();
+	checkSelectorHeigth();
+}
+
+function showJustFewBrands() {
+	var count = 0;
+	$("#Brand").children(".select").each(function() {
+		count++;
+		if(count>5) {
+			$(this).hide();	
+		}
+	});
+	if(count>5) {
+		$("#dots").show();	
+	}
+	else {
+		$("#dots").hide();
+	}
+}
+
+function showAllBrands() {
+	$("#Brand").children(".select").each(function() {
+			$(this).show();	
+	});
+	$("#dots").hide();
+}
+
+function filterBrands(searchString, matchExact) {
+	$("#noSearchResults").hide();
+	$("#dots").hide();
+	// Get the search string
+	if (searchString == null) {
+		searchString = $("#brandSearch").val();
+	}
+	if (matchExact == true) {
+		var searchStrings = searchString;
+	}
+	else {
+		var searchStrings = searchString.split(" ");
+	}
+	
+	var countFound = 0;
+	
+	// Iterate through all brands
+	$("#Brand").children(".select").each(function() {
+		var selectBrand = $(this);
+		var brandName = selectBrand.attr("id");
+		if (matchExact == true) {
+			var searchWords = brandName;
+		}
+		else {
+			// Get and add keywords
+			var keyName = "[name=" + selectBrand.attr("name") + "keywords]";
+			var keyWords = selectBrand.children(keyName).val();
+			brandName = brandName + " " + keyWords;
+			// check if it matches the searchstring
+			var searchWords = brandName.split(" ");
+		}
+		
+		
+		// go through all searchwords (brandname and keywords)
+		for (var i=0;i<searchWords.length;i++) {
+			var searchWord = searchWords[i];
+			var found = false;
+			
+			// and go through all the words in the searchstring
+			for (var j=0;j<searchStrings.length;j++) {
+				var searchString = searchStrings[j];
+				if (searchString === " " || (searchStrings.length > 1 && searchString === "")) {
+					continue;
+				}
+				if (searchWord.substr(0,searchString.length).toLowerCase() === searchString.toLowerCase()) {
+					selectBrand.show();
+					// if sth matches no further search is needed
+					found = true;
+					countFound++;
+					break;
+				}
+				else {
+					selectBrand.hide();
+				}
+			}
+			if (found) {
+				checkSelectorHeigth();
+				break;
+			}
+		}
+		
+	});
+	if(countFound == 0) {
+		// If nothing found
+		$("#noSearchResults").show();
+	}
+}
+
+function showBrandList(char) {
+		if(char != "all") {
+			letterId = "#" + char;
+			$(".brandListDetail").hide();
+			$("#brandList").hide();
+			$(letterId).show();
+		}
+		else {
+			$(".brandListDetail").hide();
+			$("#brandList").show();
+		}
+	}
+
+function checkSelectorHeigth(name) {
+		
+		setTimeout(checkSelectorHeigth, 1);
+		
+		// Do sth to set content to a well height
+		 var h  = 0;
+		 var hb = $("#Brand").height();
+		 var hg = $("#Gender").height();
+		 var ht = $("#Type").height();
+		 var hs = $("#Size").height();
+		 
+		 if (h<hb) {
+			 h=hb+20;
+		 }
+		 if (h<ht) {
+			 h=ht+20;
+		 }
+		 if (h<hs) {
+			 h=hs+20;
+		 }
+		 if (h<hg) {
+			 h=hg+20;
+		 }
+		 
+		 document.getElementById("selector").style.height = h;
+}
 
 function showTable(name, gender)
 { // AJAX
@@ -62,6 +223,10 @@ function showTable(name, gender)
 		{
 		document.getElementById(name).innerHTML=xmlhttp.responseText;
 		document.getElementById(name).style.visibility="visible";
+		$("#" + name).show();
+		setWatermark();
+		showJustFewBrands();
+		checkSelectorHeigth(name);
 		}
 	  }
 	if(name!="Size") {
@@ -86,12 +251,13 @@ function showTable(name, gender)
 
 function showByCategory(name, category, gender)
 {
+	// !! ORDER CHANGED: Brand is first column !!
 	if(category=="Gender")	{
 		document.getElementById("result").style.visibility="hidden";
 		
 		document.getElementById("Type").style.visibility="hidden";
 		document.getElementById("Size").style.visibility="hidden";
-		showTable('Brand', name)
+		showTable('Type', name)
 		// Fill result
 		document.getElementById("price").style.visibility="hidden";
 		document.getElementById("addToCart").style.visibility="hidden";
@@ -124,7 +290,7 @@ function showByCategory(name, category, gender)
 		document.getElementById("result").style.visibility="hidden";
 		
 		document.getElementById("Size").style.visibility="hidden";
-		showTable('Type', gender)
+		showTable('Gender', gender)
 		// Fill result
 		document.getElementById("price").style.visibility="hidden";
 		document.getElementById("addToCart").style.visibility="hidden";
@@ -133,9 +299,8 @@ function showByCategory(name, category, gender)
 		var sel = document.getElementById("selectedBrand");
 		//sel.style.visibility="visible";
 		sel.innerHTML=name;
-
 		document.getElementById("selectDescriptionBrand").style.visibility="hidden";
-		
+
 		var gender = document.getElementById("selectedGender");
 		var brand = document.getElementById("selectedBrand");
 		var type = document.getElementById("selectedType");
@@ -415,15 +580,15 @@ $(document).ready(function(){
 		  $(".selectFeedback").click(function () {
 			  alert("test");
 		  });
-			  if (document.getElementById('bkg_feedback').style.visibility == 'hidden') {
-				  document.getElementById('bkg_feedback').style.visibility = '';
-				  $("#bkg_feedback").hide();
+			  if (document.getElementById('bkg_brandList').style.visibility == 'hidden') {
+				  document.getElementById('bkg_brandList').style.visibility = '';
+				  $("#bkg_brandList").hide();
 				}
-				if (document.getElementById('dlg_feedback').style.visibility == 'hidden') {
-				  document.getElementById('dlg_feedback').style.visibility = '';
-				  $("#dlg_feedback").hide();
+				if (document.getElementById('dlg_brandList').style.visibility == 'hidden') {
+				  document.getElementById('dlg_brandList').style.visibility = '';
+				  $("#dlg_brandList").hide();
 				}
-			$("#bkg_feedback").fadeIn(500, "linear", function () { $("#dlg_feedback").show(800, "swing"); });
+			$("#bkg_brandList").fadeIn(500, "linear", function () { $("#dlg_brandList").show(800, "swing"); });
 		  });*/
 		  
 		// Buy
@@ -462,6 +627,31 @@ $(document).ready(function(){
 
 
 
+
+		// BrandList
+		  $("#closebtn_brandList").click(function () {
+			$("#dlg_brandList").hide('800', "swing", function () { $("#bkg_brandList").fadeOut("500"); });
+			$.get('brandList.php', function(data) {
+			  $('#dlg_brandList_content').html(data);
+			});
+			brandListOpen = false;
+		  });
+		  $("#dlg_brandList").click(function(e) {
+			  e.stopPropagation();
+		  });
+		   $("#bkg_brandList").click(function () {
+			$("#dlg_brandList").hide('800', "swing", function () { $("#bkg_brandList").fadeOut("500"); });
+			$.get('brandList.php', function(data) {
+			  $('#dlg_brandList_content').html(data);
+			});
+			brandListOpen = false;
+		  });
+		  $("#opn_brandList").click(function () {
+				openBrandListOverlay();
+		  }); 
+		  
+		  
+		  	
   
   
   //####################################
@@ -483,11 +673,11 @@ $(document).ready(function(){
 
 
 //$(document).ready(function(){
-       
+       /*
 		console.log('add click event')
 		  $(".selectFeedback").click(function () {
 			  alert("test");
-		  });
+		  });*/
 });
 
 var feedbackOpen = false;
@@ -506,6 +696,27 @@ function openFeedbackOverlay() {
 		ga('send', 'event', "Connect to KK", "Launch overlay", "Feedback");	
 		feedbackOpen = true;
 	}
+}
+
+
+var brandListOpen = false;
+function openBrandListOverlay() {
+	if (document.getElementById('bkg_brandList').style.visibility == 'hidden') {
+		  document.getElementById('bkg_brandList').style.visibility = '';
+		  $("#bkg_brandList").hide();
+		}
+		if (document.getElementById('dlg_brandList').style.visibility == 'hidden') {
+		  document.getElementById('dlg_brandList').style.visibility = '';
+		  $("#dlg_brandList").hide();
+		}
+	$("#bkg_brandList").fadeIn(500, "linear", function () { $("#dlg_brandList").show(800, "swing"); });
+	// Google Analytics 
+	if (brandListOpen == false) {
+		ga('send', 'event', "Connect to KK", "Launch overlay", "BrandList");	
+		brandListOpen = true;
+	}
+	
+	resetAkkordean();
 }
 
 //$(function() {
@@ -528,7 +739,7 @@ function sendFeedback(parameters)
 	  {
 	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
-		document.getElementById("feedbackContent").innerHTML=xmlhttp.responseText;
+		document.getElementById("brandListContent").innerHTML=xmlhttp.responseText;
 		}
 	  }
 	xmlhttp.open("POST","sendFeedback.php",true);
@@ -544,23 +755,23 @@ function getFeedback(obj) {
  			"&category=" + escape(encodeURI( radioValue(document.myform.category) )) +
  			"&exact=" + escape(encodeURI( document.getElementById("exact").value ))	;
 			
-	$("#feedback_error_1").hide();
-	$("#feedback_error_2").hide();
+	$("#brandList_error_1").hide();
+	$("#brandList_error_2").hide();
 	if ($("#email").val()=="" || isEmail($("#email").val())) {
 		if ($("#exact").val() == "") {
 			
-			$("#feedback_error_2").show();
+			$("#brandList_error_2").show();
 		}
 		else {
 		
 			// SUBMIT FEEDBACK
 			sendFeedback(poststr);
-			//ga_feedback();
+			//ga_brandList();
 		}
 	}
 	else {
 		
-		$("#feedback_error_1").show();
+		$("#brandList_error_1").show();
 	}
       
 }
@@ -571,23 +782,23 @@ function getFeedbackC(obj) {
  			"&category=" + escape(encodeURI( radioValue(document.myformC.category) )) +
  			"&exact=" + escape(encodeURI( document.getElementById("exactC").value ))	;
 			
-	$("#feedbackC_error_1").hide();
-	$("#feedbackC_error_2").hide();
+	$("#brandListC_error_1").hide();
+	$("#brandListC_error_2").hide();
 	if ($("#emailC").val()=="" || isEmail($("#emailC").val())) {
 		if ($("#exactC").val() == "") {
 			
-			$("#feedbackC_error_2").show();
+			$("#brandListC_error_2").show();
 		}
 		else {
 		
 			// SUBMIT FEEDBACK
 			sendFeedbackC(poststr);
-			//ga_feedback();
+			//ga_brandList();
 		}
 	}
 	else {
 		
-		$("#feedbackC_error_1").show();
+		$("#brandListC_error_1").show();
 	}
       
 }
@@ -605,7 +816,7 @@ function sendFeedbackC(parameters)
 	  {
 	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
-		document.getElementById("feedbackContentC").innerHTML=xmlhttp.responseText;
+		document.getElementById("brandListContentC").innerHTML=xmlhttp.responseText;
 		}
 	  }
 	xmlhttp.open("POST","sendFeedback.php",true);

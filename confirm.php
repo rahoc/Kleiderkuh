@@ -89,7 +89,13 @@
 	?>
     
     <div id="error_on_submit" class="orange"></div>
-	<input	type="checkbox" id="agb" /><label><a href="#" onclick="openOverlay('AGB.php')"><?php echo $confirm_checkbox1; ?></a></label>
+	<input	type="checkbox" id="agb" /><label>
+    <?php echo $confirm_checkbox1; ?>
+    <a href="#" onclick="openOverlay('AGB.php')"><?php echo $confirm_link1; ?></a>
+    <?php echo $confirm_checkbox2; ?>
+    <a href="#" onclick="openOverlay('Requirements.php')"><?php echo $confirm_link2; ?></a>
+    <?php echo $confirm_checkbox3; ?>
+    </label>
     <br />
     
     

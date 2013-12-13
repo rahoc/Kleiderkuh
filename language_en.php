@@ -75,12 +75,13 @@ $foot_text7  =  "&copy; Copyright 2013 Kleider Kuh";
 //##################### = 
 $sell_button1  =  "Add to sell cart!";
 $sell_bubble1  =  "Choose";
+$sell_bubble2  = 'Start';
 $sell_headline1  =  "Sell your kids clothes";
 $sell_headline2  =  "Please choose from below";
 $sell_subheader1  =  "Sellcart";
-$sell_text1  =  "Enter the details. Start below with \"Gender\"";
-$sell_text2  =  "See the clothes value and put it in the cart";
-$sell_text3  =  "Go to sell";
+$sell_text1  =  "Enter the clothes details";
+$sell_text2  =  "See the price";
+$sell_text3  =  "Checkout";
 $sell_text4  =  "Should we add something?  Give feedback...";
 $sell_text5  =  "We only buy clothes in excellent condition, ";
 $sell_text6 = "You have selected:";
@@ -89,10 +90,17 @@ $sell_text8  = "Brand:";
 $sell_text9  = "Type:";
 $sell_text10 = "Size:";
 $sell_text11 = "We pay you:";
-$sell_link1  =  "click here for details";
+$sell_text12 = 'No searchresults...';
+$sell_text13 = 'Show more brands...';
+$sell_link1  =  "Clothing criteria";
+$sell_link2  = 'Choose from list';
  
-
-
+//#####################
+// brandList.php
+//#####################
+$brandList1 = 'Further brands with ';
+$brandList2 = 'Misc';
+$brandList3 = 'Overview';
 
 //##################### = 
 // cartOverview.php = 
@@ -144,7 +152,11 @@ $confirm_label6  =  "Bank Nr:";
 $confirm_label7  =  "Account Nr:";
 $confirm_button1  =  "Back";
 $confirm_button2  =  "Confirm";
-$confirm_checkbox1  =  "Yes, I read and accept the Terms & Conditions";
+$confirm_checkbox1  =  "Yes, I read and accept the ";
+$confirm_checkbox2  =  " and the ";
+$confirm_checkbox3  = '';
+$confirm_link1  = 'Terms and Conditions';
+$confirm_link2  = 'clothes criteria';
 $confirm_error1  =  "Please accept the Terms & Conditions";
 
 //##################### = 

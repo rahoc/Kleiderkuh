@@ -78,7 +78,7 @@ $("#lang").click(function() {
 
 </script>
 <?php
-include 'clicktale/ct_bottom.php';
+// include 'clicktale/ct_bottom.php';
 ?>
 </body>
 </html>

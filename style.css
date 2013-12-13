@@ -24,6 +24,7 @@ ol ol {
 	max-height:auto;
 	margin-left:30px;
 	margin-right:30px;
+	overflow:hidden;
 }
 
 #sidebar {
@@ -169,6 +170,10 @@ color:#ffffff;
 	font-size:30px;
 	margin-top:30px;
 	margin-bottom:30px;
+}
+
+.noBottomMargin {
+	margin-bottom: 0px;
 }
 
 .popup {
@@ -379,6 +384,10 @@ div.hline {
 	height:97px;
 }
 
+#steps {
+	margin-bottom:10px;
+}
+
 #steps td{
 	width:194px;
 	padding-right:25px;
@@ -469,9 +478,23 @@ div.inline {
     Sell Selection
 ==========================  */
 
+.filterBox {
+	width: 100%;
+	border-radius: 5px;
+	padding: 5px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}	
+
+.watermark { 
+	color: #999;
+} 
+
 .selcolumn {
-	float:left;
-	width:12%;
+	position:absolute;
+	left:40%;
+	f loat:left;
+	width:150px;
 	padding:2px;
 	overflow:visible;
 	b ackground-color:#ECFFDC;
@@ -486,9 +509,28 @@ div.inline {
 	b order-color:#CCC;
 	margin:1px;
 	min-width: 130px;
+	
+	transition-property: left;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+}
+
+#selectorColumns {
+	position:relative;
+	overflow:visible;	
 }
 .selcolumnResult {
-	float:left;
+	position:absolute;
+	left:55%;
+	f loat:left;
+	max-width:15%;
+	min-width:255px;
+	padding:5px;
+}
+.selcolumnCart {
+	position:absolute;
+	left:75%;
+	f loat:left;
 	max-width:15%;
 	min-width:255px;
 	padding:5px;
@@ -535,11 +577,12 @@ a.select:hover   { color:#000; background-color:rgba(154,154,154,0.83); }
 a.select:active  { color:#000; background-color:rgba(154,154,154,0.83); }
 a.selectActive:hover   { color:#000; background-color:rgba(154,154,154,0.83); }
 #selector {
-	
+	overflow:visible;
+	position:relative;
 	padding:2px;
 	height:100%;
 	clear:both;
-	overflow:auto;
+	o verflow:auto;
 	m ax-height:100%;
 }
 
@@ -638,6 +681,8 @@ a.selectActive:hover   { color:#000; background-color:rgba(154,154,154,0.83); }
 	padding-top:10px;
 	padding-bottom:10px;
 	font-size:12pt;
+	margin-bottom: 10px;
+	padding-top: 0px;
 }
 
 
@@ -675,6 +720,7 @@ a#addToCart {
 	border-radius:5px;
 	min-height:100px;
 	width:25%;
+	min-width: 300px;
 	float:right;
 	margin-top: 70px;
 }
@@ -1076,7 +1122,21 @@ color:#000;
     width: 800px;
     height: 2400px;
 	z-index:1;
-  }
+}
+  
+.modalCentered {
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    padding: 20px;
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 800px;
+    height: 1500px;
+	z-index:1;
+}
   
   /* This gives us the styling for the background */
 .background {
@@ -1086,7 +1146,7 @@ color:#000;
     background-color: rgba(0,0,0,0.90);
     width: 100%;
 	min-width:1170px;
-    min-height: 2500px;
+    min-height: 3000px;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -1199,6 +1259,74 @@ margin-top:20px; }
 	width:530px;
 }
 
+/*  ==========================
+    BrandList
+==========================  */
+
+div#brandList td{
+	width:190px;
+	padding:5px;	
+}
+
+div#brandList p{
+	margin-after: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-before: 0em;	
+}
+
+div#brandList p:hover{
+	color:#028E9B;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+#openBrandListTxt {
+	text-align: center;
+	color: #028E9B;
+	padding: 3px;
+	padding-bottom: 4px;
+	text-decoration: underline;
+	background-color: #CCC;
+	border-radius: 5px;
+	margin: 2px;
+}
+
+#openBrandListTxt:hover {
+	cursor:pointer;
+}
+
+#noSearchResults {
+	display:none;	
+}
+
+#dots {
+	text-align:center;	
+	margin-bottom:15px;
+	text-decoration:underline;
+	background-color: #CCC;
+	border-radius: 5px;
+	margin: 2px;
+	padding: 3px;
+}
+
+#dots:hover {
+	cursor:pointer;
+
+}
+
+.brandListDetail {
+	display: none;	
+}
+
+.brandListlinks {
+	margin: 20px;	
+}
+
+.brandList_selectBrand {
+	text-decoration: underline;
+	color: #028E9B;
+	cursor: pointer;
+}
 
 /*  ================================================================= */
 /*  ==========================

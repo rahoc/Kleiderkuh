@@ -26,7 +26,8 @@
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Handlee' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Chela+One' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="style.css">
-<!-- CLICKTALE AJAX -->
+<link rel="stylesheet" type="text/css" href="dialogs.css">
+<!-- CLICKTALE AJAX
 <SCRIPT type='text/javascript'>
   // enable XHR wrapper   
   window.ClickTaleSettings = { XHRWrapper: { Enable: true, MaxResponseSize: 1000000} };
@@ -50,6 +51,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="jquery.fileDownload.js"></script>
 <script src="script.js"></script>
+<script src="watermark.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
