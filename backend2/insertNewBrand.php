@@ -17,6 +17,7 @@ require_once('../db.php');
 	// Get POST data
 	if (isset($_POST["brandName"]) && $_POST["brandName"] != "") {
 		$brandName = $_POST["brandName"];
+		$brandKeywords = $_POST["brandKeywords"];
 		echo "<br />Posted Brand: $brandName <br />";
 	}
 	else {
@@ -30,7 +31,7 @@ require_once('../db.php');
 	$num_rows = mysql_num_rows($result);
 	if ($num_rows == 0) {
 		// Insert new Brand
-		$query = "INSERT INTO Brand (Name) VALUES ('$brandName')";
+		$query = "INSERT INTO Brand (Name, Keywords) VALUES ('$brandName', '$brandKeywords')";
 		echo "Brand does not exist, try to insert: $query <br />";
 		$result = mysql_query($query);
 		

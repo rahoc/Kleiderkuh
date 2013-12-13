@@ -20,6 +20,10 @@
 	echo "<td>Brand Name (no special characters!)</td>";
 	echo "<td><input class='required' type='text' name='brandName' /></td>";
 	echo "</tr>";
+	echo "<tr>";
+	echo "<td>Key Words (no special characters! Splitted with a blank.)</td>";
+	echo "<td><input class='required' type='text' name='brandKeywords' /></td>";
+	echo "</tr>";
 	echo "</table>";
 		
 		
