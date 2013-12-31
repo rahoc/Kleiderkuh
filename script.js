@@ -160,6 +160,9 @@ function filterBrands(searchString, matchExact) {
 		// If nothing found
 		$("#noSearchResults").show();
 	}
+	else if(countFound >5) {
+		showJustFewBrands();	
+	}
 }
 
 function showBrandList(char) {
@@ -739,7 +742,7 @@ function sendFeedback(parameters)
 	  {
 	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
-		document.getElementById("brandListContent").innerHTML=xmlhttp.responseText;
+		document.getElementById("feedbackContent").innerHTML=xmlhttp.responseText;
 		}
 	  }
 	xmlhttp.open("POST","sendFeedback.php",true);
@@ -755,12 +758,12 @@ function getFeedback(obj) {
  			"&category=" + escape(encodeURI( radioValue(document.myform.category) )) +
  			"&exact=" + escape(encodeURI( document.getElementById("exact").value ))	;
 			
-	$("#brandList_error_1").hide();
-	$("#brandList_error_2").hide();
+	$("#feedback_error_1").hide();
+	$("#feedback_error_2").hide();
 	if ($("#email").val()=="" || isEmail($("#email").val())) {
 		if ($("#exact").val() == "") {
 			
-			$("#brandList_error_2").show();
+			$("#feedback_error_2").show();
 		}
 		else {
 		
@@ -771,7 +774,7 @@ function getFeedback(obj) {
 	}
 	else {
 		
-		$("#brandList_error_1").show();
+		$("#feedback_error_1").show();
 	}
       
 }
@@ -782,12 +785,12 @@ function getFeedbackC(obj) {
  			"&category=" + escape(encodeURI( radioValue(document.myformC.category) )) +
  			"&exact=" + escape(encodeURI( document.getElementById("exactC").value ))	;
 			
-	$("#brandListC_error_1").hide();
-	$("#brandListC_error_2").hide();
+	$("#feedbackC_error_1").hide();
+	$("#feedbackC_error_2").hide();
 	if ($("#emailC").val()=="" || isEmail($("#emailC").val())) {
 		if ($("#exactC").val() == "") {
 			
-			$("#brandListC_error_2").show();
+			$("#feedbackC_error_2").show();
 		}
 		else {
 		
@@ -798,7 +801,7 @@ function getFeedbackC(obj) {
 	}
 	else {
 		
-		$("#brandListC_error_1").show();
+		$("#feedbackC_error_1").show();
 	}
       
 }
@@ -816,7 +819,7 @@ function sendFeedbackC(parameters)
 	  {
 	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
-		document.getElementById("brandListContentC").innerHTML=xmlhttp.responseText;
+		document.getElementById("feedbackContentC").innerHTML=xmlhttp.responseText;
 		}
 	  }
 	xmlhttp.open("POST","sendFeedback.php",true);

@@ -19,7 +19,7 @@ ol ol {
 
 #content {
 	min-height:600px;
-	min-width:1110px;
+	min-width:1200px;
 	height: auto;
 	max-height:auto;
 	margin-left:30px;
@@ -33,6 +33,7 @@ ol ol {
 	bottom:250px;
 	width:37px;
 	height:149px;
+	z-index: 1;
 }
 
 
@@ -492,7 +493,7 @@ div.inline {
 
 .selcolumn {
 	position:absolute;
-	left:40%;
+	left:38%;
 	f loat:left;
 	width:150px;
 	padding:2px;
@@ -521,7 +522,7 @@ div.inline {
 }
 .selcolumnResult {
 	position:absolute;
-	left:55%;
+	left:51%;
 	f loat:left;
 	max-width:15%;
 	min-width:255px;
@@ -529,7 +530,7 @@ div.inline {
 }
 .selcolumnCart {
 	position:absolute;
-	left:75%;
+	left:70%;
 	f loat:left;
 	max-width:15%;
 	min-width:255px;
@@ -711,10 +712,7 @@ a#addToCart {
 
 
 #cart {
-	b ackground-image: -webkit-linear-gradient(white 0%, #ECFFDC 100%); 
-	b ackground-image: -moz-linear-gradient(white 0%, #ECFFDC 100%); 
-	b ackground-image: -o-linear-gradient(white 0%, #ECFFDC 100%); 
-	b ackground-image: linear-gradient(white 0%, #ECFFDC 100%);
+	background-color:white;
 	border:thin;
 	border-style:outset;
 	border-radius:5px;
@@ -725,7 +723,7 @@ a#addToCart {
 	margin-top: 70px;
 }
 
-#cartOverview {
+#Overview {
 	b ackground-image: -webkit-linear-gradient(white 0%, #ECFFDC 100%); 
 	b ackground-image: -moz-linear-gradient(white 0%, #ECFFDC 100%); 
 	b ackground-image: -o-linear-gradient(white 0%, #ECFFDC 100%); 

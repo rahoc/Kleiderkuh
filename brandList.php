@@ -270,6 +270,8 @@ $(document).ready(function(e) {
 			
 		//filterBrands(null, true);
 		$(".select").hide();
+		$(".selectActive").show();
+		window.scroll(0, 300);
 	});
 	
 });

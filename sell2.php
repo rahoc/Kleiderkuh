@@ -116,13 +116,13 @@ if(preg_match('/(?i)msie [1-9][^0-9]/',$_SERVER['HTTP_USER_AGENT']))
         </div>
         <style>
 			.first {
-				left:calc(40% - 150px);
+				left:calc(38% - 150px);
 			}
 			.second {
-				left:calc(40% - 300px);
+				left:calc(38% - 300px);
 			}
 			.third {
-				left:calc(40% - 450px);
+				left:calc(38% - 450px);
 			}
 		</style>
 <script>
