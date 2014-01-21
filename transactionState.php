@@ -307,7 +307,8 @@ $(document).ready(function() {
 			
 			transaction = JSON.parse(json);
 			//alert(transaction.email  + " <?php  echo $email; ?>");
-			if (transaction.email != "<?php  echo $email; ?>") {
+			var emailadresslogin = "<?php  echo $email; ?>";
+			if (transaction.email.toLowerCase() != emailadresslogin.toLowerCase()) {
 				window.location.replace("goToTransaction.php?error=true");
 				return;
 			}
