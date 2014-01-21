@@ -16,6 +16,7 @@ local.properties
 .settings/
 .loadpath
 
+
 # External tool builders
 .externalToolBuilders/
 
@@ -220,6 +221,6 @@ pip-log.txt
 #############
 jspdf/
 cloc-1.60.exe
-_notes/
+_notes
 
 dblogin.php
