@@ -10,47 +10,45 @@
 	$type=$_GET["type"];
 	$size=$_GET["size"];
 
-	$verbindung = connectDB();
+	$mysqli = connectDB();
 		
-	$abfrage = "SELECT c.id, g.Name, b.Name, t.Name, s.Name, c.Price FROM Clothes c
-				JOIN Gender g ON c.Gender=g.id
-				JOIN Brand b ON c.Brand =b.id
-				JOIN Type t ON c.Type =t.id
-				JOIN Size s ON c.Size=s.id
-				WHERE LEFT(g.Name,1) = '".substr($gender,0,1)."'
-				AND LEFT(b.Name,4) = '".substr($brand,0,4)."'
-				AND LEFT(t.Name,1) = '".substr($type,0,1)."'
-				AND s.Name='$size'
-				";
+	$abfrage = "SELECT c.id, g.Name, b.Name, t.Name, s.Name, c.Brand, c.Size, c.Type, c.Gender, c.Price FROM Clothes c
+                    JOIN Gender g ON c.Gender=g.id
+                    JOIN Brand b ON c.Brand =b.id
+                    JOIN Type t ON c.Type =t.id
+                    JOIN Size s ON c.Size=s.id
+                    WHERE LEFT(g.Name,1) = '".substr($gender,0,1)."'
+                    AND LEFT(b.Name,4) = '".substr($brand,0,4)."'
+                    AND LEFT(t.Name,1) = '".substr($type,0,1)."'
+                    AND s.Name='$size'
+                    ";
 				
 				//echo $abfrage;
-	$ergebnis = mysql_query($abfrage);
-	while($row = mysql_fetch_object($ergebnis))
+	$ergebnis = $mysqli->query($abfrage);
+	while($row = $ergebnis->fetch_object())
 	{
 		$clothId = $row->id;
+                $brandId = $row->Brand;
+                $sizeId = $row->Size;
+                $typeId = $row->Type;
+                $genderId = $row->Gender;
+                $price = $row->Price;
 		break;
 	}
 	
 	
-
-	
+        // TODO: change here to insert prices/clothes along with to new table layout
+	// INSERT
+        
+        
+        
 	$insert = "INSERT INTO Transactions_Clothes
-				(fk_Transactions, fk_Clothes)
-				VALUE ($transaction, $clothId)";
+				(fk_Transactions, fk_Clothes, Brand, Size, Type, Gender, Price)
+				VALUE ($transaction, $clothId, $brandId, $sizeId, $typeId, $genderId, $price)";
 				//echo $insert;
-	mysql_query($insert);
+	$mysqli->query($insert);
 
+	echo showCartByTransaction($transaction, "cart", $mysqli);
 	
 	
-				/*" | <a href='#' onclick='removeFromCart(\"cartItem" +
-				cart.childNodes.length + "\")'>" +"remove</a>" +*/
-				
-	
-	
-	
-	
-	echo showCartByTransaction($transaction, "cart", $verbindung);
-	
-	
-	closeDB($verbindung);
-?>
+	$mysqli->close();

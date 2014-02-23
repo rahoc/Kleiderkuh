@@ -3,10 +3,6 @@
 	$transaction = $_SESSION['transaction'];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php
-	session_start();
-	$transaction = $_SESSION['transaction'];
-?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -110,15 +106,15 @@ else {
 	
 	
 	
-	$verbindung = connectDB();
+	$mysqli = connectDB();
 	
 	// UPDATE IF NEEDED
 	
 	$countUpdates = 0;
 	
 	$abfrageIds = "SELECT id FROM Clothes";
-	$ergebnisIds = mysql_query($abfrageIds);
-	while($row = mysql_fetch_object($ergebnisIds))
+	$ergebnisIds = $mysqli->query($abfrageIds);
+	while($row = $ergebnisIds->fetch_object())
 	{
 		$changed = $_POST["changed$row->id"];
 		if($changed==1) {
@@ -146,7 +142,7 @@ else {
 						
 						";
 						
-			mysql_query($update);
+			$mysqli->query($update);
 			$countUpdates = $countUpdates + 1;
 		} //end if($changed==1)
 	} // end while
@@ -181,7 +177,7 @@ else {
 				ORDER BY $orderBy
 				";
 				
-	$ergebnis = mysql_query($abfrage);
+	$ergebnis = $mysqli->query($abfrage);
 	
 	echo "<table id='editTable'>";
 	echo "<thead>";
@@ -209,7 +205,7 @@ else {
 			<th>Active</th>
 		  </tr>";
 		echo "</thead><tbody>";	  
-	while($row = mysql_fetch_object($ergebnis))
+	while($row = $ergebnis->fetch_object())
 	{
 		if($row->Active==1) {
 			$active = "checked='checked'";
@@ -254,7 +250,7 @@ else {
 			</table>";
 
 	
-	closeDB($verbindung);
+	$mysqli->close();
 	
 	
     

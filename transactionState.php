@@ -1,8 +1,9 @@
 <?php
 session_start();
 $site = "transaction";
-
-$transactionId = $_SESSION['transaction'];
+if(isset($_SESSION['transaction'])){
+    $transactionId = $_SESSION['transaction'];
+}
 if(isset($_GET['transaction'])){
 	$transactionId = $_GET['transaction'];
 }

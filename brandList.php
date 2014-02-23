@@ -18,19 +18,19 @@
     <?php
         require_once('db.php');
     
-        $verbindung = connectDB();
+        $mysqli = connectDB();
         $count = 0;
 		
 		$letterColumns;
 		
         // Check if Brand exists?
         $query = "SELECT Name FROM Brand WHERE LEFT(Name,1) REGEXP '^[A-z]' ORDER BY Name";
-        $result = mysql_query($query);
+        $result = $mysqli->query($query);
 
 		$LastCapitalLetter = "_";
 		$count = 0;
 		$newLetter = -1;
-        while($row = mysql_fetch_object($result))
+        while($row = $result->fetch_object())
         {
 			$ActualCapitalLetter = strtoupper(substr($row->Name,0,1));
 			
@@ -52,9 +52,9 @@
     
 	
 		$query = "SELECT Name FROM Brand WHERE LEFT(Name,1) NOT REGEXP '^[A-z]' ORDER BY Name";
-        $result = mysql_query($query);
+        $result = $mysqli->query($query);
 		$specialLetters;
-		while($row = mysql_fetch_object($result))
+		while($row = $result->fetch_object())
         {
 			$specialLetters[] = $row->Name;
 		}

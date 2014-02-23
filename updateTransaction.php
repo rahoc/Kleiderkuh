@@ -67,10 +67,14 @@ require_once("Transaction.php");
 				if(isset($_POST["plz"])) {
 					$t->plz = $_POST["plz"];
 				}
+                                if($t->plz == '') {
+                                    $t->plz = 0;
+                                }
 				if(isset($_POST["city"])) {
 					$t->city = $_POST["city"];
 				}
 				$t->save();
+                                
 				echo "success";
 				return;
 			}

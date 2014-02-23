@@ -103,6 +103,9 @@ class Transaction {
 	public function getSumAccepted() {
 		$sum = 0;
 		$clothes = $this->clothes;
+                if($clothes == null) {
+                    return 0;
+                }
 		foreach ($clothes as $c => $value) {
 			if ($clothes[$c]->accepted == 1) {
 				$sum = $sum + $clothes[$c]->price;
@@ -115,6 +118,9 @@ class Transaction {
 		//echo "test";
 		$count = 0;
 		$clothes = $this->clothes;
+                if($clothes == null) {
+                    return 0;
+                }
 		foreach ($clothes as $c => $value) {
 			if ($clothes[$c]->accepted == 1) {
 				$count = $count + 1;
@@ -126,6 +132,9 @@ class Transaction {
 	public function countRejectedItems() {
 		$count = 0;
 		$clothes = $this->clothes;
+                if($clothes == null) {
+                    return 0;
+                }
 		foreach ($clothes as $c => $value) {
 			if ($clothes[$c]->rejected == 1) {
 				$count = $count + 1;
@@ -137,6 +146,9 @@ class Transaction {
 	public function countMissingItems() {
 		$count = 0;
 		$clothes = $this->clothes;
+                if($clothes == null) {
+                    return 0;
+                }
 		foreach ($clothes as $c => $value) {
 			if ($clothes[$c]->missing == 1) {
 				$count = $count + 1;
@@ -163,10 +175,7 @@ class Transaction {
 		$query = "SELECT * FROM Transactions WHERE Id=$transactionId";
 		//echo $query;*/
 		
-		$db_server = "";
-$db_name = "DB1401681";
-$db_user = "kkdbuser1";
-  $db_password = "22qmuh22";
+             include 'dblogin.php';
 
 
 		$mysqli = new mysqli($db_server ,$db_user, $db_password, $db_name);
@@ -275,6 +284,9 @@ $db_user = "kkdbuser1";
 				$stateNumber = 5;
 				break;
 			}
+                        default: {
+                            $stateNumber = 0;
+                        }
 		}
 		
 		$this->statusNumber = $stateNumber;
@@ -288,9 +300,8 @@ $db_user = "kkdbuser1";
 	
 	
 	public function save() {
-		$connection = connectDB();
-		$abfrage1 = "USE DB1401681";
-		mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
+		$mysqli = connectDB();
+                
 		$query = "UPDATE Transactions
 				SET Status = '$this->status',
 				FirstName = '$this->fname',
@@ -315,8 +326,10 @@ $db_user = "kkdbuser1";
 				language = '$this->language'
 				WHERE id=$this->id";
 				//echo $query;
-		mysql_query($query);
-		closeDB($connection);
+		$mysqli->query($query);
+		$mysqli->close();
+                
+                return $query;
 	}
 	
 }

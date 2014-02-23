@@ -1,26 +1,21 @@
 <?php
+include 'dblogin.php';
+
+$mysqli;
 
 function connectDB() {
 
-	require_once('dblogin.php');
-	
-	//mysql_connect($db_server) or die ("Connect error");
-
-	/*$res = mysql_query("SHOW DATABASES");
-	while ($row = mysql_fetch_row($res))
-	{
-		echo $row[0], '<br/>';
-	}*/
-	
-	$verbindung = mysql_connect ($db_server,$db_user, $db_password) or die ("Error mysql_connect: ".mysql_error()); 
-	
-	mysql_select_db($db_name, $verbindung); // or die ("Error select_db: ".mysql_error());
-
-	return $verbindung;
+    include 'dblogin.php';
+    
+    if(!isset($mysqli)) {
+        $mysqli = new mysqli($db_server,$db_user, $db_password) or die ("Error mysqli_connect: ".mysqli_error()); 
+        $mysqli->select_db($db_name); // or die ("Error select_db: ".mysqli_error());
+    }
+    return $mysqli;
 }
 
 function closeDB($verbindung) {
-	mysql_close($verbindung);
+	mysqli_close($verbindung);
 }
 
 function showNames($tableName, $gender) {
@@ -30,7 +25,14 @@ function showNames($tableName, $gender) {
 	else {
 		$abfrage = "SELECT Id, Name FROM $tableName ORDER BY Name";
 	}
-	$ergebnis = mysql_query($abfrage);
+        $mysqli = connectDB();
+	$result = $mysqli->query($abfrage);
+        if (!$result) {
+            printf("Error: %s\n", $mysqli->error);
+        }
+//        if ($ergebnis == false) {
+//            die ("Keine Daten in der Datenbank");
+//        }
 	include 'language.php';
 	// Column description
 	if($tableName=="Brand") {
@@ -48,21 +50,21 @@ function showNames($tableName, $gender) {
 	
 	// Column name
 	if($tableName=="Gender") {
-		echo "<div  id=\"$row->Name\" class=\"selectHeader\">$sell_text7</div>";
+		echo "<div class=\"selectHeader\">$sell_text7</div>";
 	}
 	else if($tableName=="Brand") {
 		
-		echo "<div  id=\"$row->Name\" class=\"selectHeader\">$sell_text8</div>";
+		echo "<div class=\"selectHeader\">$sell_text8</div>";
 		echo "<div><input type='text' id='brandSearch' onkeyup='filterBrands()' onclick='resetAkkordean()' class='filterBox' />
 			</div>
 			<div id='noSearchResults' class='center orange'>$sell_text12</div>
 			<div id='openBrandListTxt' onclick='openBrandListOverlay()'>$sell_link2</div>";
 	}
 	else if($tableName=="Type") {
-		echo "<div  id=\"$row->Name\" class=\"selectHeader\">$sell_text9</div>";
+		echo "<div class=\"selectHeader\">$sell_text9</div>";
 	}
 	// Column data
-	while($row = mysql_fetch_object($ergebnis))
+	while($row = $result->fetch_object())
 	{
 		if($tableName=="Gender") {
 			$genderimage  = substr($row->Name, 0,1);
@@ -104,8 +106,8 @@ function showNames($tableName, $gender) {
 	
 	}
 	// Feedback
-	if($tableName != Gender) {
-		echo "<a href='#' onclick=\"showFeedback()\" id=\"$row->Name\" class='selectFeedback'>$sell_text4</a>";
+	if($tableName != "Gender") {
+		echo "<a href='#' onclick=\"showFeedback()\" class='selectFeedback'>$sell_text4</a>";
 	}
 
 }
@@ -113,7 +115,8 @@ function showNames($tableName, $gender) {
 function showSizeNames($gender, $brand, $type) {
 	$tableName = "Size";
 	$abfrage = "SELECT Name, Age FROM $tableName";
-	$ergebnis = mysql_query($abfrage);
+        $mysqli = connectDB();
+	$ergebnis = $mysqli->query($abfrage);
 include 'language.php';
 	// Column description
 
@@ -124,10 +127,10 @@ include 'language.php';
 	
 	
 	// Column name
-	echo "<div id=\"$row->Name\" class=\"selectHeader\">$sell_text10</div>";
+	echo "<div class=\"selectHeader\">$sell_text10</div>";
 	
 	// Column data
-	while($row = mysql_fetch_object($ergebnis))
+	while($row = $ergebnis->fetch_object())
 	{
 		$abfrage2 = "SELECT Active, ActualAmount, MaxAmount FROM Clothes c
 					JOIN Gender g ON c.gender = g.id
@@ -140,8 +143,8 @@ include 'language.php';
 					AND s.Name = '$row->Name'
 					";
 					//echo $abfrage2;
-					$ergebnis2 = mysql_query($abfrage2);
-					while($row2 = mysql_fetch_object($ergebnis2))
+					$ergebnis2 = $mysqli->query($abfrage2);
+					while($row2 = $ergebnis2->fetch_object())
 					{
 						//echo  $row2->Active;
 						$active = $row2->Active;
@@ -170,26 +173,26 @@ include 'language.php';
 	}
 
 	//Feedback
-		echo "<a href='#' onclick=\"showFeedback()\" id=\"$row->Name\" class='selectFeedback'>$sell_text4</a>";
-	
+		echo "<a href='#' onclick=\"showFeedback()\" class='selectFeedback'>$sell_text4</a>";
+	$mysqli->close();
 }
 
 function getTransactionId() {
-	$verbindung = connectDB();
+	$mysqli = connectDB();
 	
 		$newTransactionId = 1;
 	$abfrage = "SELECT * FROM Transactions
 				WHERE id= (SELECT MAX(id) FROM Transactions)";
-	$ergebnis = mysql_query($abfrage);
-	while($row = mysql_fetch_object($ergebnis))
+	$result = $mysqli->query($abfrage);
+	while($row = $result->fetch_object())
 	{
 		$newTransactionId = $row->id + 1;
 	}
 	
 	//	$abfrage = "INSERT INTO Transactions (id) VALUES (".$newTransactionId.")";
-	// mysql_query($abfrage);
+	// mysqli_query($abfrage);
 	
-	closeDB($verbindung);
+	$mysqli->close();
 	
 	return $newTransactionId;
 }
@@ -206,13 +209,13 @@ function showCartByTransaction($transaction, $site, $verbindung) {
 	
 	
 	//$verbindung = connectDB();
-	$abfrage1 = "USE DB1401681";
-	mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
+	$mysqli = connectDB();
+	//$mysqli->query($abfrage1)  or die("USE DB" . mysqli_error());;
 	$abfrage = "SELECT g.Name as gender,
 						b.Name as brand,
 						t.Name as type,
 						s.Name  as size,
-						c.Price as price,
+						tc.Price as price,
 						tc.fk_Clothes as ClothId,
 						tc.Id as transactionClothId
 				FROM Clothes c
@@ -224,11 +227,11 @@ function showCartByTransaction($transaction, $site, $verbindung) {
 				WHERE tc.fk_Transactions=$transaction
 				ORDER BY transactionClothId";
 	//echo $abfrage;
-	$ergebnis = mysql_query($abfrage) or die(mysql_error());
-	$num_rows = mysql_num_rows($ergebnis);
+	$ergebnis = $mysqli->query($abfrage) or die(mysqli_error());
+	$num_rows = $ergebnis->num_rows;
 
 	if (!$ergebnis) {
-		die('Ungültige Anfrage: ' . mysql_error());
+		die('Ungültige Anfrage: ' . mysqli_error());
 	}
 	//echo "$num_rows Zeilen\n";
 	//print_r($ergebnis);
@@ -244,7 +247,7 @@ function showCartByTransaction($transaction, $site, $verbindung) {
 	}
 	echo  "</tr>";
 	
-	while($row = mysql_fetch_object($ergebnis))
+	while($row = $ergebnis->fetch_object())
 	{
 		echo "<tr>
 				<td>$row->gender</td>
@@ -261,27 +264,29 @@ function showCartByTransaction($transaction, $site, $verbindung) {
 	echo "</table>";
 	
 	// OUTPUT SUM
-	$abfrage = "SELECT SUM(price) as summe
-				FROM Clothes c
-				JOIN Transactions_Clothes tc ON c.id=tc.fk_Clothes 
+	$abfrage = "SELECT SUM(Price) as summe
+				FROM Transactions_Clothes tc 
 				WHERE tc.fk_Transactions=$transaction";
-	$ergebnis = mysql_query($abfrage);
-	while($row = mysql_fetch_object($ergebnis))
-	{
-		$sum = round($row->summe,2);
-		break;
-	}
+	$ergebnis = $mysqli->query($abfrage);
+        if(!$ergebnis) {
+            $sum = 0;
+        }
+        else {
+            while($row = $ergebnis->fetch_object())
+            {
+                    $sum = round($row->summe,2);
+                    break;
+            }
+        }
 	
-	if($sum == "") {
-		$sum = 0;
-	}
+		
 	if($site == "overview" || $site=='confirm') {
 			echo "<br />$cart_text1 ".number_format($sum,2)." €<br /><span id='cartsum' style='display:none'>$sum</span>";
 			
 		}
 		else {
 			// check if sum higher than 15 Euro
-			if($row->summe >=15) {
+			if($sum >=15) {
 				echo "<br />$cart_text1 ".number_format($sum,2)." €<br /><span id='cartsum' style='display:none'>$sum</span>
 					<form method=\"post\" action=\"cartOverview.php\">
 					
@@ -301,13 +306,13 @@ function showCartByTransaction($transaction, $site, $verbindung) {
 
 
 function showTransaction($t, $e) {
-	$verbindung = connectDB();
+	$mysqli = connectDB();
 		
 	$abfrage = "SELECT * FROM Transactions
 				WHERE id=$t AND email LIKE '$e'";
-	$ergebnis = mysql_query($abfrage);
+	$ergebnis = $mysqli->query($abfrage);
 	echo "<table>";
-	while($row = mysql_fetch_object($ergebnis))
+	while($row = $ergebnis->fetch_object())
 	{
 		echo "<tr>
 				<td>$row->FirstName</td>
@@ -329,7 +334,7 @@ function showClothState($transaction, $email, $stateNumber, $rejectOption, $Fina
 	
 	include 'language.php';
 	
-	$verbindung = connectDB();
+	$mysqli = connectDB();
 	
 	$abfrage = "SELECT g.Name as gender,
 						b.Name as brand,
@@ -348,7 +353,7 @@ function showClothState($transaction, $email, $stateNumber, $rejectOption, $Fina
 				JOIN Transactions_Clothes tc ON c.id=tc.fk_Clothes 
 				WHERE tc.fk_Transactions=$transaction";
 				//echo $abfrage;
-	$ergebnis = mysql_query($abfrage);
+	$ergebnis = $mysqli->query($abfrage);
 	echo "<div class='gradientBox'><table id='cartTable'>";
 	$rejectedItems = 0;
 	echo "<tr>
@@ -360,7 +365,7 @@ function showClothState($transaction, $email, $stateNumber, $rejectOption, $Fina
 				<th>Acceptance</th>
 				<th>Comment</th>
 			  </tr>";
-	while($row = mysql_fetch_object($ergebnis))
+	while($row = $ergebnis->fetch_object())
 	{
 		if($row->accepted==1){
 			$acceptance = "Accepted";
@@ -395,8 +400,8 @@ function showClothState($transaction, $email, $stateNumber, $rejectOption, $Fina
 				FROM Clothes c
 				JOIN Transactions_Clothes tc ON c.id=tc.fk_Clothes 
 				WHERE tc.fk_Transactions=$transaction AND tc.Accepted=1";
-	$ergebnis = mysql_query($abfrage);
-	while($row = mysql_fetch_object($ergebnis))
+	$ergebnis = $mysqli->query($abfrage);
+	while($row = $ergebnis->fetch_object())
 	{
 		$sum = $row->summe;
 		break;
@@ -474,24 +479,22 @@ function showClothState($transaction, $email, $stateNumber, $rejectOption, $Fina
 		echo "Proceeded to Payment.";
 	}
 	
-	closeDB($verbindung);
+	$mysqli->close();
 		
 }
 
 function getReceptionDate($transaction, $email) {
-	$verbindung = connectDB();
+	$mysqli = connectDB();
 		
 	$abfrage = "SELECT ReceptionDate FROM Transactions
 				WHERE id=$transaction AND email LIKE '$email'";
-	$ergebnis = mysql_query($abfrage);
+	$ergebnis = $mysqli->query($abfrage);
 	
-	while($row = mysql_fetch_object($ergebnis))
+	while($row = $ergebnis->fetch_object())
 	{
 		echo "$row->ReceptionDate";
 		break;
 	}
 	
-	closeDB($verbindung);
+	$mysqli->close();
 }
-
-?>

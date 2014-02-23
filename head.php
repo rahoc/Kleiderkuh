@@ -64,10 +64,6 @@
 </script>
 </head>
 <body>
-<?php
-include 'clicktale/ct_top.php';
-
-?>
   
     <div id="head">
     

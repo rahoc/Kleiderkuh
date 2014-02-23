@@ -24,10 +24,12 @@ class Cloth
 		
 		$this->id = $transactionClothId;
 		
-		$connection = connectDB();
-		$abfrage1 = "USE DB1401681";
-		mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
-		$query = "SELECT g.Name as Gender,
+		$mysqli = connectDB();
+                
+                // CHANGED to make lossless pricechanges possible
+		//$abfrage1 = "USE DB1401681";
+		//mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
+		/*$query = "SELECT g.Name as Gender,
 						b.Name as Brand,
 						t.Name as Type,
 						s.Name  as Size,
@@ -49,10 +51,35 @@ class Cloth
 				JOIN Size s ON c.Size=s.id
 				JOIN Transactions_Clothes tc ON c.id=tc.fk_Clothes 
 				WHERE tc.Id=$transactionClothId";
+                 
+                 */
+                
+                $query = "SELECT g.Name as Gender,
+						b.Name as Brand,
+						t.Name as Type,
+						s.Name  as Size,
+						tc.Price as Price,
+						c.Active as Active,
+						c.ActualAmount as ActualAmount,
+						c.MaxAmount as MaxAmount,
+						tc.Id as tcID,
+						tc.Accepted as Accepted,
+						tc.Rejected as Rejected,
+						tc.Missing as Missing,
+						tc.Comment as Comment,
+						tc.fk_Clothes as ClothId,
+						tc.Id as transactionClothId
+				FROM Transactions_Clothes tc
+				JOIN Gender g ON tc.Gender=g.id
+				JOIN Brand b ON tc.Brand =b.id
+				JOIN Type t ON tc.Type =t.id
+				JOIN Size s ON tc.Size=s.id
+				JOIN Clothes c ON c.id=tc.fk_Clothes 
+				WHERE tc.Id=$transactionClothId";
 				
-		$result = mysql_query($query);
+		$result = $mysqli->query($query);
 
-		while ($row = mysql_fetch_object($result)) {
+		while ($row = $result->fetch_object()) {
 			$this->id = $row->tcID;
 			$this->fk_Clothes = $row->ClothId;
 			$this->gender = $row->Gender;
@@ -70,13 +97,13 @@ class Cloth
 			break;
 		}
 		//closeDB($connection);
-		mysql_close($connection);
+		$mysqli->close();
 	}
 	
 	public function saveTransactionData() {
-		$connection = connectDB();
-		$abfrage1 = "USE DB1401681";
-		mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
+		$mysqli = connectDB();
+		//$abfrage1 = "USE DB1401681";
+		//mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
 		$query = "UPDATE Transactions_Clothes
 					SET Accepted = $this->accepted,
 					Rejected = $this->rejected,
@@ -84,20 +111,18 @@ class Cloth
 					Comment = '$this->comment'
 					WHERE id=$this->id";
 		//echo "$query";
-		mysql_query($query);
-		closeDB($connection);
+		$mysqli->query($query);
+		$mysqli->close();
 	}
 
 	public function saveClothData() {
-		$connection = connectDB();
-		$abfrage1 = "USE DB1401681";
-		mysql_query($abfrage1)  or die("USE DB" . mysql_error());;
+		$mysqli = connectDB();
 		$query = "UPDATE Clothes
 					SET ActualAmount = $this->actualAmount
 					WHERE id=$this->fk_Clothes";
 		//echo "$query";
-		mysql_query($query);
-		closeDB($connection);
+		$mysqli->query($query);
+		$mysqli->close();
 	}
 		
 	function toString()
@@ -120,6 +145,3 @@ class Cloth
 }
 
 
-
-
-?>

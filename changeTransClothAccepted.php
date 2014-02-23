@@ -13,6 +13,11 @@
 		// Create new Transaction and load it by ID
 		$cloth = new Cloth;
 		$cloth->loadById($id);
+                
+                $accepted = 0;
+                $rejected = 0;
+                $missing = 0;
+                
 	
 		if (isset($_POST["accepted"])) {
 			// Change status
@@ -62,4 +67,3 @@
 		echo "error no POST data";
 	}
 	
-?>

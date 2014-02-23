@@ -1,6 +1,6 @@
 <?php
-	session_start();
-	$transaction = $_SESSION['transaction'];
+        session_start();
+	//$transaction = $_SESSION['transaction'];
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -59,13 +59,8 @@ else {
 	$orderBy = "id";
 	
 
-	$db_server = "";
-	$db_name = "DB1401681";
-	$db_user = "kkdbuser1";
-	$db_password = "22qmuh22";
 	
-	
-	$mysqli = new mysqli($db_server ,$db_user, $db_password, $db_name);
+	$mysqli = connectDB();
 	//$mysqli = new mysqli($db_server,$db_user, $db_password, $db_name);
 	if ($mysqli->connect_errno) {
 		echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . 
@@ -84,12 +79,12 @@ else {
 	// GOING THROUGH THE DATA
 	if($result->num_rows > 0) {
 
-		while ($row = $result->fetch_assoc()) {
+		while ($row = $result->fetch_object()) {
 			
 			//print_r($row);
 			$transaction = new Transaction;
 
-			$transaction->loadById($row['id']);
+			$transaction->loadById($row->id);
 
 			$transactions[] = $transaction;
 		}
@@ -134,6 +129,7 @@ else {
 		$re = "";
 		$pr = "";
 		$wa = "";
+                $wp = "";
 		$do = "";
 		$rt = "";
 		$pa = "";
@@ -157,7 +153,7 @@ else {
 		
 		echo "<tr id='row$id'>";
 		echo "<td>" . $id . "<a href='#' id='opener_$id'>... show Clothes</a></td>";
-		echo "<td><select name='status_$id' id='status_$id' class='status' size='1''>
+		echo "<td><select name='status_$id' id='status_$id' class='status' size='1'>
 				<option $in value='InCart'>In Cart</option>
 				<option $co value='Confirmed'>Confirmed</option>
 				<option $re value='Received'>Received</option>
@@ -230,9 +226,10 @@ else {
 				echo "<div class='tableHeader'>Comment</div>";
 				echo "</div>";
 			$clothes = $transactions[$i]->clothes;
-			
+			if($clothes == null) {
+                            continue;
+                        }
 			foreach ($clothes as $j => $value) {
-				
 
 				// ############################
 				// OUTPUT DATA
@@ -292,7 +289,7 @@ else {
 <br />
 
 <script>
-$('selector').fixedHeaderTable({ footer: false, cloneHeadToFoot: false, fixedColumn: true });
+//$('selector').fixedHeaderTable({ footer: false, cloneHeadToFoot: false, fixedColumn: true });
 
 
 function textAreaAdjust(o) {
@@ -301,7 +298,7 @@ function textAreaAdjust(o) {
 }
 
 $('.status').change(function() {
-	var lang = "<?php echo $language; ?>";
+	var lang = "de<?php //echo $language; ?>";
 	var dropdown = $(this);
 	var id =  dropdown.attr( "name" ).valueOf().substring(7);
 	var status =  dropdown.val();
@@ -322,7 +319,7 @@ $('.status').change(function() {
 			doPost=true;
 		}
 		else {
-			$.post("hgetTransactionStateByID.php", { id: id })
+			$.post("getTransactionStateByID.php", { id: id })
 			.done(function(data) {
 			 	//alert("Data Loaded" + data);
 			 	dropdown.val(data) ;

@@ -29,7 +29,7 @@
             //echo $transaction;
             include 'db.php';
             
-            showCartByTransaction($transaction, "confirm");
+            showCartByTransaction($transaction, "confirm", null);
         ?>
        
     </div>
@@ -39,15 +39,44 @@
 	
     <?php
 	//print_r($_POST);
+    if(isset($_POST['fname'])){
 	$fn=$_POST['fname'];
+    }
+    if(isset($_POST['lname'])){
 	$ln=$_POST['lname'];
+    }
+    if(isset($_POST['email'])){
 	$email=$_POST['email'];
+    }
+    if(isset($_POST['payment'])){
 	$payment=$_POST['payment'];
+    }
+    if(isset($_POST['blz'])){
 	$blz=$_POST['blz'];
+    }
+    else {
+        $blz = "";
+    }
+    if(isset($_POST['kto'])){
 	$kto=$_POST['kto'];
+    }
+    else {
+        $kto = "";
+    }
+    if(isset($_POST['paypalMail'])){
 	$ppMail=$_POST['paypalMail'];
+    }
+    else {
+        $ppMail = "";
+    }
+    if(isset($_POST['paypalMailadress'])){
 	$ppMailadress=$_POST['paypalMailadress'];
-	
+    }
+    else {
+        $ppMailadress = "";
+    }
+    
+    
 	if($ppMail=="different") {
 		$paypalEmail = $ppMailadress;
 	}

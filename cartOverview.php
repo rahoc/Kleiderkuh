@@ -23,6 +23,10 @@
     	<br />
         <br />
         <?php
+        $firstName = "";
+        $lastName = "";
+        $email = "";
+        
 		$transaction = $_SESSION['transaction'];
 		//print_r($_SESSION);
 		if(isset($transaction)) {
@@ -30,10 +34,10 @@
             include 'db.php';
 			
             echo "<div id='cartList'>";
-			showCartByTransaction($transaction, "overview");
+			showCartByTransaction($transaction, "overview", null);
         	echo "</div>";
 			
-			$verbindung = connectDB();
+			$mysqli = connectDB();
 	
 			//$abfrage = "INSERT INTO Transactions (id, Status)
 			//			VALUES ($transaction, 'InCart')";
@@ -42,8 +46,8 @@
 			// Set predefined Values if existing
 			$abfrage = "SELECT * FROM Transactions
 						WHERE id=$transaction";
-			$ergebnis = mysql_query($abfrage);
-			while($row = mysql_fetch_object($ergebnis))
+			$ergebnis = $mysqli->query($abfrage);
+			while($row = $ergebnis->fetch_object())
 			{
 				$firstName = $row->FirstName;
 				$lastName = $row->LastName;
@@ -51,7 +55,7 @@
 			}
 			
 			
-			closeDB($verbindung);
+			$mysqli->close();
 		}
 		else {
 			echo "transaction number not set!";
@@ -69,11 +73,11 @@
     
     <table>
     	<tr><td><?php echo $cartOverview_label1; ?></td><td><input type="text" name="fname" id="cart_fname"
-        		value="<?php echo $firstName?>" onkeyup="checkCartForm()"></td></tr>
+        		 value="<?php echo $firstName; ?>" onkeyup="checkCartForm()"></td></tr>
         <tr><td><?php echo $cartOverview_label2; ?></td><td><input type="text" name="lname" id="cart_lname"
-        		value="<?php echo $lastName?>" onkeyup="checkCartForm()"></td></tr>
+        		 value="<?php echo $lastName; ?>" onkeyup="checkCartForm()"></td></tr>
         <tr><td><?php echo $cartOverview_label3; ?></td><td><input type="text" id="cart_email" name="email"
-        		value="<?php echo $email?>" onkeyup="checkCartForm()"></td></tr>
+        		 value="<?php echo $email; ?>" onkeyup="checkCartForm()"></td></tr>
         <tr><td><?php echo $cartOverview_label4; ?></td><td>
         <input id="payment_paypal" type="radio" name="payment" value="paypal"
         	onclick="setUeberweisungVisible(false)"><?php echo $cartOverview_label5; ?><br />

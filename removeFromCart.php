@@ -7,14 +7,13 @@
 	$removeId=$_GET["remove"];
 	
 
-	$verbindung = connectDB();
+	$mysqli = connectDB();
 
 	$delete = "DELETE FROM Transactions_Clothes
 				WHERE Id=$removeId";
 				
-	mysql_query($delete);
+	$mysqli->query($delete);
 				
-	closeDB($verbindung);
+	$mysqli->close();
 
-	echo showCartByTransaction($transaction, "remove");
-?>
+	echo showCartByTransaction($transaction, "remove", null);

@@ -9,7 +9,7 @@
 	$type=$_GET["type"];
 	$size=$_GET["size"];
 
-	$verbindung = connectDB();
+	$mysqli = connectDB();
 		
 	$abfrage = "SELECT c.id, g.Name, b.Name, t.Name, s.Name, c.Price as price
 				FROM Clothes c
@@ -22,16 +22,14 @@
 				AND LEFT(t.Name,1) = '".substr($type,0,1)."'
 				AND s.Name='$size'
 				";
-	$ergebnis = mysql_query($abfrage);
-	while($row = mysql_fetch_object($ergebnis))
+	$ergebnis = $mysqli->query($abfrage);
+	while($row = $ergebnis->fetch_object())
 	{
 		$price = $row->price;
 		break;
 	}
 
-	closeDB($verbindung);
-	
-	
-	
+	$mysqli->close();
+
 	echo  $price;
 ?>

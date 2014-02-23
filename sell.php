@@ -33,21 +33,22 @@ session_start();
  else {
  	//$_SESSION['transaction'] = getTransactionId();
 	
-	$verbindung = connectDB();
+	$mysqli = connectDB();
 	
 	$newTransactionId = 1;
 	$abfrage = "SELECT * FROM Transactions
 				WHERE id= (SELECT MAX(id) FROM Transactions)";
-	$ergebnis = mysql_query($abfrage);
-	while($row = mysql_fetch_object($ergebnis))
+	$ergebnis = $mysqli->query($abfrage);
+	while($row = $ergebnis->fetch_object())
 	{
 		$newTransactionId = $row->id + 1;
 	}
 	
 	$abfrage2 = "INSERT INTO Transactions (id, Status) VALUES (".$newTransactionId.", 'InCart')";
-	mysql_query($abfrage2);
+	$mysqli->query($abfrage2);
 	
-	closeDB($verbindung);
+	$mysqli->close();
+        
 	$_SESSION['transaction'] = $newTransactionId;
 	//echo $newTransactionId;
 	
@@ -215,7 +216,7 @@ if(preg_match('/(?i)msie [1-9][^0-9]/',$_SERVER['HTTP_USER_AGENT']))
                     $transaction = $_SESSION['transaction'];
                     //echo $transaction;
 					//echo "<br />";
-                    showCartByTransaction($transaction, "sell");
+                    showCartByTransaction($transaction, "sell", null);
                 ?>
             </div>
         </div>
