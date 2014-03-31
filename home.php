@@ -6,31 +6,7 @@
 
 <div id="home">
 
-
-<div id="intro">
-    <div id="schrank" >
-        <img class="schrankimage" src='images/schrank.png' />
-    </div>
-	<div id="intro_text">
-    	<table>
-    	<tr>
-			<td><img class='bulletpoint' src='images/bullet.png' /></td>
-			<td><?php echo $home_text1; ?></td>
-        </tr>
-        <tr>
-			<td><img class='bulletpoint' src='images/bullet.png' /></td>
-			<td><?php echo $home_text2; ?></td>
-        </tr>
-        <tr>
-			<td><img class='bulletpoint' src='images/bullet.png' /></td>
-			<td><?php echo $home_text3; ?></td>
-        </tr>
-        </table>
-    </div>
-
-</div>
-
-
+<!-- intro removed 31.03.2014 -->
 
 <div id="home_content">
 

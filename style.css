@@ -348,33 +348,7 @@ div.hline {
 	margin-right:auto;	
 }
 
-#schrank {
-	margin-left:50px;
-	margin-right:20px;
-	float:left;
-}
-.schrankimage {
-	width:254px;
-	height:175px;
-}
-
-#intro {
-	min-height:175px;
-	width:800px;
-	margin-top:5px;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-#intro_text {
-	padding-top:5px;
-	font-size:14pt;
-}
-
-#intro_text td{
-	padding:5px;
-	vertical-align:top;
-}
+/* Intro removed 31.03.2014 */
 
 .bulletpoint {
 	margin-top:3px;
